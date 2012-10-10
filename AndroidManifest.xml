@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="sk.boinc.nativeboinc"
+      android:versionCode="47"
+      android:versionName="0.4.0.5b">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="11"/>
+
+	<supports-screens
+		android:smallScreens="true"
+		android:normalScreens="true"
+		android:anyDensity="true"
+		android:largeScreens="true" />
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.BATTERY_STATS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+	<application
+	    android:name="BoincManagerApplication"
+		android:label="@string/app_name"
+		android:description="@string/app_desc"
+		android:icon="@drawable/nativeboinc" android:debuggable="false">
+
+		<activity android:name=".BoincManagerActivity"
+		    android:theme="@style/Theme.NativeBoincActivity"
+		    android:launchMode="singleTask">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<service android:name=".service.ConnectionManagerService" 
+				android:description="@string/service_desc"/>
+		<service android:name=".installer.InstallerService"
+				android:description="@string/install_service_desc" />
+		<service android:name=".nativeclient.NativeBoincService"
+				android:description="@string/nboinc_service_desc" />
+		
+		<receiver android:name=".news.NewsReceiver" android:label="@string/newsHandlerDesc">
+		    <intent-filter>
+		        <action android:name="sk.boinc.nativeboinc.news.UPDATE_NEWS"/>
+		    </intent-filter>
+		</receiver>
+		
+		<receiver android:name=".receivers.AutostartAtBootReceiver"
+		    android:label="@string/autostartReceiver">
+		    <intent-filter>
+		        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+		    </intent-filter>
+		</receiver>
+		
+		<receiver android:name=".widget.NativeBoincWidgetProvider"
+		    android:label="@string/widget2x1">
+			<intent-filter>
+		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		    	<action android:name="sk.boinc.nativeboinc.widget.WIDGET_UPDATE" />
+		    	<action android:name="sk.boinc.nativeboinc.widget.WIDGET_PREPARE_UPDATE" />
+		    	<action android:name="sk.boinc.nativeboinc.widget.CLIENT_START_STOP" />
+		    </intent-filter>
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/widget_info" />
+		</receiver>
+
+		<receiver android:name=".widget.TabletWidgetProvider"
+		    android:label="@string/widgetTablet">
+			<intent-filter>
+		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_WIDGET_UPDATE" />
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_WIDGET_PREPARE_UPDATE" />
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_START_STOP" />
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_0"/>
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_1"/>
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_2"/>
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_3"/>
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_4"/>
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_5"/>
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_6"/>
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_7"/>
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_8"/>
+		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_9"/>
+		    </intent-filter>
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/tablet_widget_info" />
+		</receiver>
+		
+		<activity android:name=".ManageClientActivity"
+			android:label="@string/menuManage"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+
+		<activity android:name=".NativeClientActivity"
+			android:label="@string/nativeBoincClient"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".AccessListActivity"
+			android:label="@string/accessHostList"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".BoincLogsActivity"
+			android:label="@string/nativeBoincLogs"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".InstalledBinariesActivity"
+		    android:label="@string/installedBinaries"
+		    android:launchMode="singleTop"
+		    android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".AppPreferencesActivity"
+			android:label="@string/menuPreferences"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+
+		<activity android:name=".HostListActivity"
+			android:label="@string/selectHost"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+
+		<activity android:name=".EditHostActivity"
+			android:label="@string/hostEdit"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+
+		<activity android:name=".ProjectsActivity"
+		    android:theme="@style/Theme.NativeBoincActivity" />
+
+		<activity android:name=".TasksActivity"
+		    android:theme="@style/Theme.NativeBoincActivity" />
+
+		<activity android:name=".TransfersActivity"
+		    android:theme="@style/Theme.NativeBoincActivity" />
+
+		<activity android:name=".MessagesActivity"
+		    android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".NoticesActivity"
+		    android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".EditBAMActivity"
+			android:label="@string/editBAM"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".ProjectListActivity"
+			android:label="@string/projectList"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+
+		<activity android:name=".AddProjectActivity"
+			android:label="@string/addProject"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".InstallStep1Activity"
+			android:launchMode="singleTop"
+			android:label="@string/installWizard"
+			android:theme="@style/Theme.NativeBoincActivity" />
+			
+		<activity android:name=".InstallStep2Activity"
+			android:launchMode="singleTop"
+			android:label="@string/installWizard"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".InstallFinishActivity"
+			android:launchMode="singleTop"
+			android:label="@string/installWizard"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".ProgressActivity"
+			android:launchMode="singleTop"
+			android:label="@string/operationsProgress"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".ScreenLockActivity"
+			android:theme="@style/ScreenLockScreen"
+			android:screenOrientation="landscape"
+			android:launchMode="singleTop" />
+		
+		<activity android:name=".UpdateActivity"
+			android:label="@string/updateBinaries"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".UpdateFromSDCardActivity"
+			android:label="@string/updateFromSDCard"
+			android:launchMode="singleTop" />
+		
+		<activity android:name=".DeleteProjectBinsActivity"
+			android:label="@string/deleteProjectBins"
+			android:launchMode="singleTop" />
+			
+		<activity android:name=".ShutdownDialogActivity"
+			android:launchMode="singleInstance"
+			android:theme="@style/StandaloneDialog" />
+		
+		<activity android:name=".ClientMonitorErrorActivity"
+			android:launchMode="singleInstance"
+			android:theme="@style/StandaloneDialog" />
+		
+		<activity android:name=".TaskInfoDialogActivity"
+			android:launchMode="singleInstance"
+			android:theme="@style/StandaloneDialog" />
+		
+		<activity android:name=".LocalPreferencesActivity"
+			android:label="@string/localPreferences"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".TimePreferencesActivity"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+		
+		<activity android:name=".NewsActivity"
+		    android:label="@string/latestNews"
+			android:launchMode="singleTop"
+			android:theme="@style/Theme.NativeBoincActivity" />
+	</application>
+    
+</manifest>
