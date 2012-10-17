@@ -1,21 +1,3 @@
-/* 
- * NativeBOINC - Native BOINC Client with Manager
- * Copyright (C) 2011, Mateusz Szpakowski
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
 
 package sk.boinc.nativeboinc;
 
@@ -64,7 +46,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 /**
- * @author mat
+ * @author Robson
  *
  */
 public class ProjectListActivity extends ServiceBoincActivity implements InstallerProgressListener,
@@ -237,22 +219,6 @@ public class ProjectListActivity extends ServiceBoincActivity implements Install
 			@Override
 			public void onClick(View v) {
 				onBackPressed();
-			}
-		});
-		
-		Button otherProjectButton = (Button)findViewById(R.id.otherProject);
-		otherProjectButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if (!mGetFromInstaller)
-					showDialog(DIALOG_ENTER_URL);
-				else {
-					finish();
-					Intent intent = new Intent(ProjectListActivity.this, ProjectListActivity.class);
-					intent.putExtra(ARG_FORCE_PROJECT_LIST, true);
-					// with boinc project list 
-					startActivity(intent);
-				}
 			}
 		});
 		

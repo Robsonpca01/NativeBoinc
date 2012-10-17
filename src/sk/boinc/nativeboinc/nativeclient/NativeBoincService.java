@@ -70,7 +70,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 
 /**
- * @author mat
+ * @author Robson
  *
  */
 public class NativeBoincService extends Service implements MonitorListener,
@@ -789,7 +789,7 @@ public class NativeBoincService extends Service implements MonitorListener,
 			String text = getString(R.string.nativeClientStarting);
 			mNotificationController.notifyClientEvent(text, text, false);
 			
-			// inform that service is working
+			// informa que serviço está em funcionamento
 			mIsWorking = true;
 			notifyChangeIsWorking();
 			
@@ -804,6 +804,7 @@ public class NativeBoincService extends Service implements MonitorListener,
 				clientId.setPassword(password);
 				dbAdapter.updateHost(clientId);
 			} catch(IOException ex) {
+				Log.e("ROBSON", "ERRO: "+ ex.getMessage());
 			} finally {
 				dbAdapter.close();
 			}

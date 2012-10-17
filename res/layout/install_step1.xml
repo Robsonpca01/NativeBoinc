@@ -1,24 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-/* 
- * NativeBOINC - Native BOINC Client with Manager
- * Copyright (C) 2011, Mateusz Szpakowski
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
- -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   	android:layout_width="fill_parent"
   	android:layout_height="wrap_content"
@@ -57,34 +37,13 @@
 			  		android:layout_alignParentTop="false"
 			  		android:layout_alignParentRight="false"
 			  		android:text="@string/versionToInstall" />
-			  	<Button android:id="@+id/clientInfo"
-			  		android:layout_width="wrap_content"
-			  		android:layout_height="wrap_content"
-			  		android:textSize="14dip"
-			  		android:enabled="false"
-			  		android:layout_alignParentTop="true"
-			  		android:layout_alignParentRight="true"
-			  		android:text="@string/info" />
 		  	</RelativeLayout>
 		  	<RelativeLayout
 		  	    android:layout_width="fill_parent"
 		  		android:layout_height="wrap_content"
 		  		android:paddingBottom="10dip">
-		  	    <TextView
-		  	        android:layout_width="wrap_content"
-		  	        android:layout_height="wrap_content"
-		  	        android:textSize="@dimen/labelTextSize"
-		  	        android:layout_centerVertical="true"
-		  	        android:layout_alignParentTop="false"
-			  		android:layout_alignParentRight="false"
-		  	        android:text="@string/placeToInstall" />
-		  	    <Spinner android:id="@+id/placeToInstall"
-		  	        android:layout_width="wrap_content"
-		  	        android:layout_height="wrap_content"
-		  	        android:layout_alignParentTop="true"
-			  		android:layout_alignParentRight="true"
-			  		android:prompt="@string/placeToInstall"
-			  		android:entries="@array/placesToInstallLabels" />
+		  	  
+		
 		  	</RelativeLayout>
   		  	<TextView
 		  		android:layout_width="fill_parent"

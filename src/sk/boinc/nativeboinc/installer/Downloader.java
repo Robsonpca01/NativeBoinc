@@ -88,6 +88,7 @@ public class Downloader {
 	public void downloadPGPKey(int channelId, InstallOp installOp, String distribName, String projectUrl)
 			throws InstallationException {
 		
+		
 		Thread currentThread = Thread.currentThread();
 		
 		if (channelId == InstallerService.DEFAULT_CHANNEL_ID)
@@ -189,163 +190,169 @@ public class Downloader {
 					throws InstallationException {
 		if (Logging.DEBUG) Log.d(TAG, "verifying file "+urlString);
 		FileInputStream pgpStream = null;
-		
-		Thread currentThread = Thread.currentThread();
-		
-		if (currentThread.isInterrupted())	// if cancelled
-			return VERIFICATION_CANCELLED;
-		
-		try {
-			synchronized(this) {
-				// should be synchronized, because can be work in multiple threads
-				if (mPgpKeyContent == null) {
-					if (mContext.getFileStreamPath("pgpkey.pgp").exists())
-						pgpStream = mContext.openFileInput("pgpkey.pgp");
-					else	// download from keyserver
-						downloadPGPKey(channelId, installOp, distribName, projectUrl);
-				}
-				
-				if (mPgpKeyContent == null) {
-					if (pgpStream == null) // cancelled
-						return VERIFICATION_CANCELLED;
-					
-					byte[] content = new byte[4096];
-					int readed = pgpStream.read(content);
-					if (readed >= 4096) {
-						throw new IOException("File too big");
-					}
-					
-					mPgpKeyContent = new byte[readed];
-					System.arraycopy(content, 0, mPgpKeyContent, 0, readed);
-				}
-			}
-		} catch(InterruptedIOException ex) {
-			return VERIFICATION_CANCELLED;
-		} catch(IOException ex) {
-			mInstallerHandler.notifyError(channelId, installOp, distribName, projectUrl,
-					mContext.getString(R.string.loadPGPKeyError));
-			throw new InstallationException();
-		} finally {
-			try {
-				if (pgpStream != null)
-					pgpStream.close();
-			} catch(IOException ex) { }
-		}
-		
-		if (currentThread.isInterrupted())
-			return VERIFICATION_CANCELLED;
-		
-		byte[] signContent = null;
-		InputStream signatureStream = null;
-		/* download file signature */
-		try {
-			URL url = new URL(urlString+".asc");
-			URLConnection conn = url.openConnection();
-			signatureStream = conn.getInputStream();
+			Thread currentThread;
 			
-			byte[] content = new byte[4096];
-			int readed = signatureStream.read(content);
-			if (readed >= 4096) {
-				throw new IOException("File too big");
-			}
-			
-			signContent = new byte[readed];
-			System.arraycopy(content, 0, signContent, 0, readed);
-		} catch(InterruptedIOException ex) {
-			return VERIFICATION_CANCELLED;
-		} catch(IOException ex) {
-			mInstallerHandler.notifyError(channelId, installOp, distribName, projectUrl,
-					mContext.getString(R.string.downloadSignatureError));
-			throw new InstallationException();
-		} finally {
-			try {
-				if (signatureStream != null)
-					signatureStream.close();
-			} catch(IOException ex) { }
-		}
+			return VERIFIED_SUCCESFULLY;
 		
-		if (currentThread.isInterrupted())
-			return VERIFICATION_CANCELLED;
+	
+	//	Thread currentThread = Thread.currentThread();
 		
-		String opDesc = mContext.getString(R.string.verifySignature);
 		
-		if (channelId == InstallerService.DEFAULT_CHANNEL_ID)
-			mInstallerHandler.notifyOperation(distribName, projectUrl, opDesc);
+//		if (currentThread.isInterrupted())	// if cancelled
+//			return VERIFICATION_CANCELLED;
+//		
 		
-		/* verify file signature */
-		InputStream bIStream = new ByteArrayInputStream(signContent);
-		InputStream contentStream = null;
+//		try {
+//			synchronized(this) {
+//				// should be synchronized, because can be work in multiple threads
+//				if (mPgpKeyContent == null) {
+//					if (mContext.getFileStreamPath("pgpkey.pgp").exists())
+//						pgpStream = mContext.openFileInput("pgpkey.pgp");
+//					else	// download from keyserver
+//						downloadPGPKey(channelId, installOp, distribName, projectUrl);
+//				}
+//				
+//				if (mPgpKeyContent == null) {
+//					if (pgpStream == null) // cancelled
+//						return VERIFICATION_CANCELLED;
+//					
+//					byte[] content = new byte[4096];
+//					int readed = pgpStream.read(content);
+//					if (readed >= 4096) {
+//						throw new IOException("File too big");
+//					}
+//					
+//					mPgpKeyContent = new byte[readed];
+//					System.arraycopy(content, 0, mPgpKeyContent, 0, readed);
+//				}
+//			}
+//		} catch(InterruptedIOException ex) {
+//			return VERIFICATION_CANCELLED;
+//		} catch(IOException ex) {
+//			mInstallerHandler.notifyError(channelId, installOp, distribName, projectUrl,
+//					mContext.getString(R.string.loadPGPKeyError));
+//			throw new InstallationException();
+//		} finally {
+//			try {
+//				if (pgpStream != null)
+//					pgpStream.close();
+//			} catch(IOException ex) { }
+//		}
+//		
+//		if (currentThread.isInterrupted())
+//			return VERIFICATION_CANCELLED;
 		
-		try {
-			bIStream = PGPUtil.getDecoderStream(bIStream);
-			
-			PGPObjectFactory pgpFact = new PGPObjectFactory(bIStream);
-	        
-	        PGPSignatureList pgpSignList = (PGPSignatureList)pgpFact.nextObject();
-	        
-	        InputStream keyInStream = new ByteArrayInputStream(mPgpKeyContent);
-	        
-	        PGPPublicKeyRingCollection pgpPubRingCollection = 
-	        	new PGPPublicKeyRingCollection(PGPUtil.getDecoderStream(keyInStream));
-	        
-	        contentStream = new BufferedInputStream(new FileInputStream(file));
-
-	        PGPSignature signature = pgpSignList.get(0);
-	        PGPPublicKey key = pgpPubRingCollection.getPublicKey(signature.getKeyID());
-	        
-	        signature.initVerify(key, "BC");
-
-	        long length = file.length();
-	        
-	        int ch;
-	        long readed = 0;
-	        long time = System.currentTimeMillis();
-	        
-	        while ((ch = contentStream.read()) >= 0) {
-	            signature.update((byte)ch);
-	            readed++;
-	            
-	            if(currentThread.isInterrupted())	// do cancel
-	            	return VERIFICATION_CANCELLED;
-	            
-	            if (withProgress && (readed & 8191) == 0) {
-	            	long newTime = System.currentTimeMillis(); 
-	            	if (newTime-time > NOTIFY_PERIOD) {
-	            		if (channelId == InstallerService.DEFAULT_CHANNEL_ID)
-	            			mInstallerHandler.notifyProgress(distribName, projectUrl, opDesc,
-	            					(int)((double)readed*10000.0/(double)length));
-	            		time = newTime;
-	            	}
-	            	/*try {
-						Thread.sleep(40);
-					} catch(InterruptedException ex) {
-						return VERIFICATION_CANCELLED;
-					}*/
-	            }
-	        }
-	        
-	        if (withProgress && channelId == InstallerService.DEFAULT_CHANNEL_ID)
-	        	mInstallerHandler.notifyProgress(distribName, projectUrl, opDesc,
-	        			InstallerProgressListener.FINISH_PROGRESS);
-	        
-	        if (signature.verify())
-	        	return VERIFIED_SUCCESFULLY;
-	        else
-	        	return VERIFICATION_FAILED;
-		} catch(InterruptedIOException ex) {
-			if (Logging.DEBUG) Log.d(TAG, "verif cancelled");
-			return VERIFICATION_CANCELLED;
-		} catch (Exception ex) {
-			if (Logging.DEBUG) Log.d(TAG, "verif failed:"+ex.getMessage());
-			mInstallerHandler.notifyError(channelId, installOp, distribName, projectUrl,
-					mContext.getString(R.string.verifySignatureError));
-			throw new InstallationException();
-		} finally {
-			try {
-				if (contentStream != null)
-					contentStream.close();
-			} catch(IOException ex) { }
-		}
+//		byte[] signContent = null;
+//		InputStream signatureStream = null;
+//		/* download file signature */
+//		try {
+//			URL url = new URL(urlString+".asc");
+//			URLConnection conn = url.openConnection();
+//			signatureStream = conn.getInputStream();
+//			
+//			byte[] content = new byte[4096];
+//			int readed = signatureStream.read(content);
+//			if (readed >= 4096) {
+//				throw new IOException("File too big");
+//			}
+//			
+//			signContent = new byte[readed];
+//			System.arraycopy(content, 0, signContent, 0, readed);
+//		} catch(InterruptedIOException ex) {
+//			return VERIFICATION_CANCELLED;
+//		} catch(IOException ex) {
+//			mInstallerHandler.notifyError(channelId, installOp, distribName, projectUrl,
+//					mContext.getString(R.string.downloadSignatureError));
+//			throw new InstallationException();
+//		} finally {
+//			try {
+//				if (signatureStream != null)
+//					signatureStream.close();
+//			} catch(IOException ex) { }
+//		}
+//		
+//		if (currentThread.isInterrupted())
+//			return VERIFICATION_CANCELLED;
+//		
+//		String opDesc = mContext.getString(R.string.verifySignature);
+//		
+//		if (channelId == InstallerService.DEFAULT_CHANNEL_ID)
+//			mInstallerHandler.notifyOperation(distribName, projectUrl, opDesc);
+//		
+//		/* verify file signature */
+//		InputStream bIStream = new ByteArrayInputStream(signContent);
+//		InputStream contentStream = null;
+//		
+//		try {
+//			bIStream = PGPUtil.getDecoderStream(bIStream);
+//			
+//			PGPObjectFactory pgpFact = new PGPObjectFactory(bIStream);
+//	        
+//	        PGPSignatureList pgpSignList = (PGPSignatureList)pgpFact.nextObject();
+//	        
+//	        InputStream keyInStream = new ByteArrayInputStream(mPgpKeyContent);
+//	        
+//	        PGPPublicKeyRingCollection pgpPubRingCollection = 
+//	        	new PGPPublicKeyRingCollection(PGPUtil.getDecoderStream(keyInStream));
+//	        
+//	        contentStream = new BufferedInputStream(new FileInputStream(file));
+//
+//	        PGPSignature signature = pgpSignList.get(0);
+//	        PGPPublicKey key = pgpPubRingCollection.getPublicKey(signature.getKeyID());
+//	        
+//	        signature.initVerify(key, "BC");
+//
+//	        long length = file.length();
+//	        
+//	        int ch;
+//	        long readed = 0;
+//	        long time = System.currentTimeMillis();
+//	        
+//	        while ((ch = contentStream.read()) >= 0) {
+//	            signature.update((byte)ch);
+//	            readed++;
+//	            
+//	            if(currentThread.isInterrupted())	// do cancel
+//	            	return VERIFICATION_CANCELLED;
+//	            
+//	            if (withProgress && (readed & 8191) == 0) {
+//	            	long newTime = System.currentTimeMillis(); 
+//	            	if (newTime-time > NOTIFY_PERIOD) {
+//	            		if (channelId == InstallerService.DEFAULT_CHANNEL_ID)
+//	            			mInstallerHandler.notifyProgress(distribName, projectUrl, opDesc,
+//	            					(int)((double)readed*10000.0/(double)length));
+//	            		time = newTime;
+//	            	}
+//	            	/*try {
+//						Thread.sleep(40);
+//					} catch(InterruptedException ex) {
+//						return VERIFICATION_CANCELLED;
+//					}*/
+//	            }
+//	        }
+//	        
+//	        if (withProgress && channelId == InstallerService.DEFAULT_CHANNEL_ID)
+//	        	mInstallerHandler.notifyProgress(distribName, projectUrl, opDesc,
+//	        			InstallerProgressListener.FINISH_PROGRESS);
+//	        
+//	        if (signature.verify())
+//	        	return VERIFIED_SUCCESFULLY;
+//	        else
+//	        	return VERIFICATION_FAILED;
+//		} catch(InterruptedIOException ex) {
+//			if (Logging.DEBUG) Log.d(TAG, "verif cancelled");
+//			return VERIFICATION_CANCELLED;
+//		} catch (Exception ex) {
+//			if (Logging.DEBUG) Log.d(TAG, "verif failed:"+ex.getMessage());
+//			mInstallerHandler.notifyError(channelId, installOp, distribName, projectUrl,
+//					mContext.getString(R.string.verifySignatureError));
+//			throw new InstallationException();
+//		} finally {
+//			try {
+//				if (contentStream != null)
+//					contentStream.close();
+//			} catch(IOException ex) { }
+//		}
 	}
 	
 	public void downloadFile(String urlString, String outFilename, final String opDesc,
@@ -361,6 +368,7 @@ public class Downloader {
 		FileOutputStream outStream = null;
 		
 		try {
+			
 			URL url = new URL(urlString);
 			
 			if (channelId == InstallerService.DEFAULT_CHANNEL_ID)
@@ -401,12 +409,7 @@ public class Downloader {
 							currentTime = newTime;
 						}
 					}
-					/*try {
-						Thread.sleep(60);
-					} catch(InterruptedException ex) {
-						currentThread.interrupt();
-						return;
-					}*/
+					
 				}
 				
 				outStream.flush();
@@ -420,7 +423,7 @@ public class Downloader {
 			return; // cancelled
 		} catch(IOException ex) {
 			mContext.deleteFile(outFilename);
-			mInstallerHandler.notifyError(channelId, installOp, distribName, projectUrl, messageError);
+			mInstallerHandler.notifyError(channelId, installOp, distribName, projectUrl, messageError + ex.getMessage());
 			throw new InstallationException();
 		} finally {
 			try {

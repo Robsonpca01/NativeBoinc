@@ -41,71 +41,69 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 /**
- * @author mat
+ * @author Robson
  * 
  */
-public class InstallStep1Activity extends ServiceBoincActivity implements InstallerUpdateListener {
+public class InstallStep1Activity extends ServiceBoincActivity implements
+		InstallerUpdateListener {
 	private final static String TAG = "InstallStep1Activity";
 
 	private TextView mVersionToInstall = null;
 
 	private BoincManagerApplication mApp = null;
-	
+
 	// if true, then client distrib shouldnot be updated
 	private ClientDistrib mClientDistrib = null;
-	private int mClientDistribProgressState = ProgressState.NOT_RUN; 
-	
-	private Button mInfoButton = null;
+	private int mClientDistribProgressState = ProgressState.NOT_RUN;
+
 	private Button mNextButton = null;
-	
-	private Spinner mInstallPlaceSpinner = null;
-	
+
 	@Override
 	public int getInstallerChannelId() {
 		return InstallerService.DEFAULT_CHANNEL_ID;
 	}
-	
+
 	private static class SavedState {
 		private final ClientDistrib mClientDistrib;
 		private final int mClientDistribProgressState;
-		
+
 		public SavedState(InstallStep1Activity activity) {
 			mClientDistrib = activity.mClientDistrib;
 			mClientDistribProgressState = activity.mClientDistribProgressState;
 		}
-		
+
 		public void restore(InstallStep1Activity activity) {
 			activity.mClientDistrib = mClientDistrib;
 			activity.mClientDistribProgressState = mClientDistribProgressState;
 		}
 	}
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 
-		SavedState savedState = (SavedState)getLastNonConfigurationInstance();
+		SavedState savedState = (SavedState) getLastNonConfigurationInstance();
 		if (savedState != null)
 			savedState.restore(this);
-		
+
 		setUpService(false, false, false, false, true, true);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.install_step1);
 
-		mVersionToInstall = (TextView)findViewById(R.id.versionToInstall);
-		mNextButton = (Button)findViewById(R.id.installNext);
-		mInfoButton = (Button)findViewById(R.id.clientInfo);
-		
-		mInstallPlaceSpinner = (Spinner)findViewById(R.id.placeToInstall);
+		mVersionToInstall = (TextView) findViewById(R.id.versionToInstall);
+		mNextButton = (Button) findViewById(R.id.installNext);
 
-		Button cancelButton = (Button)findViewById(R.id.installCancel);
-		
+		Button cancelButton = (Button) findViewById(R.id.installCancel);
+
 		if (mClientDistrib == null)
-			mVersionToInstall.setText(getString(R.string.versionToInstall) + ": ...");
+			mVersionToInstall.setText(getString(R.string.versionToInstall)
+					+ ": ...");
 
 		mApp = (BoincManagerApplication) getApplication();
-		mApp.setInstallerStage(BoincManagerApplication.INSTALLER_CLIENT_STAGE);	// set as run
-		
+		mApp.setInstallerStage(BoincManagerApplication.INSTALLER_CLIENT_STAGE); // set
+																				// as
+																				// run
+
 		mNextButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -120,14 +118,7 @@ public class InstallStep1Activity extends ServiceBoincActivity implements Instal
 			}
 		});
 
-		mInfoButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				StandardDialogs.showDistribInfoDialog(InstallStep1Activity.this,
-						InstallerService.BOINC_CLIENT_ITEM_NAME, mClientDistrib.version,
-						mClientDistrib.description, mClientDistrib.changes);
-			}
-		});
+		
 	}
 
 	@Override
@@ -136,37 +127,38 @@ public class InstallStep1Activity extends ServiceBoincActivity implements Instal
 		if (mInstaller != null)
 			updateActivityState();
 	}
-	
+
 	@Override
 	public void onBackPressed() {
 		if (mInstaller != null)
 			mInstaller.cancelSimpleOperation();
 		finish();
 	}
-	
+
 	@Override
 	public Object onRetainNonConfigurationInstance() {
 		return new SavedState(this);
 	}
-	
-	private void updateClientVersionText() {
-		mVersionToInstall.setText(getString(R.string.versionToInstall) + ": " +
-				mClientDistrib.version);
 
-		mInfoButton.setEnabled(true);
+	private void updateClientVersionText() {
+		mVersionToInstall.setText(getString(R.string.versionToInstall) + ": "
+				+ mClientDistrib.version);
+
+	
 		mNextButton.setEnabled(true);
 	}
-	
+
 	private void updateActivityState() {
 		setProgressBarIndeterminateVisibility(mInstaller.isWorking());
-		
+
 		if (mInstaller.handlePendingErrors(InstallOp.UpdateClientDistrib, this))
 			return;
-		
+
 		if (mClientDistrib == null) {
 			if (mClientDistribProgressState == ProgressState.IN_PROGRESS) {
-				mClientDistrib = (ClientDistrib)mInstaller.getPendingOutput(InstallOp.UpdateClientDistrib);
-				
+				mClientDistrib = (ClientDistrib) mInstaller
+						.getPendingOutput(InstallOp.UpdateClientDistrib);
+
 				if (mClientDistrib != null)
 					updateClientVersionText();
 			} else if (mClientDistribProgressState == ProgressState.NOT_RUN) {
@@ -175,20 +167,20 @@ public class InstallStep1Activity extends ServiceBoincActivity implements Instal
 				mInstaller.updateClientDistrib();
 			}
 			// if finished but failed
-		} else 
+		} else
 			updateClientVersionText();
 	}
-	
+
 	@Override
 	protected void onInstallerConnected() {
 		updateActivityState();
 	}
-	
+
 	@Override
 	protected void onInstallerDisconnected() {
 		setProgressBarIndeterminateVisibility(false);
 	}
-	
+
 	@Override
 	public Dialog onCreateDialog(int dialogId, Bundle args) {
 		return StandardDialogs.onCreateDialog(this, dialogId, args);
@@ -198,20 +190,23 @@ public class InstallStep1Activity extends ServiceBoincActivity implements Instal
 	public void onPrepareDialog(int dialogId, Dialog dialog, Bundle args) {
 		StandardDialogs.onPrepareDialog(this, dialogId, dialog, args);
 	}
-	
+
 	@Override
-	public boolean onOperationError(InstallOp installOp, String distribName, String errorMessage) {
-		if (installOp.equals(InstallOp.UpdateClientDistrib) &&
-				mClientDistribProgressState == ProgressState.IN_PROGRESS) {
+	public boolean onOperationError(InstallOp installOp, String distribName,
+			String errorMessage) {
+		if (installOp.equals(InstallOp.UpdateClientDistrib)
+				&& mClientDistribProgressState == ProgressState.IN_PROGRESS) {
 			mClientDistribProgressState = ProgressState.FAILED;
-			StandardDialogs.showInstallErrorDialog(this, distribName, errorMessage);
+			StandardDialogs.showInstallErrorDialog(this, distribName,
+					errorMessage);
 			return true;
 		}
 		return false;
 	}
 
 	@Override
-	public void currentProjectDistribList(ArrayList<ProjectDistrib> projectDistribs) {
+	public void currentProjectDistribList(
+			ArrayList<ProjectDistrib> projectDistribs) {
 		// do nothing
 	}
 
@@ -228,17 +223,15 @@ public class InstallStep1Activity extends ServiceBoincActivity implements Instal
 	private void installClient() {
 		if (mInstaller == null)
 			return;
-		
+
 		mApp.setInstallerStage(BoincManagerApplication.INSTALLER_CLIENT_INSTALLING_STAGE);
-		
-		if (mInstallPlaceSpinner.getSelectedItemPosition() == 0) //: first internal memory
-			BoincManagerApplication.setBoincPlace(this, false);
-		else
-			BoincManagerApplication.setBoincPlace(this, true);
-		
+
+		// força instalação sempre no SD card
+		BoincManagerApplication.setBoincPlace(this, true);
+
 		mInstaller.installClientAutomatically();
 		finish();
-		
+
 		startActivity(new Intent(this, ProgressActivity.class));
 	}
 
@@ -250,12 +243,12 @@ public class InstallStep1Activity extends ServiceBoincActivity implements Instal
 	@Override
 	public void binariesToUpdateOrInstall(UpdateItem[] updateItems) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void binariesToUpdateFromSDCard(String[] projectNames) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

@@ -43,6 +43,8 @@ import sk.boinc.nativeboinc.util.HostListDbAdapter;
 import sk.boinc.nativeboinc.util.PreferenceName;
 import sk.boinc.nativeboinc.util.ScreenOrientationHandler;
 import sk.boinc.nativeboinc.util.StandardDialogs;
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -73,6 +75,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+@TargetApi(11)
+@SuppressLint("NewApi")
 public class BoincManagerActivity extends TabActivity implements ClientUpdateNoticesReceiver,
 		ClientPollReceiver, NativeBoincStateListener, MonitorListener {
 	private static final String TAG = "BoincManagerActivity";
