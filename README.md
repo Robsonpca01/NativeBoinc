@@ -1,8 +1,4 @@
-NativeBOINC for Android project.
+Estrutura do Repositório
 
-Structure of repository:
-
-
-* src/ - main source directory
-  * NativeBOINC - source of BOINC Manager based on AndroBOINC (with installer and boinc client runner)
+* src/ - Código Forte
  
