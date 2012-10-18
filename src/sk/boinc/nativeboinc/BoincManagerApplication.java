@@ -1,21 +1,3 @@
-/* 
- * AndroBOINC - BOINC Manager for Android
- * Copyright (C) 2010, Pavol Michalec
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
 
 package sk.boinc.nativeboinc;
 
@@ -30,8 +12,6 @@ import sk.boinc.nativeboinc.debug.Logging;
 import sk.boinc.nativeboinc.nativeclient.NativeBoincStateListener;
 import sk.boinc.nativeboinc.nativeclient.NativeBoincService;
 import sk.boinc.nativeboinc.nativeclient.NativeBoincUtils;
-import sk.boinc.nativeboinc.news.NewsReceiver;
-import sk.boinc.nativeboinc.news.NewsUtil;
 import sk.boinc.nativeboinc.service.ConnectionManagerService;
 import sk.boinc.nativeboinc.util.ActivityVisibilityTracker;
 import sk.boinc.nativeboinc.util.NativeClientAutostart;
@@ -119,10 +99,6 @@ public class BoincManagerApplication extends Application implements NativeBoincS
 	};
 	
 	private MyActivityVisibilityTracker mVisibilityTracker = null;
-	
-	private NewsReceiver.NewsFetcherTask mCurrentNewsFetcherTask = null;
-	private NewsReceiver.NewsFetcherBridge mNewsFetcherBridge = null;
-	private NewsReceiver mNewsReceiverPrefsListener = null;
 	
 	// restart after reinstall handling
 	private Object mRestartAfterReinstallSync = new Object();
@@ -237,13 +213,7 @@ public class BoincManagerApplication extends Application implements NativeBoincS
 		mGlobalPrefs.registerOnSharedPreferenceChangeListener(mRefreshWidgetHandler);
 		
 		// initialize news service
-		mNewsReceiverPrefsListener = new NewsReceiver(this);
-		mGlobalPrefs.registerOnSharedPreferenceChangeListener(mNewsReceiverPrefsListener);
-		NewsUtil.initialize();
-		NewsReceiver.initialize(this);
-		
-		mNewsFetcherBridge = new NewsReceiver.NewsFetcherBridge(mStandardHandler);
-		
+	
 		if (NativeClientAutostart.isAutostartsAtAppStartup(mGlobalPrefs))
 			autostartClient();
 	}
@@ -359,21 +329,7 @@ public class BoincManagerApplication extends Application implements NativeBoincS
 		Linkify.addLinks(text, Linkify.ALL);
 	}
 
-	public void setChangelogText(TextView text) {
-		String changelog = readRawText(R.raw.changelog);
-		// Transform plain-text ChangeLog to simple HTML format:
-		// 1. Make line beginning with "Version" bold
-		String trans1 = changelog.replaceAll("(?m)^([Vv]ersion.*)$", "<b>$1</b>");
-		// 2. Append <br> at the end of each line
-		String trans2 = trans1.replaceAll("(?m)^(.*)$", "$1<br>");
-		// 3. Add HTML tags
-		if (mStringBuilder == null) mStringBuilder = new StringBuilder(32);
-		mStringBuilder.setLength(0);
-		mStringBuilder.append("<html>\n<body>\n");
-		mStringBuilder.append(trans2);
-		mStringBuilder.append("\n</body>\n</html>");
-		text.setText(Html.fromHtml(mStringBuilder.toString()));
-	}
+
 	
 	public void setHtmlText(TextView text, String content) {
 		mStringBuilder.setLength(0);
@@ -570,25 +526,7 @@ public class BoincManagerApplication extends Application implements NativeBoincS
 		return mVisibilityTracker;
 	}
 	
-	/**
-	 * news handling
-	 */
-	public synchronized void setNewsFetcherTask(NewsReceiver.NewsFetcherTask task) {
-		mCurrentNewsFetcherTask = task;
-	}
-	
-	public synchronized void removeNewsFetcherTask() {
-		mCurrentNewsFetcherTask = null;
-	}
-	
-	public synchronized NewsReceiver.NewsFetcherTask getNewsFetcherTask() {
-		return mCurrentNewsFetcherTask;
-	}
-	
-	public NewsReceiver.NewsFetcherBridge getNewsFetcherBridge() {
-		return mNewsFetcherBridge;
-	}
-	
+
 	/*
 	 * standard handler
 	 */

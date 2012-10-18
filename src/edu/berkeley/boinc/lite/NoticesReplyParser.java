@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package edu.berkeley.boinc.lite;
 
 import sk.boinc.nativeboinc.debug.Logging;

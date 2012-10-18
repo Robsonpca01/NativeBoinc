@@ -1,22 +1,3 @@
-/* 
- * AndroBOINC - BOINC Manager for Android
- * Copyright (C) 2010, Pavol Michalec
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
-
 package sk.boinc.nativeboinc;
 
 import sk.boinc.nativeboinc.debug.Logging;
@@ -93,31 +74,6 @@ public class AppPreferencesActivity extends PreferenceActivity implements OnShar
 			}
 		});
 		
-		// ScreenLock Update period
-		listPref = (ListPreference)findPreference(PreferenceName.SCREEN_LOCK_UPDATE);
-		listPref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-			@Override
-			public boolean onPreferenceChange(Preference preference, Object newValue) {
-				ListPreference listPref = (ListPreference)preference;
-				int idx = listPref.findIndexOfValue((String)newValue);
-				CharSequence[] allDesc = listPref.getEntries();
-				listPref.setSummary(getString(R.string.prefScreenLockUpdateIntervalSummary) + " " + allDesc[idx]);
-				return true;
-			}
-		});
-		
-		// Widget Update period
-		listPref = (ListPreference)findPreference(PreferenceName.WIDGET_UPDATE);
-		listPref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-			@Override
-			public boolean onPreferenceChange(Preference preference, Object newValue) {
-				ListPreference listPref = (ListPreference)preference;
-				int idx = listPref.findIndexOfValue((String)newValue);
-				CharSequence[] allDesc = listPref.getEntries();
-				listPref.setSummary(getString(R.string.prefWidgetUpdateIntervalSummary) + " " + allDesc[idx]);
-				return true;
-			}
-		});
 		
 		// Keep screen on:
 		// This preference does not need special handling here.
@@ -127,60 +83,7 @@ public class AppPreferencesActivity extends PreferenceActivity implements OnShar
 		// This preference does not need special handling here.
 		// Data in XML file will manage all needed handling.
 
-		// Automatic refresh interval for WiFi
-		listPref = (ListPreference)findPreference(PreferenceName.AUTO_UPDATE_WIFI);
-		listPref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-			public boolean onPreferenceChange(Preference preference, Object newValue) {
-				ListPreference listPref = (ListPreference)preference;
-				int idx = listPref.findIndexOfValue((String)newValue);
-				CharSequence[] allDesc = listPref.getEntries();
-				if (idx == 0) {
-					// Automatic updates are disabled
-					listPref.setSummary(R.string.disabled);
-				}
-				else {
-					listPref.setSummary(getString(R.string.prefAutoUpdateIntervalSummary) + " " + allDesc[idx]);
-				}
-				return true;
-			}
-		});
-
-		// Automatic refresh interval for Mobile
-		listPref = (ListPreference)findPreference(PreferenceName.AUTO_UPDATE_MOBILE);
-		listPref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-			public boolean onPreferenceChange(Preference preference, Object newValue) {
-				ListPreference listPref = (ListPreference)preference;
-				int idx = listPref.findIndexOfValue((String)newValue);
-				CharSequence[] allDesc = listPref.getEntries();
-				if (idx == 0) {
-					// Automatic updates are disabled
-					listPref.setSummary(R.string.disabled);
-				}
-				else {
-					listPref.setSummary(getString(R.string.prefAutoUpdateIntervalSummary) + " " + allDesc[idx]);
-				}
-				return true;
-			}
-		});
 		
-		// Automatic refresh interval for Localhost
-		listPref = (ListPreference)findPreference(PreferenceName.AUTO_UPDATE_LOCALHOST);
-		listPref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-			public boolean onPreferenceChange(Preference preference, Object newValue) {
-				ListPreference listPref = (ListPreference)preference;
-				int idx = listPref.findIndexOfValue((String)newValue);
-				CharSequence[] allDesc = listPref.getEntries();
-				if (idx == 0) {
-					// Automatic updates are disabled
-					listPref.setSummary(R.string.disabled);
-				}
-				else {
-					listPref.setSummary(getString(R.string.prefAutoUpdateIntervalSummary) + " " + allDesc[idx]);
-				}
-				return true;
-			}
-		});
-
 		// Limit/No-limit initially retrieved messages:
 		// This preference does not need special handling here.
 		// Data in XML file will manage all needed handling.
@@ -214,37 +117,7 @@ public class AppPreferencesActivity extends PreferenceActivity implements OnShar
 				}
 			}
 		});
-
-		// Display About the application
-		pref = findPreference("aboutMe");
-		pref.setSummary(mApp.getApplicationVersion());
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				showDialog(DIALOG_ABOUT);
-				return true;
-			}
-		});
 		
-		// Display Changelog
-		pref = findPreference("changeLog");
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				showDialog(DIALOG_CHANGELOG);
-				return true;
-			}
-		});
-
-		// Display License
-		pref = findPreference("license");
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				showDialog(DIALOG_LICENSE);
-				return true;
-			}
-		});
 	}
 
 	@Override
@@ -260,48 +133,7 @@ public class AppPreferencesActivity extends PreferenceActivity implements OnShar
 		listPref = (ListPreference)findPreference(PreferenceName.SCREEN_ORIENTATION);
 		listPref.setSummary(listPref.getEntry());
 
-		// screen lock refresh
-		listPref = (ListPreference)findPreference(PreferenceName.SCREEN_LOCK_UPDATE);
-		auiIdx = listPref.findIndexOfValue(listPref.getValue());
-		listPref.setSummary(getString(R.string.prefScreenLockUpdateIntervalSummary) + " " + listPref.getEntry());
 		
-		// widget refresh
-		listPref = (ListPreference)findPreference(PreferenceName.WIDGET_UPDATE);
-		auiIdx = listPref.findIndexOfValue(listPref.getValue());
-		listPref.setSummary(getString(R.string.prefWidgetUpdateIntervalSummary) + " " + listPref.getEntry());
-		
-		// Automatic refresh interval for WiFi
-		listPref = (ListPreference)findPreference(PreferenceName.AUTO_UPDATE_WIFI);
-		auiIdx = listPref.findIndexOfValue(listPref.getValue());
-		if (auiIdx == 0) {
-			// Automatic updates are disabled
-			listPref.setSummary(R.string.disabled);
-		}
-		else {
-			listPref.setSummary(getString(R.string.prefAutoUpdateIntervalSummary) + " " + listPref.getEntry());
-		}
-
-		// Automatic refresh interval for Mobile
-		listPref = (ListPreference)findPreference(PreferenceName.AUTO_UPDATE_MOBILE);
-		auiIdx = listPref.findIndexOfValue(listPref.getValue());
-		if (auiIdx == 0) {
-			// Automatic updates are disabled
-			listPref.setSummary(R.string.disabled);
-		}
-		else {
-			listPref.setSummary(getString(R.string.prefAutoUpdateIntervalSummary) + " " + listPref.getEntry());
-		}
-		
-		// Automatic refresh interval for Mobile
-		listPref = (ListPreference)findPreference(PreferenceName.AUTO_UPDATE_LOCALHOST);
-		auiIdx = listPref.findIndexOfValue(listPref.getValue());
-		if (auiIdx == 0) {
-			// Automatic updates are disabled
-			listPref.setSummary(R.string.disabled);
-		}
-		else {
-			listPref.setSummary(getString(R.string.prefAutoUpdateIntervalSummary) + " " + listPref.getEntry());
-		}
 
 		// Register to receive changes in statistics
 		SharedPreferences netStats = getSharedPreferences(NetStatsStorage.NET_STATS_FILE, MODE_PRIVATE);
@@ -366,50 +198,8 @@ public class AppPreferencesActivity extends PreferenceActivity implements OnShar
 					}
 				})
 				.create();
-		case DIALOG_ABOUT:
-			v = LayoutInflater.from(this).inflate(R.layout.dialog, null);
-			text = (TextView)v.findViewById(R.id.dialogText);
-			mApp.setAboutText(text);
-			return new AlertDialog.Builder(this)
-				.setIcon(android.R.drawable.ic_dialog_info)
-				.setTitle(R.string.aboutTitle)
-				.setView(v)
-				.setPositiveButton(R.string.homepage,
-					new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int whichButton) {
-							Uri uri = Uri.parse(getString(R.string.aboutHomepageUrl));
-							startActivity(new Intent(Intent.ACTION_VIEW, uri));
-						}
-					})
-				.setNegativeButton(R.string.dismiss, null)
-        		.create();
-		case DIALOG_LICENSE:
-			v = LayoutInflater.from(this).inflate(R.layout.dialog, null);
-			text = (TextView)v.findViewById(R.id.dialogText);
-			mApp.setLicenseText(text);
-			return new AlertDialog.Builder(this)
-				.setIcon(android.R.drawable.ic_dialog_info)
-				.setTitle(R.string.license)
-				.setView(v)
-				.setPositiveButton(R.string.sources,
-					new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int whichButton) {
-							Uri uri = Uri.parse(getString(R.string.aboutHomepageUrl));
-							startActivity(new Intent(Intent.ACTION_VIEW, uri));
-						}
-					})
-        		.setNegativeButton(R.string.dismiss, null)
-        		.create();
-		case DIALOG_CHANGELOG:
-			v = LayoutInflater.from(this).inflate(R.layout.dialog, null);
-			text = (TextView)v.findViewById(R.id.dialogText);
-			mApp.setChangelogText(text);
-			return new AlertDialog.Builder(this)
-				.setIcon(android.R.drawable.ic_dialog_info)
-				.setTitle(R.string.changelog)
-				.setView(v)
-				.setNegativeButton(R.string.dismiss, null)
-        		.create();
+		
+		
 		}
 		
 		return null;

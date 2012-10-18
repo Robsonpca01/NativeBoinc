@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-/* 
- * NativeBOINC - Native BOINC Client with Manager
- * Copyright (C) 2011, Mateusz Szpakowski
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
--->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
-    <PreferenceCategory android:title="@string/newsAndUpdates">
-    	<Preference
-			android:key="latestNews"
-			android:title="@string/nativeLatestNewsTitle"
-			android:summary="@string/nativeLatestNewsSummary"
-			android:persistent="false" />
-   	    <CheckBoxPreference
-            android:key="nativeNewsUpdate"
-            android:title="@string/notifyNewsUpdatesTitle"
-            android:summaryOn="@string/notifyNewsUpdatesSummaryOn"
-            android:summaryOff="@string/notifyNewsUpdatesSummaryOff"
-            android:defaultValue="true"
-            android:persistent="true" />
-	</PreferenceCategory>    	
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >    	
     <PreferenceCategory android:title="@string/nativeAutostart">
         <ListPreference
             android:key="nativeAutostart"
@@ -64,33 +31,13 @@
 			android:inputType="textPassword"
 			android:defaultValue=""
 			android:persistent="false" />
-        <Preference
-            android:key="nativeAccessList"
-            android:title="@string/nativeAccessListTitle"
-            android:summary="@string/nativeAccessListSummary" 
-            android:persistent="false"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/nativeBoincInstallation">
-        <Preference
-            android:key="nativeMoveInstallation"
-            android:title="@string/nativeMoveToIntMemTitle"
-            android:summary="@string/nativeMoveToIntMemSummary"
-            android:persistent="false" />
         <Preference
             android:key="nativeInstalledBinaries"
             android:title="@string/nativeInstalledBinariesTitle"
             android:summary="@string/nativeInstalledBinariesSummary" 
             android:persistent="false" />
-       	<Preference
-       	    android:key="nativeUpdateBinaries"
-       	    android:title="@string/nativeUpdateBinariesTitle"
-       	    android:summary="@string/nativeUpdateBinariesSummary"
-       	    android:persistent="false" />
-       	<Preference
-       	    android:key="nativeUpdateFromSDCard"
-       	    android:title="@string/nativeUpdateFromSDCardTitle"
-       	    android:summary="@string/nativeUpdateFromSDCardSummary"
-       	    android:persistent="false" />
        	<Preference
        	    android:key="nativeReinstall"
        	    android:title="@string/nativeReinstallTitle"
@@ -100,18 +47,6 @@
        	    android:key="nativeDeleteProjectBins"
        	    android:title="@string/nativeDeleteProjectBinsTitle"
        	    android:summary="@string/nativeDeleteProjectBinsSummary"
-       	    android:persistent="false" />
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/nativeBoincDiagnostics">
-        <Preference
-       	    android:key="nativeDumpBoincDir"
-       	    android:title="@string/nativeDumpBoincDirTitle"
-       	    android:summary="@string/nativeDumpBoincDirSummary"
-       	    android:persistent="false" />
-        <Preference
-       	    android:key="nativeShowLogs"
-       	    android:title="@string/nativeShowLogsTitle"
-       	    android:summary="@string/nativeShowLogsSummary"
        	    android:persistent="false" />
     </PreferenceCategory>
 </PreferenceScreen>

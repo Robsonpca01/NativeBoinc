@@ -1,41 +1,16 @@
-/* 
- * AndroBOINC - BOINC Manager for Android
- * Copyright (C) 2010, Pavol Michalec
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
 
 package sk.boinc.nativeboinc;
 
 import hal.android.workarounds.FixedProgressDialog;
-
-import java.util.ArrayList;
-
-import edu.berkeley.boinc.nativeboinc.ClientEvent;
-
 import sk.boinc.nativeboinc.clientconnection.BoincOp;
 import sk.boinc.nativeboinc.clientconnection.ClientPollReceiver;
-import sk.boinc.nativeboinc.clientconnection.ClientUpdateNoticesReceiver;
 import sk.boinc.nativeboinc.clientconnection.NoConnectivityException;
-import sk.boinc.nativeboinc.clientconnection.NoticeInfo;
 import sk.boinc.nativeboinc.clientconnection.VersionInfo;
 import sk.boinc.nativeboinc.debug.Logging;
 import sk.boinc.nativeboinc.installer.InstallerService;
 import sk.boinc.nativeboinc.nativeclient.MonitorListener;
-import sk.boinc.nativeboinc.nativeclient.NativeBoincStateListener;
 import sk.boinc.nativeboinc.nativeclient.NativeBoincService;
+import sk.boinc.nativeboinc.nativeclient.NativeBoincStateListener;
 import sk.boinc.nativeboinc.service.ConnectionManagerService;
 import sk.boinc.nativeboinc.util.ActivityVisibilityTracker;
 import sk.boinc.nativeboinc.util.ClientId;
@@ -52,10 +27,10 @@ import android.app.TabActivity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
-import android.content.DialogInterface.OnCancelListener;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
@@ -73,11 +48,12 @@ import android.view.Window;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
+import edu.berkeley.boinc.nativeboinc.ClientEvent;
 
 
 @TargetApi(11)
 @SuppressLint("NewApi")
-public class BoincManagerActivity extends TabActivity implements ClientUpdateNoticesReceiver,
+public class BoincManagerActivity extends TabActivity implements 
 		ClientPollReceiver, NativeBoincStateListener, MonitorListener {
 	private static final String TAG = "BoincManagerActivity";
 
@@ -351,18 +327,12 @@ public class BoincManagerActivity extends TabActivity implements ClientUpdateNot
 				.setIndicator(getString(R.string.messages), res.getDrawable(R.drawable.ic_tab_messages))
 				.setContent(new Intent(this, MessagesActivity.class)));
 		
-		// Tab 5 - Notices
-		tabHost.addTab(tabHost.newTabSpec("tab_notices")
-				.setIndicator(getString(R.string.notices), res.getDrawable(R.drawable.ic_tab_notices))
-				.setContent(new Intent(this, NoticesActivity.class)));
-
 		// Set all tabs one by one, to start all activities now
 		// It is better to receive early updates of data
 		tabHost.setCurrentTabByTag("tab_messages");
 		tabHost.setCurrentTabByTag("tab_tasks");
 		tabHost.setCurrentTabByTag("tab_transfers");
 		tabHost.setCurrentTabByTag("tab_projects");
-		tabHost.setCurrentTabByTag("tab_notices");
 		// Set saved tab (the last selected on previous run) as current
 		SharedPreferences globalPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 		int lastActiveTab = globalPrefs.getInt(PreferenceName.LAST_ACTIVE_TAB, 1);
@@ -423,21 +393,6 @@ public class BoincManagerActivity extends TabActivity implements ClientUpdateNot
 					mConnectionManager.updateMessages();
 			}
 		});
-		
-		getTabWidget().getChildAt(4).setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Log.d(TAG, "Click tab: 4");
-				TabHost tabHost = getTabHost();
-				if (tabHost.getCurrentTab() != 4)
-					getTabHost().setCurrentTab(4);
-				
-				if (Logging.DEBUG) Log.d(TAG, "Update notices");
-				if (mConnectedClient != null)
-					mConnectionManager.updateNotices();
-			}
-		});
-		
 		
 		getTabHost().setOnTabChangedListener(new TabHost.OnTabChangeListener() {
 			
@@ -804,31 +759,7 @@ public class BoincManagerActivity extends TabActivity implements ClientUpdateNot
 				}
 			});
             return progressDialog;
-		case DIALOG_UPGRADE_INFO:
-			v = LayoutInflater.from(this).inflate(R.layout.dialog, null);
-			text = (TextView)v.findViewById(R.id.dialogText);
-			mApp.setChangelogText(text);
-			return new AlertDialog.Builder(this)
-				.setIcon(android.R.drawable.ic_dialog_info)
-				.setTitle(getString(R.string.upgradedTo) + " " + mApp.getApplicationVersion())
-				.setView(v)
-				.setNegativeButton(R.string.dismiss, 
-					new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int whichButton) {
-							// Progress dialog is allowed since now
-							mProgressDialogAllowed = true;
-							if (Logging.DEBUG) Log.d(TAG, "Progress dialog allowed again");
-						}					
-					})
-				.setOnCancelListener(new OnCancelListener() {
-					@Override
-					public void onCancel(DialogInterface dialog) {
-						// Progress dialog is allowed since now
-						mProgressDialogAllowed = true;
-						if (Logging.DEBUG) Log.d(TAG, "Progress dialog allowed again");
-					}
-				})
-        		.create();
+		
 		case DIALOG_SHUTDOWN:
 			if (mRunner != null && !mRunner.isRun()) {
 				mShowShutdownDialog = false;
@@ -1084,16 +1015,7 @@ public class BoincManagerActivity extends TabActivity implements ClientUpdateNot
 			setProgressBarIndeterminateVisibility(false);
 	}
 
-	@Override
-	public boolean updatedNotices(ArrayList<NoticeInfo> notices) {
-		if (mInitialDataRetrievalStarted) {
-			dismissProgressDialog();
-			mInitialDataRetrievalStarted = false;
-			if (Logging.DEBUG) Log.d(TAG, "Explicit initial data retrieval finished");
-			mInitialDataAvailable = true;
-		}
-		return false;
-	}
+
 
 	@Override
 	public void onClientStart() {
@@ -1194,9 +1116,7 @@ public class BoincManagerActivity extends TabActivity implements ClientUpdateNot
 		case 3: // messages
 			mConnectionManager.updateMessages();
 			break;
-		case 4: // notices
-			mConnectionManager.updateNotices();
-			break;
+		
 		}
 	}
 	
@@ -1312,7 +1232,6 @@ public class BoincManagerActivity extends TabActivity implements ClientUpdateNot
 		mConnectionManager.updateTasks(); // will get whole state
 		mConnectionManager.updateTransfers();
 		mConnectionManager.updateMessages();
-		mConnectionManager.updateNotices();
 		mInitialDataRetrievalStarted = true;
 	}
 }

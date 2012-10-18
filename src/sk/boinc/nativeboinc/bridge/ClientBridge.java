@@ -1,53 +1,27 @@
-/* 
- * AndroBOINC - BOINC Manager for Android
- * Copyright (C) 2010, Pavol Michalec
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
 
 package sk.boinc.nativeboinc.bridge;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.ArrayList;
-
-import edu.berkeley.boinc.lite.AccountIn;
-import edu.berkeley.boinc.lite.AccountMgrInfo;
-import edu.berkeley.boinc.lite.GlobalPreferences;
-import edu.berkeley.boinc.lite.ProjectConfig;
-import edu.berkeley.boinc.lite.ProjectListEntry;
 
 import sk.boinc.nativeboinc.clientconnection.BoincOp;
-import sk.boinc.nativeboinc.clientconnection.ClientAllProjectsListReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientAccountMgrReceiver;
+import sk.boinc.nativeboinc.clientconnection.ClientAllProjectsListReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientError;
+import sk.boinc.nativeboinc.clientconnection.ClientManageReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientPollReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientPreferencesReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientProjectReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientReceiver;
-import sk.boinc.nativeboinc.clientconnection.ClientManageReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientRequestHandler;
 import sk.boinc.nativeboinc.clientconnection.ClientUpdateMessagesReceiver;
-import sk.boinc.nativeboinc.clientconnection.ClientUpdateNoticesReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientUpdateProjectsReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientUpdateTasksReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientUpdateTransfersReceiver;
 import sk.boinc.nativeboinc.clientconnection.HostInfo;
 import sk.boinc.nativeboinc.clientconnection.MessageInfo;
 import sk.boinc.nativeboinc.clientconnection.ModeInfo;
-import sk.boinc.nativeboinc.clientconnection.NoticeInfo;
 import sk.boinc.nativeboinc.clientconnection.PollError;
 import sk.boinc.nativeboinc.clientconnection.PollOp;
 import sk.boinc.nativeboinc.clientconnection.ProjectInfo;
@@ -66,6 +40,11 @@ import android.content.Context;
 import android.os.ConditionVariable;
 import android.os.Handler;
 import android.util.Log;
+import edu.berkeley.boinc.lite.AccountIn;
+import edu.berkeley.boinc.lite.AccountMgrInfo;
+import edu.berkeley.boinc.lite.GlobalPreferences;
+import edu.berkeley.boinc.lite.ProjectConfig;
+import edu.berkeley.boinc.lite.ProjectListEntry;
 
 
 /**
@@ -379,20 +358,7 @@ public class ClientBridge implements ClientRequestHandler {
 			}
 		}
 		
-		public void updatedNotices(final ArrayList <NoticeInfo> notices) {
-			mClientPendingController.finishWithOutput(BoincOp.UpdateNotices, notices);
-			
-			ClientReceiver[] observers = mObservers.toArray(new ClientReceiver[0]);
-			for (ClientReceiver observer: observers) {
-				if (observer instanceof ClientUpdateNoticesReceiver) {
-					ClientUpdateNoticesReceiver callback = (ClientUpdateNoticesReceiver)observer;
-					
-					boolean periodicAllowed = callback.updatedNotices(notices);
-					if (periodicAllowed)
-						mAutoRefresh.scheduleAutomaticRefresh(callback, AutoRefresh.NOTICES, -1);
-				}
-			}
-		}
+		
 		
 		public void onChangeIsWorking(boolean isWorking) {
 			ClientReceiver[] observers = mObservers.toArray(new ClientReceiver[0]);

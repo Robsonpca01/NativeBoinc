@@ -35,7 +35,6 @@ import sk.boinc.nativeboinc.clientconnection.ClientReceiver;
 import sk.boinc.nativeboinc.clientconnection.HostInfo;
 import sk.boinc.nativeboinc.clientconnection.MessageInfo;
 import sk.boinc.nativeboinc.clientconnection.ModeInfo;
-import sk.boinc.nativeboinc.clientconnection.NoticeInfo;
 import sk.boinc.nativeboinc.clientconnection.PollOp;
 import sk.boinc.nativeboinc.clientconnection.ProjectInfo;
 import sk.boinc.nativeboinc.clientconnection.TaskDescriptor;
@@ -105,7 +104,6 @@ public class ClientBridgeWorkerHandler extends Handler {
 	private Set<String> mActiveTasks = new HashSet<String>();
 	private ArrayList<TransferInfo> mTransfers = new ArrayList<TransferInfo>();
 	private SortedMap<Integer, MessageInfo> mMessages = new TreeMap<Integer, MessageInfo>();
-	private SortedMap<Integer, NoticeInfo> mNotices = new TreeMap<Integer, NoticeInfo>();
 	private boolean mInitialStateRetrieved = false;
 
 	private boolean mHaveAti = false;
@@ -538,26 +536,11 @@ public class ClientBridgeWorkerHandler extends Handler {
 			notifyOperationBegin(BoincOp.UpdateNotices);
 		
 		notifyProgress(BoincOp.UpdateNotices, ClientReceiver.PROGRESS_XFER_STARTED);
-		int reqSeqno = (mNotices.isEmpty()) ? 0 : mNotices.lastKey();
 		if (mDisconnecting) {
 			changeIsHandlerWorking(false);
 			return;  // already in disconnect phase
 		}
-		Notices notices = mRpcClient.getNotices(reqSeqno);
-		if (notices == null) {
-			if (Logging.INFO) Log.i(TAG, "RPC failed in updateNotices()");
-			notifyError(BoincOp.UpdateNotices, 0, mContext.getString(R.string.boincOperationError));
-			rpcFailed();
-			changeIsHandlerWorking(false);
-			return;
-		}
-		if (!notices.complete) {
-			// do update
-			dataUpdateNotices(notices.notices);
-		}
-		// always update notices
-		updatedNotices(getNotices());
-		notifyProgress(BoincOp.UpdateNotices, ClientReceiver.PROGRESS_XFER_FINISHED);
+		
 		changeIsHandlerWorking(false);
 	}
 	
@@ -1792,15 +1775,7 @@ public class ClientBridgeWorkerHandler extends Handler {
 		});
 	}
 	
-	private synchronized void updatedNotices(final ArrayList<NoticeInfo> notices) {
-		if (mDisconnecting) return;
-		mReplyHandler.post(new Runnable() {
-			@Override
-			public void run() {
-				mReplyHandler.updatedNotices(notices);
-			}
-		});
-	}
+
 	
 	private synchronized void notifyChangeOfIsWorking() {
 		final boolean currentIsWorking = isWorking();
@@ -2032,8 +2007,7 @@ public class ClientBridgeWorkerHandler extends Handler {
 		Iterator<Notice> ni = notices.iterator();
 		while (ni.hasNext()) {
 			edu.berkeley.boinc.lite.Notice msg = ni.next();
-			NoticeInfo message = NoticeInfoCreator.create(msg, mFormatter);
-			mNotices.put(msg.seqno, message);
+			
 		}
 		if (Logging.DEBUG) Log.d(TAG, "dataUpdateNotices(): End update");
 	}
@@ -2054,7 +2028,5 @@ public class ClientBridgeWorkerHandler extends Handler {
 		return new ArrayList<MessageInfo>(mMessages.values());
 	}
 	
-	private final ArrayList<NoticeInfo> getNotices() {
-		return new ArrayList<NoticeInfo>(mNotices.values());
-	}
+	
 }

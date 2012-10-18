@@ -1,22 +1,3 @@
-/* 
- * NativeBOINC - Native BOINC Client with Manager
- * Copyright (C) 2011, Mateusz Szpakowski
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
-
 package sk.boinc.nativeboinc;
 
 import java.util.ArrayList;
@@ -25,7 +6,6 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import sk.boinc.nativeboinc.installer.InstallerService;
-import sk.boinc.nativeboinc.news.NewsMessage;
 import sk.boinc.nativeboinc.util.NotificationId;
 import sk.boinc.nativeboinc.util.ProgressItem;
 import android.app.Notification;
@@ -630,30 +610,7 @@ public class NotificationController {
 		mNotificationManager.cancel(NotificationId.BOINC_CLIENT_EVENT);
 	}
 	
-	/**
-	 * handling News notifications 
-	 */
-	public void notifyNewsMessages(NewsMessage newsMessage) {
-		Intent intent = new Intent(mAppContext, NewsActivity.class);
-		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		PendingIntent pendingIntent = PendingIntent.getActivity(mAppContext, 0, intent,
-				PendingIntent.FLAG_UPDATE_CURRENT);
-		
-		String newsText = mAppContext.getString(R.string.newsNotifyText);
-		
-		if (mNewsMessageNotification != null)
-			mNewsMessageNotification.when = System.currentTimeMillis();
-		else
-			mNewsMessageNotification = new Notification(R.drawable.ic_news,
-				newsText, System.currentTimeMillis());
-		
-		mNewsMessageNotification.contentIntent = pendingIntent;
-		mNewsMessageNotification.tickerText = newsText;
-		mNewsMessageNotification.setLatestEventInfo(mAppContext, newsText, newsMessage.getTitle(),
-				pendingIntent);
-		
-		mNotificationManager.notify(NotificationId.NATIVE_BOINC_NEWS, mNewsMessageNotification);
-	}
+
 	
 	/**
 	 * handling auto updates notifications
