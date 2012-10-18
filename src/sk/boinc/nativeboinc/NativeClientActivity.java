@@ -1,21 +1,3 @@
-/* 
- * NativeBOINC - Native BOINC Client with Manager
- * Copyright (C) 2011, Mateusz Szpakowski
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
 package sk.boinc.nativeboinc;
 
 import java.io.IOException;
@@ -55,7 +37,7 @@ import android.view.Window;
 import android.widget.EditText;
 
 /**
- * @author mat
+ * @author Robson
  *
  */
 public class NativeClientActivity extends PreferenceActivity implements AbstractNativeBoincListener,
@@ -225,14 +207,7 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 		
 		// Display latest news
 		Preference pref = findPreference(PreferenceName.NATIVE_LATEST_NEWS);
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				startActivity(new Intent(NativeClientActivity.this, NewsActivity.class));
-				return true;
-			}
-		});
-		
+			
 		/* native autostart */
 		ListPreference listPref = (ListPreference)findPreference(PreferenceName.NATIVE_AUTOSTART);
 		
@@ -306,29 +281,6 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 			}
 		});
 		
-		/* host list preference */
-		pref = (Preference)findPreference(PreferenceName.NATIVE_HOST_LIST);
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				startActivityForResult(new Intent(NativeClientActivity.this, AccessListActivity.class),
-						ACTIVITY_ACCESS_LIST);
-				return true;
-			}
-		});
-		
-		/* move installation preference */
-		pref = (Preference)findPreference(PreferenceName.NATIVE_MOVE_INSTALLATION);
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				mInstaller.moveInstallationTo();
-				mDoRestart = false;
-				startActivity(new Intent(NativeClientActivity.this, ProgressActivity.class));
-				return true;
-			}
-		});
-		
 		/* installed binaries preference */
 		pref = (Preference)findPreference(PreferenceName.NATIVE_INSTALLED_BINARIES);
 		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
@@ -339,16 +291,6 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 			}
 		});
 		
-		/* dump boinc files */
-		pref = (Preference)findPreference(PreferenceName.NATIVE_DUMP_BOINC_DIR);
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				if (mInstaller != null && !mInstaller.isBeingDumpedFiles())
-					showDialog(DIALOG_ENTER_DUMP_DIRECTORY);
-				return true;
-			}
-		});
 		
 		/* reinstall boinc */
 		pref = (Preference)findPreference(PreferenceName.NATIVE_REINSTALL);
@@ -361,25 +303,7 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 			}
 		});
 		
-		/* update binaries preference */
-		pref = (Preference)findPreference(PreferenceName.NATIVE_UPDATE_BINARIES);
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				startActivity(new Intent(NativeClientActivity.this, UpdateActivity.class));
-				return true;
-			}
-		});
 		
-		/* update binaries from sdcard */
-		pref = (Preference)findPreference(PreferenceName.NATIVE_UPDATE_FROM_SDCARD);
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				showDialog(DIALOG_ENTER_UPDATE_DIRECTORY);
-				return true;
-			}
-		});
 		
 		/* delete project bins */
 		pref = (Preference)findPreference(PreferenceName.NATIVE_DELETE_PROJ_BINS);
@@ -391,15 +315,7 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 			}
 		});
 		
-		/* show logs preference */
-		pref = (Preference)findPreference(PreferenceName.NATIVE_SHOW_LOGS);
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			@Override
-			public boolean onPreferenceClick(Preference preference) {
-				startActivity(new Intent(NativeClientActivity.this, BoincLogsActivity.class));
-				return true;
-			}
-		});
+		
 	}
 	
 	@Override
@@ -444,25 +360,14 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 		
 		// update enabled/disabled
 		Preference pref = (Preference)findPreference(PreferenceName.NATIVE_DUMP_BOINC_DIR);
-		pref.setEnabled(!mInstaller.isBeingDumpedFiles());
-		
+		//TODO
 		pref = (Preference)findPreference(PreferenceName.NATIVE_REINSTALL);
 		pref.setEnabled(!mInstaller.isBeingReinstalled());
 		pref = findPreference(PreferenceName.NATIVE_MOVE_INSTALLATION);
-		pref.setEnabled(!mInstaller.IsBeingInstallationMoved());
+		
 	}
 	
-	private void updateMoveToPreference() {
-		Preference pref = findPreference(PreferenceName.NATIVE_MOVE_INSTALLATION);
-		
-		if (BoincManagerApplication.isSDCardInstallation(this)) { // if in sdcard
-			pref.setTitle(R.string.nativeMoveToIntMemTitle);
-			pref.setSummary(R.string.nativeMoveToIntMemSummary);
-		} else { // if in internal memory
-			pref.setTitle(R.string.nativeMoveToSDCardTitle);
-			pref.setSummary(R.string.nativeMoveToSDCardSummary);
-		}
-	}
+	
 	
 	@Override
 	protected void onResume() {
@@ -495,9 +400,7 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 		else
 			editPref.setSummary(R.string.nativeHostnameSummaryNone);
 		
-		/* move installation */
-		updateMoveToPreference();
-		
+				
 		/* add listener */
 		if (mRunner != null) {
 			if (Logging.DEBUG) Log.d(TAG, "Normal register runner listener");
@@ -554,34 +457,7 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 			return dialog;
 		
 		switch(dialogId) {
-		case DIALOG_ENTER_DUMP_DIRECTORY: {
-			View view = LayoutInflater.from(this).inflate(R.layout.dialog_edit, null);
-			final EditText edit = (EditText)view.findViewById(android.R.id.edit);
-			edit.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL);
-			
-			return new AlertDialog.Builder(this)
-				.setIcon(android.R.drawable.ic_input_get)
-				.setTitle(R.string.enterDumpDir)
-				.setView(view)
-				.setPositiveButton(R.string.ok, new Dialog.OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						String dumpDir = edit.getText().toString();
-						if (dumpDir.length() != 0) {
-							if (!InstallationOps.isDestinationExists(dumpDir)) {
-								mInstaller.dumpBoincFiles(dumpDir);
-								startActivity(new Intent(NativeClientActivity.this, ProgressActivity.class));
-							} else {
-								Bundle dumpDialogArgs = new Bundle();
-								dumpDialogArgs.putString(DUMP_DIRECTORY_ARG, dumpDir);
-								showDialog(DIALOG_DUMP_WARNING, dumpDialogArgs);
-							}
-						}
-					}
-				})
-				.setNegativeButton(R.string.cancel, null)
-				.create();
-		}
+		
 		case DIALOG_APPLY_AFTER_RESTART: {
 			return new AlertDialog.Builder(this)
 				.setIcon(android.R.drawable.ic_dialog_alert)
@@ -632,31 +508,7 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 				})
 				.setNegativeButton(R.string.noText, null)
 				.create();
-		case DIALOG_ENTER_UPDATE_DIRECTORY:
-			View view = LayoutInflater.from(this).inflate(R.layout.dialog_edit, null);
-			final EditText edit = (EditText)view.findViewById(android.R.id.edit);
-			edit.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL);
-			
-			return new AlertDialog.Builder(this)
-				.setIcon(android.R.drawable.ic_input_get)
-				.setTitle(R.string.enterUpdateDir)
-				.setView(view)
-				.setPositiveButton(R.string.ok, new Dialog.OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						String updateDir = edit.getText().toString();
-						
-						if (updateDir.length() != 0) {
-							Intent intent = new Intent(NativeClientActivity.this,
-									UpdateFromSDCardActivity.class);
-							intent.putExtra(UpdateFromSDCardActivity.UPDATE_DIR, updateDir);
-							startActivity(intent);
-						}
-					}
-				})
-				.setNegativeButton(R.string.cancel, null)
-				.create();
-		case DIALOG_DUMP_WARNING:
+			case DIALOG_DUMP_WARNING:
 			return new AlertDialog.Builder(this)
 				.setIcon(android.R.drawable.ic_dialog_alert)
 				.setTitle(R.string.warning)
@@ -668,34 +520,7 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 		return null;
 	}
 	
-	@Override
-	public void onPrepareDialog(int dialogId, Dialog dialog, Bundle args) {
-		if (StandardDialogs.onPrepareDialog(this, dialogId, dialog, args))
-			return; // if standard dialog
-		
-		EditText edit = null;
-		switch (dialogId) {
-		case DIALOG_ENTER_UPDATE_DIRECTORY:
-		case DIALOG_ENTER_DUMP_DIRECTORY:
-			edit = (EditText)dialog.findViewById(android.R.id.edit);
-			edit.setText("");
-			break;
-		case DIALOG_DUMP_WARNING: {
-			final String dumpDir = args.getString(DUMP_DIRECTORY_ARG);
-			AlertDialog alertDialog = ((AlertDialog)dialog);
-			alertDialog.setMessage(getString(R.string.dumpBoincWarn, dumpDir));
-			alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, getString(R.string.yesText),
-				new DialogInterface.OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						mInstaller.dumpBoincFiles(dumpDir);
-						startActivity(new Intent(NativeClientActivity.this, ProgressActivity.class));
-					}
-				});
-			break;
-			}
-		}
-	}
+
 	
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -747,11 +572,7 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 		} else if (distribName.equals(InstallerService.BOINC_REINSTALL_ITEM_NAME)) {
 			Preference pref = (Preference)findPreference(PreferenceName.NATIVE_REINSTALL);
 			pref.setEnabled(true); // enable it
-		} else if (distribName.equals(InstallerService.BOINC_MOVETO_ITEM_NAME)) {
-			Preference pref = (Preference)findPreference(PreferenceName.NATIVE_MOVE_INSTALLATION);
-			pref.setEnabled(true); // enable it
-			updateMoveToPreference();
-		}
+		} 
 	}
 	
 	@Override
