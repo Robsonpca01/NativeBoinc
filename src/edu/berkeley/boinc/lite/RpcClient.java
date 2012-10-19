@@ -622,21 +622,7 @@ public class RpcClient {
 	 * 
 	 * @return notices
 	 */
-	public Notices getNotices(int seqNo) {
-		mLastErrorMessage = null;
-		try {
-			mRequest.setLength(0);
-			mRequest.append("<get_notices>\n  <seqno>");
-			mRequest.append(seqNo);
-			mRequest.append("</seqno>\n</get_notices>\n");
-			sendRequest(mRequest.toString());
-			Notices notices = NoticesReplyParser.parse(receiveReply());
-			return notices;
-		} catch(IOException e) {
-			if (Logging.WARNING) Log.w(TAG, "error in getNotices()", e);
-			return null;
-		}
-	}
+
 
 	/**
 	 * Performs get_state RPC towards BOINC client

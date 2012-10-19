@@ -1,8 +1,6 @@
 package org.bouncycastle.openpgp;
 
 import org.bouncycastle.bcpg.UserAttributeSubpacket;
-//import org.bouncycastle.bcpg.UserAttributeSubpacketTags;
-//import org.bouncycastle.bcpg.attr.ImageAttribute;
 
 /**
  * Container for a list of user attribute subpackets.
@@ -31,17 +29,6 @@ public class PGPUserAttributeSubpacketVector
         return null;
     }
     
-    /*public ImageAttribute getImageAttribute()
-    {
-        UserAttributeSubpacket    p = this.getSubpacket(UserAttributeSubpacketTags.IMAGE_ATTRIBUTE);
-        
-        if (p == null)
-        {
-            return null;
-        }
-                    
-        return (ImageAttribute)p;
-    }*/
     
     UserAttributeSubpacket[] toSubpacketArray()
     {

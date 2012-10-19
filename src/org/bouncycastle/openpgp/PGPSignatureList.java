@@ -28,13 +28,4 @@ public class PGPSignatureList
         return sigs[index];
     }
     
-    /*public int size()
-    {
-        return sigs.length;
-    }
-    
-    public boolean isEmpty()
-    {
-        return (sigs.length == 0);
-    }*/
 }

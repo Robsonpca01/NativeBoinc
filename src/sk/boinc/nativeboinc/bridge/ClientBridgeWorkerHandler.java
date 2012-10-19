@@ -63,8 +63,6 @@ import edu.berkeley.boinc.lite.CcState;
 import edu.berkeley.boinc.lite.CcStatus;
 import edu.berkeley.boinc.lite.GlobalPreferences;
 import edu.berkeley.boinc.lite.Message;
-import edu.berkeley.boinc.lite.Notice;
-import edu.berkeley.boinc.lite.Notices;
 import edu.berkeley.boinc.lite.Project;
 import edu.berkeley.boinc.lite.ProjectAttachReply;
 import edu.berkeley.boinc.lite.ProjectConfig;
@@ -2001,17 +1999,6 @@ public class ClientBridgeWorkerHandler extends Handler {
 		if (Logging.DEBUG) Log.d(TAG, "dataUpdateMessages(): End update");
 	}
 	
-	private void dataUpdateNotices(ArrayList<Notice> notices) {
-		if (notices == null) return;
-		if (Logging.DEBUG) Log.d(TAG, "dataUpdateNotices(): Begin update");
-		Iterator<Notice> ni = notices.iterator();
-		while (ni.hasNext()) {
-			edu.berkeley.boinc.lite.Notice msg = ni.next();
-			
-		}
-		if (Logging.DEBUG) Log.d(TAG, "dataUpdateNotices(): End update");
-	}
-
 	private final ArrayList<ProjectInfo> getProjects() {
 		return new ArrayList<ProjectInfo>(mProjects.values());
 	}

@@ -9,14 +9,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import sk.boinc.nativeboinc.debug.Logging;
-import sk.boinc.nativeboinc.nativeclient.NativeBoincStateListener;
 import sk.boinc.nativeboinc.nativeclient.NativeBoincService;
+import sk.boinc.nativeboinc.nativeclient.NativeBoincStateListener;
 import sk.boinc.nativeboinc.nativeclient.NativeBoincUtils;
 import sk.boinc.nativeboinc.service.ConnectionManagerService;
 import sk.boinc.nativeboinc.util.ActivityVisibilityTracker;
 import sk.boinc.nativeboinc.util.NativeClientAutostart;
 import sk.boinc.nativeboinc.util.PreferenceName;
-import sk.boinc.nativeboinc.widget.RefreshWidgetHandler;
 import android.app.Application;
 import android.content.ComponentName;
 import android.content.Context;
@@ -134,7 +133,6 @@ public class BoincManagerApplication extends Application implements NativeBoincS
 	
 	private int mAutostartTrialNumber = 0;
 	
-	private RefreshWidgetHandler mRefreshWidgetHandler = null;
 	
 	private ServiceConnection mRunnerServiceConnection = new ServiceConnection() {
 		@Override
@@ -143,9 +141,7 @@ public class BoincManagerApplication extends Application implements NativeBoincS
 			if (Logging.DEBUG) Log.d(TAG, "runner.onServiceConnected()");
 			// service automatically adds application object to listeners
 			mRunner.addNativeBoincListener(BoincManagerApplication.this);
-			mRunner.addNativeBoincListener(mRefreshWidgetHandler);
-			mRunner.addMonitorListener(mRefreshWidgetHandler);
-			
+						
 			if (!mRunner.isRun()) {
 				if (mDoStartClientAfterBind && !mRunner.isRun()) {
 					if (Logging.DEBUG) Log.d(TAG, "Start client after bind runner");
@@ -161,9 +157,7 @@ public class BoincManagerApplication extends Application implements NativeBoincS
 		@Override
 		public void onServiceDisconnected(ComponentName name) {
 			if (mRunner != null) {
-				mRunner.removeNativeBoincListener(mRefreshWidgetHandler);
-				mRunner.removeMonitorListener(mRefreshWidgetHandler);
-				mRunner.removeNativeBoincListener(BoincManagerApplication.this);
+								mRunner.removeNativeBoincListener(BoincManagerApplication.this);
 			}
 			mRunner = null;
 			if (Logging.DEBUG) Log.d(TAG, "runner.onServiceDisconnected()");
@@ -178,8 +172,6 @@ public class BoincManagerApplication extends Application implements NativeBoincS
 	private void doUnbindRunnerService() {
 		if (Logging.DEBUG) Log.d(TAG, "Undind runner service");
 		unbindService(mRunnerServiceConnection);
-		mRunner.removeNativeBoincListener(mRefreshWidgetHandler);
-		mRunner.removeMonitorListener(mRefreshWidgetHandler);
 		mRunner.removeNativeBoincListener(this);
 		mRunner = null;
 	}
@@ -204,13 +196,10 @@ public class BoincManagerApplication extends Application implements NativeBoincS
 		mInstallerStage = mGlobalPrefs.getInt(PreferenceName.INSTALLER_STAGE, INSTALLER_NO_STAGE);
 		
 		mSecondTryStartHandler = new SecondStartTryHandler();
-		mRefreshWidgetHandler = new RefreshWidgetHandler(this);
 		mVisibilityTracker = new MyActivityVisibilityTracker();
 		
 		mStandardHandler = new Handler();
 		
-		// register refreshWidgetHandler as preferences change listener
-		mGlobalPrefs.registerOnSharedPreferenceChangeListener(mRefreshWidgetHandler);
 		
 		// initialize news service
 	
@@ -250,11 +239,7 @@ public class BoincManagerApplication extends Application implements NativeBoincS
 		super.onLowMemory();
 	}
 	
-	/* get autorefresh handler */
-	public RefreshWidgetHandler getRefreshWidgetHandler() {
-		return mRefreshWidgetHandler;
-	}
-
+	
 	/**
 	 * Finds whether this is the application was upgraded recently.
 	 * It also marks the status in preferences, so even if first call of this

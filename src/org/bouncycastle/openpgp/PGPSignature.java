@@ -1,8 +1,6 @@
 package org.bouncycastle.openpgp;
 
-/*import org.bouncycastle.asn1.ASN1EncodableVector;
-import org.bouncycastle.asn1.DERInteger;
-import org.bouncycastle.asn1.DERSequence;*/
+
 import org.bouncycastle.bcpg.*;
 import org.bouncycastle.util.BigIntegers;
 
@@ -84,34 +82,6 @@ public class PGPSignature
             throw new PGPException("can't set up signature object.", e);
         }
     }
-
-    /**
-     * Return the OpenPGP version number for this signature.
-     * 
-     * @return signature version number.
-     */
-    /*public int getVersion()
-    {
-        return sigPck.getVersion();
-    }*/
-    
-    /**
-     * Return the key algorithm associated with this signature.
-     * @return signature key algorithm.
-     */
-    /*public int getKeyAlgorithm()
-    {
-        return sigPck.getKeyAlgorithm();
-    }*/
-    
-    /**
-     * Return the hash algorithm associated with this signature.
-     * @return signature hash algorithm.
-     */
-    /*public int getHashAlgorithm()
-    {
-        return sigPck.getHashAlgorithm();
-    }*/
 
     public void initVerify(
         PGPPublicKey    pubKey,
@@ -210,145 +180,6 @@ public class PGPSignature
             
         return sig.verify(this.getSignature());
     }
-
-
-    /*private void updateWithIdData(int header, byte[] idBytes)
-        throws SignatureException
-    {
-        this.update((byte)header);
-        this.update((byte)(idBytes.length >> 24));
-        this.update((byte)(idBytes.length >> 16));
-        this.update((byte)(idBytes.length >> 8));
-        this.update((byte)(idBytes.length));
-        this.update(idBytes);
-    }
-    
-    private void updateWithPublicKey(PGPPublicKey key)
-        throws PGPException, SignatureException
-    {
-        byte[] keyBytes = getEncodedPublicKey(key);
-
-        this.update((byte)0x99);
-        this.update((byte)(keyBytes.length >> 8));
-        this.update((byte)(keyBytes.length));
-        this.update(keyBytes);
-    }*/
-
-    /**
-     * Verify the signature as certifying the passed in public key as associated
-     * with the passed in user attributes.
-     *
-     * @param userAttributes user attributes the key was stored under
-     * @param key the key to be verified.
-     * @return true if the signature matches, false otherwise.
-     * @throws PGPException
-     * @throws SignatureException
-     */
-    /*public boolean verifyCertification(
-        PGPUserAttributeSubpacketVector userAttributes,
-        PGPPublicKey    key)
-        throws PGPException, SignatureException
-    {
-        updateWithPublicKey(key);
-
-        //
-        // hash in the userAttributes
-        //
-        try
-        {
-            ByteArrayOutputStream bOut = new ByteArrayOutputStream();
-            UserAttributeSubpacket[] packets = userAttributes.toSubpacketArray();
-            for (int i = 0; i != packets.length; i++)
-            {
-                packets[i].encode(bOut);
-            }
-            updateWithIdData(0xd1, bOut.toByteArray());
-        }
-        catch (IOException e)
-        {
-            throw new PGPException("cannot encode subpacket array", e);
-        }
-
-        this.update(sigPck.getSignatureTrailer());
-
-        return sig.verify(this.getSignature());
-    }*/
-
-    /**
-     * Verify the signature as certifying the passed in public key as associated
-     * with the passed in id.
-     * 
-     * @param id id the key was stored under
-     * @param key the key to be verified.
-     * @return true if the signature matches, false otherwise.
-     * @throws PGPException
-     * @throws SignatureException
-     */
-    /*public boolean verifyCertification(
-        String          id,
-        PGPPublicKey    key)
-        throws PGPException, SignatureException
-    {
-        updateWithPublicKey(key);
-            
-        //
-        // hash in the id
-        //
-        updateWithIdData(0xb4, Strings.toByteArray(id));
-
-        this.update(sigPck.getSignatureTrailer());
-        
-        return sig.verify(this.getSignature());
-    }*/
-
-    /**
-     * Verify a certification for the passed in key against the passed in
-     * master key.
-     * 
-     * @param masterKey the key we are verifying against.
-     * @param pubKey the key we are verifying.
-     * @return true if the certification is valid, false otherwise.
-     * @throws SignatureException
-     * @throws PGPException
-     */
-    /*public boolean verifyCertification(
-        PGPPublicKey    masterKey,
-        PGPPublicKey    pubKey) 
-        throws SignatureException, PGPException
-    {
-        updateWithPublicKey(masterKey);
-        updateWithPublicKey(pubKey);
-        
-        this.update(sigPck.getSignatureTrailer());
-        
-        return sig.verify(this.getSignature());
-    }*/
-    
-    /**
-     * Verify a key certification, such as a revocation, for the passed in key.
-     * 
-     * @param pubKey the key we are checking.
-     * @return true if the certification is valid, false otherwise.
-     * @throws SignatureException
-     * @throws PGPException
-     */
-    /*public boolean verifyCertification(
-        PGPPublicKey    pubKey) 
-        throws SignatureException, PGPException
-    {
-        if (this.getSignatureType() != KEY_REVOCATION
-            && this.getSignatureType() != SUBKEY_REVOCATION)
-        {
-            throw new IllegalStateException("signature is not a key signature");
-        }
-
-        updateWithPublicKey(pubKey);
-        
-        this.update(sigPck.getSignatureTrailer());
-        
-        return sig.verify(this.getSignature());
-    }*/
-
     public int getSignatureType()
     {
          return sigPck.getSignatureType();
@@ -422,18 +253,6 @@ public class PGPSignature
             }
             else
             {
-                /*try
-                {
-                    ASN1EncodableVector v = new ASN1EncodableVector();
-                    v.add(new DERInteger(sigValues[0].getValue()));
-                    v.add(new DERInteger(sigValues[1].getValue()));
-
-                    signature = new DERSequence(v).getEncoded();
-                }
-                catch (IOException e)
-                {
-                    throw new PGPException("exception encoding DSA sig.", e);
-                }*/
             	throw new PGPException("Sorry, not supported");
             }
         }
@@ -477,21 +296,4 @@ public class PGPSignature
         }
     }
     
-    /*private byte[] getEncodedPublicKey(
-        PGPPublicKey pubKey) 
-        throws PGPException
-    {
-        byte[]    keyBytes;
-        
-        try
-        {
-            keyBytes = pubKey.publicPk.getEncodedContents();
-        }
-        catch (IOException e)
-        {
-            throw new PGPException("exception preparing key.", e);
-        }
-        
-        return keyBytes;
-    }*/
 }

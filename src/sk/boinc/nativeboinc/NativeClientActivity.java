@@ -5,7 +5,6 @@ import java.io.IOException;
 import sk.boinc.nativeboinc.debug.Logging;
 import sk.boinc.nativeboinc.installer.AbstractInstallerListener;
 import sk.boinc.nativeboinc.installer.InstallOp;
-import sk.boinc.nativeboinc.installer.InstallationOps;
 import sk.boinc.nativeboinc.installer.InstallerProgressListener;
 import sk.boinc.nativeboinc.installer.InstallerService;
 import sk.boinc.nativeboinc.nativeclient.AbstractNativeBoincListener;
@@ -29,12 +28,8 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
-import android.text.InputType;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.Window;
-import android.widget.EditText;
 
 /**
  * @author Robson
