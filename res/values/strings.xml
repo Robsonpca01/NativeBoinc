@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-
 <resources>
     <!-- Basic application stuff -->
-    <string name="app_name">NativeBOINC</string>
+    <string name="app_name">Mobile Boinc</string>
     <string name="app_desc">Native BOINC for Android with AndroBOINC</string>
     <string name="service_desc">Enables participating to BOINC projects on Android devices</string>
     <string name="install_service_desc">Native Client and BOINC application Installer service </string>

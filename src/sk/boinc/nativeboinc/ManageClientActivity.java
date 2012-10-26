@@ -33,7 +33,6 @@ import sk.boinc.nativeboinc.clientconnection.PollOp;
 import sk.boinc.nativeboinc.clientconnection.VersionInfo;
 import sk.boinc.nativeboinc.debug.Logging;
 import sk.boinc.nativeboinc.service.ConnectionManagerService;
-import sk.boinc.nativeboinc.util.BAMAccount;
 import sk.boinc.nativeboinc.util.ClientId;
 import sk.boinc.nativeboinc.util.ScreenOrientationHandler;
 import sk.boinc.nativeboinc.util.StandardDialogs;
@@ -777,27 +776,7 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		return false;
 	}
 	
-	@Override
-	public boolean currentBAMInfo(AccountMgrInfo bamInfo) {
-		if (Logging.DEBUG) Log.d(TAG, "BAM info received, using");
-		mDoGetBAMInfo = false;
-		if (bamInfo.acct_mgr_url.length() == 0) {
-			// view dialog
-			startActivity(new Intent(this, EditBAMActivity.class));
-		} else if (!bamInfo.have_credentials) {
-			// view dialog with data
-			Intent intent = new Intent(this, EditBAMActivity.class);
-			intent.putExtra(BAMAccount.TAG, new BAMAccount(bamInfo.acct_mgr_name, "", ""));
-			startActivity(intent);
-			// if end of operation (next part in edit bam activity)
-			updateParticularPreferences();
-		} else {
-			mSyncingBAMInProgress = true;
-			showDialog(DIALOG_ATTACH_BAM_PROGRESS);
-			mConnectionManager.synchronizeWithBAM();
-		}
-		return true;
-	}
+	
 	
 	private void refreshClientName() {
 		Preference pref = findPreference("selectedHost");
@@ -1054,5 +1033,11 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 	@Override
 	public void onClientIsWorking(boolean isWorking) {
 		setProgressBarIndeterminateVisibility(isWorking);
+	}
+
+	@Override
+	public boolean currentBAMInfo(AccountMgrInfo accountMgrInfo) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

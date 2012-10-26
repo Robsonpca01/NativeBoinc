@@ -61,8 +61,7 @@
 		    	<action android:name="sk.boinc.nativeboinc.widget.WIDGET_PREPARE_UPDATE" />
 		    	<action android:name="sk.boinc.nativeboinc.widget.CLIENT_START_STOP" />
 		    </intent-filter>
-			<meta-data android:name="android.appwidget.provider"
-				android:resource="@xml/widget_info" />
+			
 		</receiver>
 
 		<receiver android:name=".widget.TabletWidgetProvider"
@@ -83,8 +82,7 @@
 		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_8"/>
 		    	<action android:name="sk.boinc.nativeboinc.widget.TABLET_CLIENT_TASK_INFO_9"/>
 		    </intent-filter>
-			<meta-data android:name="android.appwidget.provider"
-				android:resource="@xml/tablet_widget_info" />
+			
 		</receiver>
 		
 		<activity android:name=".ManageClientActivity"
