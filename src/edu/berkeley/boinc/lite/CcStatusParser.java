@@ -19,8 +19,8 @@
 
 package edu.berkeley.boinc.lite;
 
-import android.util.Log;
 import sk.boinc.nativeboinc.debug.Logging;
+import android.util.Log;
 
 public class CcStatusParser extends BoincBaseParser {
 	private static final String TAG = "CcStatusParser";

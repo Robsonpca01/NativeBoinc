@@ -1,7 +1,7 @@
 
 package sk.boinc.nativeboinc;
 
-import hal.android.workarounds.FixedProgressDialog;
+import hal.android.components.FixedProgressDialog;
 import sk.boinc.nativeboinc.clientconnection.BoincOp;
 import sk.boinc.nativeboinc.clientconnection.ClientPollReceiver;
 import sk.boinc.nativeboinc.clientconnection.NoConnectivityException;
@@ -39,7 +39,6 @@ import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;

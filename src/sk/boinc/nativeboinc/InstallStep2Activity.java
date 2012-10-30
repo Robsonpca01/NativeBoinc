@@ -1,6 +1,6 @@
 package sk.boinc.nativeboinc;
 
-import hal.android.workarounds.FixedProgressDialog;
+import hal.android.components.FixedProgressDialog;
 
 import java.io.IOException;
 

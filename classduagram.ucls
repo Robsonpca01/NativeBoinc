@@ -1010,27 +1010,27 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="110" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.InstallFinishActivity" 
+  <class id="110" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.InstallFinishActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/InstallFinishActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/InstallFinishActivity.java" binary="false">    
     <position height="95" width="132" x="21794" y="1085"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="111" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.HostListActivity.SavedState" 
+  <class id="111" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.HostListActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/HostListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/HostListActivity.java" binary="false">    
     <position height="112" width="188" x="13055" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="112" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.TasksActivity.TaskOnClickListener" 
+  <class id="112" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.TasksActivity.TaskOnClickListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TasksActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TasksActivity.java" binary="false">    
     <position height="129" width="142" x="16930" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1038,18 +1038,18 @@
     </display>  
   </class>  
   <class id="113" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.ProjectListActivity.ProjectItemComparator" 
+    name="sk.boinc.mobileboinc.ProjectListActivity.ProjectItemComparator" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProjectListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProjectListActivity.java" binary="false">    
     <position height="95" width="195" x="20137" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="114" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.BoincManagerActivity.SavedState" 
+  <class id="114" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.BoincManagerActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/BoincManagerActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/BoincManagerActivity.java" binary="false">    
     <position height="248" width="220" x="24555" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1057,9 +1057,9 @@
     </display>  
   </class>  
   <class id="115" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.UpdateFromSDCardActivity.ItemOnClickListener" 
+    name="sk.boinc.mobileboinc.UpdateFromSDCardActivity.ItemOnClickListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/UpdateFromSDCardActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/UpdateFromSDCardActivity.java" 
     binary="false">    
     <position height="129" width="154" x="17652" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1067,9 +1067,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="116" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.DeleteProjectBinsActivity" 
+  <class id="116" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.DeleteProjectBinsActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/DeleteProjectBinsActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/DeleteProjectBinsActivity.java" 
     binary="false">    
     <position height="401" width="259" x="18532" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1077,18 +1077,18 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="117" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.AccessListActivity.AccessListAdapter" 
+  <class id="117" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.AccessListActivity.AccessListAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/AccessListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/AccessListActivity.java" binary="false">    
     <position height="163" width="200" x="20260" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="118" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.BoincManagerApplication" 
+  <class id="118" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.BoincManagerApplication" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/BoincManagerApplication.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/BoincManagerApplication.java" 
     binary="false">    
     <position height="1200" width="255" x="21430" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1096,27 +1096,27 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="119" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ProjectListActivity.SavedState" 
+  <class id="119" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ProjectListActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProjectListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProjectListActivity.java" binary="false">    
     <position height="129" width="207" x="22082" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="120" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.AbstractBoincActivity" 
+  <class id="120" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.AbstractBoincActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/AbstractBoincActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/AbstractBoincActivity.java" binary="false">    
     <position height="129" width="146" x="19589" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="121" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.TaskInfoDialogActivity" 
+  <class id="121" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.TaskInfoDialogActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TaskInfoDialogActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TaskInfoDialogActivity.java" 
     binary="false">    
     <position height="197" width="195" x="14579" y="10122"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1124,9 +1124,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="122" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.NativeClientActivity.SavedState" 
+  <class id="122" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.NativeClientActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/NativeClientActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/NativeClientActivity.java" binary="false">    
     <position height="163" width="212" x="16546" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1134,18 +1134,18 @@
     </display>  
   </class>  
   <class id="123" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.ProjectListActivity.ProjectDistribsAdapter" 
+    name="sk.boinc.mobileboinc.ProjectListActivity.ProjectDistribsAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProjectListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProjectListActivity.java" binary="false">    
     <position height="163" width="200" x="19657" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="124" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.NotificationController" 
+  <class id="124" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.NotificationController" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/NotificationController.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/NotificationController.java" 
     binary="false">    
     <position height="741" width="307" x="22371" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1153,9 +1153,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="125" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ClientMonitorErrorActivity" 
+  <class id="125" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ClientMonitorErrorActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ClientMonitorErrorActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ClientMonitorErrorActivity.java" 
     binary="false">    
     <position height="129" width="213" x="6228" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1163,18 +1163,18 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="126" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.BoincLogsActivity" 
+  <class id="126" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.BoincLogsActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/BoincLogsActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/BoincLogsActivity.java" binary="false">    
     <position height="248" width="232" x="16192" y="1085"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="127" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.TimePreferencesActivity.SavedState" 
+  <class id="127" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.TimePreferencesActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TimePreferencesActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TimePreferencesActivity.java" 
     binary="false">    
     <position height="129" width="208" x="24573" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1182,27 +1182,27 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="128" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ServiceBoincActivity" 
+  <class id="128" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ServiceBoincActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ServiceBoincActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ServiceBoincActivity.java" binary="false">    
     <position height="588" width="363" x="21391" y="1085"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="129" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.AddProjectActivity.SavedState" 
+  <class id="129" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.AddProjectActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/AddProjectActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/AddProjectActivity.java" binary="false">    
     <position height="197" width="222" x="21725" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="130" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ProjectsActivity.ProjectListAdapter" 
+  <class id="130" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ProjectsActivity.ProjectListAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProjectsActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProjectsActivity.java" binary="false">    
     <position height="197" width="200" x="11982" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1210,9 +1210,9 @@
     </display>  
   </class>  
   <class id="131" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.NotificationController.DistribNotification" 
+    name="sk.boinc.mobileboinc.NotificationController.DistribNotification" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/NotificationController.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/NotificationController.java" 
     binary="false">    
     <position height="129" width="253" x="22371" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1221,9 +1221,9 @@
     </display>  
   </class>  
   <class id="132" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.TimePreferencesActivity.OnChangeDayEnableListener" 
+    name="sk.boinc.mobileboinc.TimePreferencesActivity.OnChangeDayEnableListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TimePreferencesActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TimePreferencesActivity.java" 
     binary="false">    
     <position height="112" width="275" x="25605" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1231,9 +1231,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="133" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ProjectsActivity" 
+  <class id="133" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ProjectsActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProjectsActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProjectsActivity.java" binary="false">    
     <position height="894" width="337" x="11921" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1241,9 +1241,9 @@
     </display>  
   </class>  
   <class id="134" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.BoincManagerApplication.SecondStartTryHandler" 
+    name="sk.boinc.mobileboinc.BoincManagerApplication.SecondStartTryHandler" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/BoincManagerApplication.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/BoincManagerApplication.java" 
     binary="false">    
     <position height="95" width="156" x="21125" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1252,18 +1252,18 @@
     </display>  
   </class>  
   <class id="135" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.TransfersActivity.TransferListAdapter" 
+    name="sk.boinc.mobileboinc.TransfersActivity.TransferListAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TransfersActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TransfersActivity.java" binary="false">    
     <position height="197" width="200" x="18360" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="136" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.UpdateFromSDCardActivity.SavedState" 
+  <class id="136" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.UpdateFromSDCardActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/UpdateFromSDCardActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/UpdateFromSDCardActivity.java" 
     binary="false">    
     <position height="163" width="221" x="16840" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1271,27 +1271,27 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="137" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ProgressActivity.ProgressItemAdapter" 
+  <class id="137" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ProgressActivity.ProgressItemAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProgressActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProgressActivity.java" binary="false">    
     <position height="163" width="200" x="19300" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="138" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.UpdateActivity" 
+  <class id="138" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.UpdateActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/UpdateActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/UpdateActivity.java" binary="false">    
     <position height="452" width="290" x="19017" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="139" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ShutdownDialogActivity" 
+  <class id="139" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ShutdownDialogActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ShutdownDialogActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ShutdownDialogActivity.java" 
     binary="false">    
     <position height="214" width="255" x="22377" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1300,9 +1300,9 @@
     </display>  
   </class>  
   <class id="140" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.ProjectsActivity.ProjectOnClickListener" 
+    name="sk.boinc.mobileboinc.ProjectsActivity.ProjectOnClickListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProjectsActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProjectsActivity.java" binary="false">    
     <position height="129" width="156" x="11681" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1310,18 +1310,18 @@
     </display>  
   </class>  
   <class id="141" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.TransfersActivity.TransferOnClickListener" 
+    name="sk.boinc.mobileboinc.TransfersActivity.TransferOnClickListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TransfersActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TransfersActivity.java" binary="false">    
     <position height="129" width="163" x="18157" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="142" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.LocalPreferencesActivity" 
+  <class id="142" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.LocalPreferencesActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/LocalPreferencesActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/LocalPreferencesActivity.java" 
     binary="false">    
     <position height="1064" width="283" x="22944" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1330,9 +1330,9 @@
     </display>  
   </class>  
   <class id="143" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.UpdateFromSDCardActivity.UpdateListAdapter" 
+    name="sk.boinc.mobileboinc.UpdateFromSDCardActivity.UpdateListAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/UpdateFromSDCardActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/UpdateFromSDCardActivity.java" 
     binary="false">    
     <position height="163" width="200" x="17101" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1340,18 +1340,18 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="144" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.TasksActivity.SavedState" 
+  <class id="144" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.TasksActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TasksActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TasksActivity.java" binary="false">    
     <position height="163" width="181" x="14337" y="10122"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="145" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.TimePreferencesActivity" 
+  <class id="145" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.TimePreferencesActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TimePreferencesActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TimePreferencesActivity.java" 
     binary="false">    
     <position height="435" width="232" x="25675" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1360,54 +1360,54 @@
     </display>  
   </class>  
   <class id="146" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.AccessListActivity.ItemOnCheckClickListener" 
+    name="sk.boinc.mobileboinc.AccessListActivity.ItemOnCheckClickListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/AccessListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/AccessListActivity.java" binary="false">    
     <position height="129" width="184" x="20036" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="147" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.MessagesActivity" 
+  <class id="147" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.MessagesActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/MessagesActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/MessagesActivity.java" binary="false">    
     <position height="622" width="337" x="23763" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="148" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.AccessListActivity.SavedState" 
+  <class id="148" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.AccessListActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/AccessListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/AccessListActivity.java" binary="false">    
     <position height="180" width="181" x="20820" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="149" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ProgressActivity.ItemViewTag" 
+  <class id="149" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ProgressActivity.ItemViewTag" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProgressActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProgressActivity.java" binary="false">    
     <position height="129" width="152" x="19540" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="150" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.TransfersActivity.SavedState" 
+  <class id="150" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.TransfersActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TransfersActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TransfersActivity.java" binary="false">    
     <position height="163" width="201" x="19540" y="10122"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="151" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ProgressActivity" 
+  <class id="151" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ProgressActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProgressActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProgressActivity.java" binary="false">    
     <position height="622" width="268" x="19611" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1415,27 +1415,27 @@
     </display>  
   </class>  
   <class id="152" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.ProgressActivity.ProgressCancelOnClickListener" 
+    name="sk.boinc.mobileboinc.ProgressActivity.ProgressCancelOnClickListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProgressActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProgressActivity.java" binary="false">    
     <position height="129" width="243" x="19732" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="153" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.NativeClientActivity" 
+  <class id="153" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.NativeClientActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/NativeClientActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/NativeClientActivity.java" binary="false">    
     <position height="809" width="259" x="19476" y="1085"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="154" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.LocalPreferencesActivity.SavedState" 
+  <class id="154" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.LocalPreferencesActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/LocalPreferencesActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/LocalPreferencesActivity.java" 
     binary="false">    
     <position height="163" width="234" x="22865" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1443,54 +1443,54 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="155" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.UpdateActivity.SavedState" 
+  <class id="155" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.UpdateActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/UpdateActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/UpdateActivity.java" binary="false">    
     <position height="112" width="184" x="18812" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="156" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.InstallStep1Activity.SavedState" 
+  <class id="156" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.InstallStep1Activity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/InstallStep1Activity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/InstallStep1Activity.java" binary="false">    
     <position height="112" width="181" x="23523" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="157" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.InstallStep1Activity" 
+  <class id="157" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.InstallStep1Activity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/InstallStep1Activity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/InstallStep1Activity.java" binary="false">    
     <position height="452" width="290" x="23046" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="158" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ManageClientActivity.SavedState" 
+  <class id="158" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ManageClientActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ManageClientActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ManageClientActivity.java" binary="false">    
     <position height="163" width="215" x="13629" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="159" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.InstallStep2Activity.SavedState" 
+  <class id="159" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.InstallStep2Activity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/InstallStep2Activity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/InstallStep2Activity.java" binary="false">    
     <position height="146" width="181" x="21104" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="160" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.HostListActivity.HostListAdapter" 
+  <class id="160" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.HostListActivity.HostListAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/HostListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/HostListActivity.java" binary="false">    
     <position height="112" width="240" x="12775" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1498,9 +1498,9 @@
     </display>  
   </class>  
   <class id="161" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.DeleteProjectBinsActivity.ProjectBinariesAdapter" 
+    name="sk.boinc.mobileboinc.DeleteProjectBinsActivity.ProjectBinariesAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/DeleteProjectBinsActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/DeleteProjectBinsActivity.java" 
     binary="false">    
     <position height="163" width="200" x="17867" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1509,9 +1509,9 @@
     </display>  
   </class>  
   <class id="162" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.TimePreferencesActivity.OnClickHourListener" 
+    name="sk.boinc.mobileboinc.TimePreferencesActivity.OnClickHourListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TimePreferencesActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TimePreferencesActivity.java" 
     binary="false">    
     <position height="129" width="182" x="25920" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1519,9 +1519,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="163" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ProjectsActivity.SavedState" 
+  <class id="163" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ProjectsActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProjectsActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProjectsActivity.java" binary="false">    
     <position height="180" width="192" x="11666" y="10122"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1529,9 +1529,9 @@
     </display>  
   </class>  
   <class id="164" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.DeleteProjectBinsActivity.ItemOnClickListener" 
+    name="sk.boinc.mobileboinc.DeleteProjectBinsActivity.ItemOnClickListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/DeleteProjectBinsActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/DeleteProjectBinsActivity.java" 
     binary="false">    
     <position height="129" width="154" x="18107" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1540,9 +1540,9 @@
     </display>  
   </class>  
   <class id="165" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.BoincManagerApplication.MyActivityVisibilityTracker" 
+    name="sk.boinc.mobileboinc.BoincManagerApplication.MyActivityVisibilityTracker" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/BoincManagerApplication.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/BoincManagerApplication.java" 
     binary="false">    
     <position height="146" width="321" x="21342" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1550,27 +1550,27 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="166" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ManageClientActivity" 
+  <class id="166" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ManageClientActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ManageClientActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ManageClientActivity.java" binary="false">    
     <position height="1166" width="233" x="13886" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="167" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ProjectListActivity" 
+  <class id="167" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ProjectListActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProjectListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProjectListActivity.java" binary="false">    
     <position height="877" width="308" x="20714" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="168" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.DeleteProjectBinsActivity.SavedState" 
+  <class id="168" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.DeleteProjectBinsActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/DeleteProjectBinsActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/DeleteProjectBinsActivity.java" 
     binary="false">    
     <position height="129" width="210" x="18301" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1578,9 +1578,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="169" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.InstallStep2Activity" 
+  <class id="169" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.InstallStep2Activity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/InstallStep2Activity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/InstallStep2Activity.java" binary="false">    
     <position height="707" width="233" x="21431" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1588,27 +1588,27 @@
     </display>  
   </class>  
   <class id="170" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.ProjectListActivity.ProjectsListAdapter" 
+    name="sk.boinc.mobileboinc.ProjectListActivity.ProjectsListAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ProjectListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ProjectListActivity.java" binary="false">    
     <position height="163" width="200" x="19897" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="171" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.TasksActivity" 
+  <class id="171" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.TasksActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TasksActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TasksActivity.java" binary="false">    
     <position height="860" width="337" x="16106" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="172" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.AppPreferencesActivity" 
+  <class id="172" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.AppPreferencesActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/AppPreferencesActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/AppPreferencesActivity.java" 
     binary="false">    
     <position height="333" width="325" x="20626" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1616,45 +1616,45 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="173" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.AccessListActivity" 
+  <class id="173" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.AccessListActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/AccessListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/AccessListActivity.java" binary="false">    
     <position height="520" width="337" x="20991" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="174" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.MessagesActivity.MessageListAdapter" 
+  <class id="174" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.MessagesActivity.MessageListAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/MessagesActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/MessagesActivity.java" binary="false">    
     <position height="197" width="200" x="23067" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="175" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.UpdateActivity.UpdateListAdapter" 
+  <class id="175" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.UpdateActivity.UpdateListAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/UpdateActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/UpdateActivity.java" binary="false">    
     <position height="163" width="200" x="18572" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="176" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.ScreenLockActivity" 
+  <class id="176" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.ScreenLockActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/ScreenLockActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/ScreenLockActivity.java" binary="false">    
     <position height="656" width="283" x="25106" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="177" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.TransfersActivity" 
+  <class id="177" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.TransfersActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TransfersActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TransfersActivity.java" binary="false">    
     <position height="792" width="337" x="20337" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1662,36 +1662,36 @@
     </display>  
   </class>  
   <class id="178" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.HostListActivity.HostItemOnCheckedClickListener" 
+    name="sk.boinc.mobileboinc.HostListActivity.HostItemOnCheckedClickListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/HostListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/HostListActivity.java" binary="false">    
     <position height="129" width="216" x="12519" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="179" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.UpdateActivity.ItemOnClickListener" 
+  <class id="179" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.UpdateActivity.ItemOnClickListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/UpdateActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/UpdateActivity.java" binary="false">    
     <position height="129" width="140" x="19078" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="180" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.AddProjectActivity" 
+  <class id="180" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.AddProjectActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/AddProjectActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/AddProjectActivity.java" binary="false">    
     <position height="1064" width="267" x="22032" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="181" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.UpdateFromSDCardActivity" 
+  <class id="181" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.UpdateFromSDCardActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/UpdateFromSDCardActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/UpdateFromSDCardActivity.java" 
     binary="false">    
     <position height="520" width="290" x="17827" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1699,54 +1699,54 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="182" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.TasksActivity.TaskListAdapter" 
+  <class id="182" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.TasksActivity.TaskListAdapter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/TasksActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/TasksActivity.java" binary="false">    
     <position height="197" width="200" x="17112" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="183" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.BoincLogsActivity.SavedState" 
+  <class id="183" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.BoincLogsActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/BoincLogsActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/BoincLogsActivity.java" binary="false">    
     <position height="129" width="177" x="15826" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="184" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.MessagesActivity.SavedState" 
+  <class id="184" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.MessagesActivity.SavedState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/MessagesActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/MessagesActivity.java" binary="false">    
     <position height="146" width="203" x="24599" y="10122"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="185" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.EditHostActivity" 
+  <class id="185" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.EditHostActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/EditHostActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/EditHostActivity.java" binary="false">    
     <position height="248" width="137" x="16015" y="1085"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="186" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.BoincManagerActivity" 
+  <class id="186" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.BoincManagerActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/BoincManagerActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/BoincManagerActivity.java" binary="false">    
     <position height="1387" width="255" x="24515" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="187" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.InstalledBinariesActivity" 
+  <class id="187" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.InstalledBinariesActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/InstalledBinariesActivity.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/InstalledBinariesActivity.java" 
     binary="false">    
     <position height="435" width="259" x="16464" y="1085"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1754,9 +1754,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="188" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.HostListActivity" 
+  <class id="188" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.HostListActivity" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/HostListActivity.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/HostListActivity.java" binary="false">    
     <position height="418" width="337" x="13055" y="1085"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -1974,9 +1974,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="210" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.ModeInfo" 
+  <class id="210" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.ModeInfo" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ModeInfo.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ModeInfo.java" 
     binary="false">    
     <position height="112" width="164" x="13926" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1984,9 +1984,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="211" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.ProjectInfo" 
+  <class id="211" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.ProjectInfo" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ProjectInfo.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ProjectInfo.java" 
     binary="false">    
     <position height="537" width="191" x="11900" y="12008"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -1994,9 +1994,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="212" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.ClientOp" 
+  <interface id="212" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.ClientOp" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientOp.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientOp.java" 
     binary="false">    
     <position height="248" width="164" x="7882" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2004,9 +2004,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <interface id="213" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.PollOp" 
+  <interface id="213" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.PollOp" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/PollOp.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/PollOp.java" 
     binary="false">    
     <position height="265" width="207" x="7218" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2015,8 +2015,8 @@
     </display>  
   </interface>  
   <interface id="214" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientPollReceiver" project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientPollReceiver.java" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientPollReceiver" project="sk.boinc.nativeboinc.BoincManagerActivity" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientPollReceiver.java" 
     binary="false">    
     <position height="95" width="212" x="21133" y="13367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2024,9 +2024,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="215" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.TaskInfo" 
+  <class id="215" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.TaskInfo" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/TaskInfo.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/TaskInfo.java" 
     binary="false">    
     <position height="605" width="164" x="14795" y="12008"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2035,9 +2035,9 @@
     </display>  
   </class>  
   <interface id="216" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientAccountMgrReceiver" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientAccountMgrReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientAccountMgrReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientAccountMgrReceiver.java" 
     binary="false">    
     <position height="95" width="226" x="13568" y="13570"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2045,9 +2045,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="217" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.PollError" 
+  <class id="217" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.PollError" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/PollError.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/PollError.java" 
     binary="false">    
     <position height="146" width="164" x="6024" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2055,9 +2055,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="218" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.VersionInfo" 
+  <class id="218" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.VersionInfo" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/VersionInfo.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/VersionInfo.java" 
     binary="false">    
     <position height="112" width="164" x="23028" y="12008"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2065,9 +2065,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="219" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.ClientError" 
+  <class id="219" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.ClientError" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientError.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientError.java" 
     binary="false">    
     <position height="112" width="164" x="3417" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2076,9 +2076,9 @@
     </display>  
   </class>  
   <interface id="220" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientUpdateProjectsReceiver" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientUpdateProjectsReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientUpdateProjectsReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientUpdateProjectsReceiver.java" 
     binary="false">    
     <position height="78" width="259" x="13750" y="13367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2086,9 +2086,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <interface id="221" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.ClientReceiver" 
+  <interface id="221" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.ClientReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientReceiver.java" 
     binary="false">    
     <position height="248" width="234" x="20011" y="12008"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2097,9 +2097,9 @@
     </display>  
   </interface>  
   <interface id="222" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientRequestHandler" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientRequestHandler" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientRequestHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientRequestHandler.java" 
     binary="false">    
     <position height="843" width="318" x="21545" y="10122"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2108,9 +2108,9 @@
     </display>  
   </interface>  
   <interface id="223" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientUpdateTasksReceiver" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientUpdateTasksReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientUpdateTasksReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientUpdateTasksReceiver.java" 
     binary="false">    
     <position height="78" width="237" x="14297" y="13367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2118,9 +2118,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="224" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.TaskDescriptor" 
+  <class id="224" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.TaskDescriptor" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/TaskDescriptor.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/TaskDescriptor.java" 
     binary="false">    
     <position height="163" width="164" x="14337" y="12008"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2129,9 +2129,9 @@
     </display>  
   </class>  
   <interface id="225" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientAllProjectsListReceiver" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientAllProjectsListReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientAllProjectsListReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientAllProjectsListReceiver.java" 
     binary="false">    
     <position height="78" width="308" x="19810" y="13367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2139,9 +2139,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="226" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.MessageInfo" 
+  <class id="226" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.MessageInfo" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/MessageInfo.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/MessageInfo.java" 
     binary="false">    
     <position height="163" width="164" x="24823" y="12008"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2150,9 +2150,9 @@
     </display>  
   </class>  
   <interface id="227" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientUpdateTransfersReceiver" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientUpdateTransfersReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientUpdateTransfersReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientUpdateTransfersReceiver.java" 
     binary="false">    
     <position height="78" width="277" x="19230" y="13367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2161,9 +2161,9 @@
     </display>  
   </interface>  
   <interface id="228" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientPreferencesReceiver" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientPreferencesReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientPreferencesReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientPreferencesReceiver.java" 
     binary="false">    
     <position height="95" width="270" x="20158" y="13367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2171,9 +2171,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="229" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.TransferDescriptor" 
+  <class id="229" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.TransferDescriptor" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/TransferDescriptor.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/TransferDescriptor.java" 
     binary="false">    
     <position height="163" width="183" x="19270" y="12008"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2192,9 +2192,9 @@
     </display>  
   </interface>  
   <class id="231" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.NoConnectivityException" 
+    name="sk.boinc.mobileboinc.clientconnection.NoConnectivityException" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/NoConnectivityException.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/NoConnectivityException.java" 
     binary="false">    
     <position height="95" width="179" x="3854" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2203,9 +2203,9 @@
     </display>  
   </class>  
   <interface id="232" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientManageReceiver" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientManageReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientManageReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientManageReceiver.java" 
     binary="false">    
     <position height="95" width="208" x="14049" y="13367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2213,9 +2213,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="233" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.TransferInfo" 
+  <class id="233" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.TransferInfo" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/TransferInfo.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/TransferInfo.java" 
     binary="false">    
     <position height="333" width="164" x="19786" y="12008"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2224,9 +2224,9 @@
     </display>  
   </class>  
   <interface id="234" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientProjectReceiver" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientProjectReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientProjectReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientProjectReceiver.java" 
     binary="false">    
     <position height="112" width="267" x="23389" y="13570"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2235,9 +2235,9 @@
     </display>  
   </interface>  
   <interface id="235" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.clientconnection.ClientUpdateMessagesReceiver" 
+    name="sk.boinc.mobileboinc.clientconnection.ClientUpdateMessagesReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/ClientUpdateMessagesReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/ClientUpdateMessagesReceiver.java" 
     binary="false">    
     <position height="78" width="281" x="20812" y="13367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2245,9 +2245,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="236" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.BoincOp" 
+  <class id="236" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.BoincOp" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/BoincOp.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/BoincOp.java" 
     binary="false">    
     <position height="758" width="199" x="1119" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2255,9 +2255,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="237" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.clientconnection.HostInfo" 
+  <class id="237" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.clientconnection.HostInfo" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/HostInfo.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/HostInfo.java" 
     binary="false">    
     <position height="112" width="164" x="13701" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2265,36 +2265,36 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="238" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.debug.Debugging" 
+  <interface id="238" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.debug.Debugging" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/debug/Debugging.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/debug/Debugging.java" binary="false">    
     <position height="112" width="150" x="7465" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <interface id="239" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.debug.Logging" 
+  <interface id="239" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.debug.Logging" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/debug/Logging.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/debug/Logging.java" binary="false">    
     <position height="129" width="122" x="9672" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <interface id="240" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.debug.NetStats" 
+  <interface id="240" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.debug.NetStats" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/debug/NetStats.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/debug/NetStats.java" binary="false">    
     <position height="129" width="151" x="20468" y="13367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="241" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstalledDistribManager" 
+  <class id="241" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstalledDistribManager" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstalledDistribManager.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstalledDistribManager.java" 
     binary="false">    
     <position height="316" width="357" x="26020" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2302,9 +2302,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="242" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.ProjectsClientStateParser" 
+  <class id="242" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.ProjectsClientStateParser" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/ProjectsClientStateParser.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/ProjectsClientStateParser.java" 
     binary="false">    
     <position height="163" width="209" x="19699" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2312,9 +2312,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="243" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.ClientDistribListParser" 
+  <class id="243" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.ClientDistribListParser" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/ClientDistribListParser.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/ClientDistribListParser.java" 
     binary="false">    
     <position height="163" width="254" x="24221" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2322,9 +2322,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="244" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.ProjectDescriptor" 
+  <class id="244" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.ProjectDescriptor" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/ProjectDescriptor.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/ProjectDescriptor.java" 
     binary="false">    
     <position height="129" width="174" x="19755" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2332,9 +2332,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="245" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.Downloader" 
+  <class id="245" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.Downloader" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/Downloader.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/Downloader.java" binary="false">    
     <position height="299" width="401" x="19982" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -2342,8 +2342,8 @@
     </display>  
   </class>  
   <interface id="246" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.DeleteProjectBinsListener" project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/DeleteProjectBinsListener.java" 
+    name="sk.boinc.mobileboinc.installer.DeleteProjectBinsListener" project="sk.boinc.nativeboinc.BoincManagerActivity" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/DeleteProjectBinsListener.java" 
     binary="false">    
     <position height="78" width="173" x="19321" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2351,9 +2351,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="247" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstallerThread" 
+  <class id="247" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstallerThread" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerThread.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerThread.java" 
     binary="false">    
     <position height="401" width="342" x="22777" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2361,9 +2361,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="248" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstallationOps" 
+  <class id="248" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstallationOps" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallationOps.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallationOps.java" 
     binary="false">    
     <position height="588" width="448" x="21947" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2371,9 +2371,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="249" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstalledBinary" 
+  <class id="249" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstalledBinary" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstalledBinary.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstalledBinary.java" 
     binary="false">    
     <position height="180" width="264" x="18301" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2381,9 +2381,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="250" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstallOp" 
+  <class id="250" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstallOp" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallOp.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallOp.java" binary="false">    
     <position height="299" width="221" x="17341" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -2391,9 +2391,9 @@
     </display>  
   </class>  
   <class id="251" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallerHandler.ClientInstaller" 
+    name="sk.boinc.mobileboinc.installer.InstallerHandler.ClientInstaller" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerHandler.java" 
     binary="false">    
     <position height="129" width="164" x="25429" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2401,9 +2401,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="252" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstalledClient" 
+  <class id="252" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstalledClient" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstalledClient.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstalledClient.java" 
     binary="false">    
     <position height="146" width="129" x="26218" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2411,9 +2411,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="253" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstallerHandler" 
+  <class id="253" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstallerHandler" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerHandler.java" 
     binary="false">    
     <position height="1455" width="504" x="23997" y="1085"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2422,9 +2422,9 @@
     </display>  
   </class>  
   <class id="254" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallerHandler.BoincInstallationMover" 
+    name="sk.boinc.mobileboinc.installer.InstallerHandler.BoincInstallationMover" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerHandler.java" 
     binary="false">    
     <position height="95" width="153" x="23976" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2432,9 +2432,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="255" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.ResourcesLocker" 
+  <class id="255" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.ResourcesLocker" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/ResourcesLocker.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/ResourcesLocker.java" 
     binary="false">    
     <position height="282" width="163" x="20423" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2442,9 +2442,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="256" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.ProjectDistribListParser" 
+  <class id="256" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.ProjectDistribListParser" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/ProjectDistribListParser.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/ProjectDistribListParser.java" 
     binary="false">    
     <position height="163" width="254" x="26319" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2452,9 +2452,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="257" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.ProjectDistrib" 
+  <class id="257" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.ProjectDistrib" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/ProjectDistrib.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/ProjectDistrib.java" 
     binary="false">    
     <position height="197" width="227" x="25947" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2463,9 +2463,9 @@
     </display>  
   </class>  
   <class id="258" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallerService.LocalBinder" 
+    name="sk.boinc.mobileboinc.installer.InstallerService.LocalBinder" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerService.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerService.java" 
     binary="false">    
     <position height="95" width="161" x="22134" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2474,9 +2474,9 @@
     </display>  
   </class>  
   <class id="259" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallerHandler.BoincReinstaller" 
+    name="sk.boinc.mobileboinc.installer.InstallerHandler.BoincReinstaller" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerHandler.java" 
     binary="false">    
     <position height="95" width="129" x="23807" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2484,9 +2484,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="260" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstallationException" 
+  <class id="260" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstallationException" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallationException.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallationException.java" 
     binary="false">    
     <position height="95" width="157" x="1608" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2495,8 +2495,8 @@
     </display>  
   </class>  
   <interface id="261" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.AbstractInstallerListener" project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/AbstractInstallerListener.java" 
+    name="sk.boinc.mobileboinc.installer.AbstractInstallerListener" project="sk.boinc.nativeboinc.BoincManagerActivity" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/AbstractInstallerListener.java" 
     binary="false">    
     <position height="112" width="259" x="20500" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2504,9 +2504,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="262" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstalledClientParser" 
+  <class id="262" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstalledClientParser" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstalledClientParser.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstalledClientParser.java" 
     binary="false">    
     <position height="163" width="254" x="26417" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2515,9 +2515,9 @@
     </display>  
   </class>  
   <class id="263" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallerService.ListenerHandler" 
+    name="sk.boinc.mobileboinc.installer.InstallerService.ListenerHandler" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerService.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerService.java" 
     binary="false">    
     <position height="265" width="348" x="23333" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2525,9 +2525,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="264" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.ClientDistrib" 
+  <class id="264" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.ClientDistrib" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/ClientDistrib.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/ClientDistrib.java" 
     binary="false">    
     <position height="146" width="129" x="24182" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2536,9 +2536,9 @@
     </display>  
   </class>  
   <class id="265" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallerHandler.ProjectAppsInstaller" 
+    name="sk.boinc.mobileboinc.installer.InstallerHandler.ProjectAppsInstaller" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerHandler.java" 
     binary="false">    
     <position height="231" width="263" x="25675" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2546,9 +2546,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="266" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstalledDistrib" 
+  <class id="266" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstalledDistrib" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstalledDistrib.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstalledDistrib.java" 
     binary="false">    
     <position height="197" width="134" x="26732" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2557,9 +2557,9 @@
     </display>  
   </class>  
   <class id="267" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallerHandler.BoincFilesDumper" 
+    name="sk.boinc.mobileboinc.installer.InstallerHandler.BoincFilesDumper" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerHandler.java" 
     binary="false">    
     <position height="112" width="146" x="24920" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2567,9 +2567,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="268" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.ExecFilesAppInfoParser" 
+  <class id="268" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.ExecFilesAppInfoParser" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/ExecFilesAppInfoParser.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/ExecFilesAppInfoParser.java" 
     binary="false">    
     <position height="231" width="205" x="18400" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2578,8 +2578,8 @@
     </display>  
   </class>  
   <interface id="269" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallerUpdateListener" project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerUpdateListener.java" 
+    name="sk.boinc.mobileboinc.installer.InstallerUpdateListener" project="sk.boinc.nativeboinc.BoincManagerActivity" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerUpdateListener.java" 
     binary="false">    
     <position height="129" width="290" x="17827" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2587,9 +2587,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="270" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstallerService" 
+  <class id="270" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstallerService" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerService.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerService.java" 
     binary="false">    
     <position height="1251" width="335" x="22339" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2597,9 +2597,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="271" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstalledDistribListParser" 
+  <class id="271" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstalledDistribListParser" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstalledDistribListParser.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstalledDistribListParser.java" 
     binary="false">    
     <position height="163" width="254" x="26732" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2608,8 +2608,8 @@
     </display>  
   </class>  
   <interface id="272" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallerProgressListener" project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerProgressListener.java" 
+    name="sk.boinc.mobileboinc.installer.InstallerProgressListener" project="sk.boinc.nativeboinc.BoincManagerActivity" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerProgressListener.java" 
     binary="false">    
     <position height="146" width="231" x="17556" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2618,9 +2618,9 @@
     </display>  
   </interface>  
   <class id="273" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.ProjectsFromClientRetriever" 
+    name="sk.boinc.mobileboinc.installer.ProjectsFromClientRetriever" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/ProjectsFromClientRetriever.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/ProjectsFromClientRetriever.java" 
     binary="false">    
     <position height="333" width="283" x="24169" y="4007"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2629,9 +2629,9 @@
     </display>  
   </class>  
   <class id="274" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallationOps.CopyDirectoryHelper" 
+    name="sk.boinc.mobileboinc.installer.InstallationOps.CopyDirectoryHelper" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallationOps.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallationOps.java" 
     binary="false">    
     <position height="129" width="247" x="21062" y="1085"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2640,9 +2640,9 @@
     </display>  
   </class>  
   <class id="275" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallerHandler.AbstractWorker" 
+    name="sk.boinc.mobileboinc.installer.InstallerHandler.AbstractWorker" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallerHandler.java" 
     binary="false">    
     <position height="163" width="150" x="24831" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2650,9 +2650,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="276" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.installer.InstallError" 
+  <class id="276" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.installer.InstallError" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallError.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallError.java" 
     binary="false">    
     <position height="129" width="173" x="4681" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2661,9 +2661,9 @@
     </display>  
   </class>  
   <interface id="277" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.installer.InstallationOps.ProgressNotifier" 
+    name="sk.boinc.mobileboinc.installer.InstallationOps.ProgressNotifier" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/installer/InstallationOps.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/installer/InstallationOps.java" 
     binary="false">    
     <position height="78" width="137" x="17650" y="2580"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2672,9 +2672,9 @@
     </display>  
   </interface>  
   <interface id="278" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincAutoInstallListener" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincAutoInstallListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincAutoInstallListener.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincAutoInstallListener.java" 
     binary="false">    
     <position height="95" width="198" x="22664" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2682,9 +2682,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <interface id="279" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.nativeclient.MonitorListener" 
+  <interface id="279" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.nativeclient.MonitorListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/MonitorListener.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/MonitorListener.java" 
     binary="false">    
     <position height="95" width="182" x="25362" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2693,9 +2693,9 @@
     </display>  
   </interface>  
   <interface id="280" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.AbstractNativeBoincListener" 
+    name="sk.boinc.mobileboinc.nativeclient.AbstractNativeBoincListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/AbstractNativeBoincListener.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/AbstractNativeBoincListener.java" 
     binary="false">    
     <position height="95" width="224" x="22739" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2704,9 +2704,9 @@
     </display>  
   </interface>  
   <interface id="281" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincStateListener" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincStateListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincStateListener.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincStateListener.java" 
     binary="false">    
     <position height="95" width="168" x="24592" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2715,9 +2715,9 @@
     </display>  
   </interface>  
   <class id="282" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincService.NativeBoincThread" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincService.NativeBoincThread" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincService.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincService.java" 
     binary="false">    
     <position height="180" width="161" x="21639" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2725,9 +2725,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="283" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.nativeclient.NativeBoincWorkerThread" 
+  <class id="283" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.nativeclient.NativeBoincWorkerThread" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincWorkerThread.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincWorkerThread.java" 
     binary="false">    
     <position height="248" width="452" x="23758" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2736,9 +2736,9 @@
     </display>  
   </class>  
   <class id="284" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincWorkerHandler" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincWorkerHandler" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincWorkerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincWorkerHandler.java" 
     binary="false">    
     <position height="401" width="369" x="21966" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2746,9 +2746,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="285" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.nativeclient.ExitCode" 
+  <class id="285" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.nativeclient.ExitCode" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/ExitCode.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/ExitCode.java" binary="false">    
     <position height="282" width="256" x="10097" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -2756,9 +2756,9 @@
     </display>  
   </class>  
   <interface id="286" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincProjectsListener" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincProjectsListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincProjectsListener.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincProjectsListener.java" 
     binary="false">    
     <position height="78" width="199" x="24884" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2766,9 +2766,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="287" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.nativeclient.NativeBoincUtils" 
+  <class id="287" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.nativeclient.NativeBoincUtils" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincUtils.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincUtils.java" 
     binary="false">    
     <position height="282" width="270" x="6481" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2776,9 +2776,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="288" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.nativeclient.NativeBoincService" 
+  <class id="288" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.nativeclient.NativeBoincService" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincService.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincService.java" 
     binary="false">    
     <position height="1540" width="439" x="22695" y="5247"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2786,9 +2786,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="289" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.nativeclient.WakeLockHolder" 
+  <class id="289" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.nativeclient.WakeLockHolder" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/WakeLockHolder.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/WakeLockHolder.java" 
     binary="false">    
     <position height="588" width="325" x="23328" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2797,9 +2797,9 @@
     </display>  
   </class>  
   <class id="290" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincService.LocalBinder" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincService.LocalBinder" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincService.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincService.java" 
     binary="false">    
     <position height="95" width="181" x="21840" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2808,9 +2808,9 @@
     </display>  
   </class>  
   <class id="291" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.MonitorThread.ListenerHandler" 
+    name="sk.boinc.mobileboinc.nativeclient.MonitorThread.ListenerHandler" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/MonitorThread.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/MonitorThread.java" 
     binary="false">    
     <position height="146" width="239" x="24292" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2819,9 +2819,9 @@
     </display>  
   </class>  
   <class id="292" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincService.NativeKillerThread" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincService.NativeKillerThread" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincService.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincService.java" 
     binary="false">    
     <position height="129" width="145" x="21454" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2830,9 +2830,9 @@
     </display>  
   </class>  
   <interface id="293" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincTasksListener" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincTasksListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincTasksListener.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincTasksListener.java" 
     binary="false">    
     <position height="78" width="196" x="23665" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2841,9 +2841,9 @@
     </display>  
   </interface>  
   <class id="294" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincService.ListenerHandler" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincService.ListenerHandler" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincService.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincService.java" 
     binary="false">    
     <position height="265" width="266" x="23878" y="10122"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2851,9 +2851,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="295" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.nativeclient.WorkerOp" 
+  <class id="295" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.nativeclient.WorkerOp" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/WorkerOp.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/WorkerOp.java" binary="false">    
     <position height="265" width="205" x="6791" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -2861,9 +2861,9 @@
     </display>  
   </class>  
   <interface id="296" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincUpdateListener" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincUpdateListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincUpdateListener.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincUpdateListener.java" 
     binary="false">    
     <position height="95" width="199" x="25123" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2872,9 +2872,9 @@
     </display>  
   </interface>  
   <interface id="297" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincReplyListener" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincReplyListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincReplyListener.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincReplyListener.java" 
     binary="false">    
     <position height="78" width="180" x="23901" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2883,9 +2883,9 @@
     </display>  
   </interface>  
   <interface id="298" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.NativeBoincServiceListener" 
+    name="sk.boinc.mobileboinc.nativeclient.NativeBoincServiceListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/NativeBoincServiceListener.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/NativeBoincServiceListener.java" 
     binary="false">    
     <position height="95" width="283" x="23351" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2894,9 +2894,9 @@
     </display>  
   </interface>  
   <interface id="299" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.nativeclient.ProjectAutoInstallerState" 
+    name="sk.boinc.mobileboinc.nativeclient.ProjectAutoInstallerState" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/ProjectAutoInstallerState.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/ProjectAutoInstallerState.java" 
     binary="false">    
     <position height="112" width="167" x="3210" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2904,9 +2904,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="300" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.nativeclient.MonitorThread" 
+  <class id="300" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.nativeclient.MonitorThread" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/nativeclient/MonitorThread.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/nativeclient/MonitorThread.java" 
     binary="false">    
     <position height="350" width="218" x="23861" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2914,9 +2914,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="301" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.receivers.AutostartAtBootReceiver" 
+  <class id="301" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.receivers.AutostartAtBootReceiver" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/receivers/AutostartAtBootReceiver.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/receivers/AutostartAtBootReceiver.java" 
     binary="false">    
     <position height="112" width="172" x="8313" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2924,9 +2924,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="302" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.service.ConnectionManagerService" 
+  <class id="302" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.service.ConnectionManagerService" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/service/ConnectionManagerService.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/service/ConnectionManagerService.java" 
     binary="false">    
     <position height="1336" width="325" x="20963" y="6827"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2935,9 +2935,9 @@
     </display>  
   </class>  
   <class id="303" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.nativeboinc.service.ConnectionManagerService.LocalBinder" 
+    name="sk.boinc.mobileboinc.service.ConnectionManagerService.LocalBinder" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/service/ConnectionManagerService.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/service/ConnectionManagerService.java" 
     binary="false">    
     <position height="95" width="220" x="21135" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2945,9 +2945,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="304" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.service.NetworkStatisticsHandler" 
+  <class id="304" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.service.NetworkStatisticsHandler" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/service/NetworkStatisticsHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/service/NetworkStatisticsHandler.java" 
     binary="false">    
     <position height="418" width="325" x="20428" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2955,9 +2955,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="305" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.service.ConnectivityStatus" 
+  <class id="305" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.service.ConnectivityStatus" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/service/ConnectivityStatus.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/service/ConnectivityStatus.java" 
     binary="false">    
     <position height="214" width="260" x="20793" y="8203"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -2965,9 +2965,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="306" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.service.ConnectivityListener" 
+  <interface id="306" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.service.ConnectivityListener" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/service/ConnectivityListener.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/service/ConnectivityListener.java" 
     binary="false">    
     <position height="112" width="203" x="21391" y="9307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      

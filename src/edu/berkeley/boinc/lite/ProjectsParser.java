@@ -22,7 +22,6 @@ package edu.berkeley.boinc.lite;
 import java.util.ArrayList;
 
 import sk.boinc.nativeboinc.debug.Logging;
-
 import android.util.Log;
 
 public class ProjectsParser extends BoincBaseParser {

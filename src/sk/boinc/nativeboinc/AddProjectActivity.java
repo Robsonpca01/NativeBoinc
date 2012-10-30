@@ -20,11 +20,10 @@
 package sk.boinc.nativeboinc;
 
 
+import hal.android.components.FixedProgressDialog;
+
 import java.util.List;
 
-import hal.android.workarounds.FixedProgressDialog;
-import edu.berkeley.boinc.lite.AccountIn;
-import edu.berkeley.boinc.lite.ProjectConfig;
 import sk.boinc.nativeboinc.clientconnection.BoincOp;
 import sk.boinc.nativeboinc.clientconnection.ClientProjectReceiver;
 import sk.boinc.nativeboinc.clientconnection.PollOp;
@@ -53,6 +52,8 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
+import edu.berkeley.boinc.lite.AccountIn;
+import edu.berkeley.boinc.lite.ProjectConfig;
 
 /**
  * @author mat

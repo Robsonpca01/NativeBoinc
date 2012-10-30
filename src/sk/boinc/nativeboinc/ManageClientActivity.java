@@ -19,10 +19,7 @@
 
 package sk.boinc.nativeboinc;
 
-import hal.android.workarounds.FixedProgressDialog;
-
-import edu.berkeley.boinc.lite.AccountMgrInfo;
-
+import hal.android.components.FixedProgressDialog;
 import sk.boinc.nativeboinc.clientconnection.BoincOp;
 import sk.boinc.nativeboinc.clientconnection.ClientAccountMgrReceiver;
 import sk.boinc.nativeboinc.clientconnection.ClientManageReceiver;
@@ -42,17 +39,17 @@ import android.app.ProgressDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.content.DialogInterface.OnCancelListener;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
+import android.preference.PreferenceActivity;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -62,6 +59,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
+import edu.berkeley.boinc.lite.AccountMgrInfo;
 
 
 public class ManageClientActivity extends PreferenceActivity implements ClientManageReceiver,

@@ -19,11 +19,10 @@
 
 package edu.berkeley.boinc.nativeboinc;
 
-import edu.berkeley.boinc.lite.BoincBaseParser;
-import edu.berkeley.boinc.lite.BoincParserException;
-
 import sk.boinc.nativeboinc.debug.Logging;
 import android.util.Log;
+import edu.berkeley.boinc.lite.BoincBaseParser;
+import edu.berkeley.boinc.lite.BoincParserException;
 
 /**
  * @author mat

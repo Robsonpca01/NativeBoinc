@@ -431,7 +431,7 @@ public final class R {
         public static final int appListDownloadError=0x7f0901d6;
         public static final int appListParseError=0x7f0901d7;
         public static final int app_desc=0x7f090001;
-        /**  Basic application stuff 
+        /**  Informações Básica 
  Basic application stuff 
  Basic application stuff 
  Basic application stuff 
@@ -443,7 +443,7 @@ public final class R {
         public static final int attachBAMInProgress=0x7f090135;
         public static final int authorization=0x7f09000d;
         public static final int autostartReceiver=0x7f090008;
-        /**  Some common, generic strings 
+        /**  Strings genéricas 
  Some common, generic strings 
  Some common, generic strings 
  Some common, generic strings 
@@ -461,7 +461,7 @@ public final class R {
         public static final int boincMoveTo=0x7f09010e;
         public static final int boincOperationError=0x7f0901dd;
         public static final int boincPollError=0x7f0901de;
-        /**  reinstall boinc 
+        /**  reinstalar boinc boinc 
  reinstall boinc 
  reinstall boinc 
  reinstall boinc 
@@ -722,7 +722,7 @@ public final class R {
         public static final int localPrefUseAtMost=0x7f09008a;
         public static final int localPrefUseGPUInUse=0x7f090081;
         public static final int localPrefWrong=0x7f0900a0;
-        /**   Local Preferences 
+        /**   Preferencias locais Local  
   Local Preferences 
   Local Preferences 
   Local Preferences 
@@ -890,7 +890,7 @@ public final class R {
         public static final int prefCategoryAbout=0x7f090074;
         public static final int prefCategoryNativeBoinc=0x7f09005f;
         public static final int prefCategoryNetworkBW=0x7f090067;
-        /**  Preferences 
+        /**  Preferencias 
  Preferences 
  Preferences 
  Preferences 
@@ -1086,7 +1086,7 @@ public final class R {
         public static final int warnShutdownText=0x7f0900d5;
         public static final int warning=0x7f090026;
         public static final int wednesday=0x7f0900a8;
-        /**  widget names 
+        /** nomes dos widgets 
  widget names 
  widget names 
  widget names 

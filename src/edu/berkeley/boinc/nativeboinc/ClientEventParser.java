@@ -21,14 +21,10 @@ package edu.berkeley.boinc.nativeboinc;
 
 import sk.boinc.nativeboinc.debug.Logging;
 import android.util.Log;
-
 import edu.berkeley.boinc.lite.BoincBaseParser;
 import edu.berkeley.boinc.lite.BoincParserException;
 
-/**
- * @author mat
- *
- */
+
 public class ClientEventParser extends BoincBaseParser {
 	private static final String TAG = "ClientEventParser";
 
