@@ -92,14 +92,7 @@ public class InstallStep2Activity extends ServiceBoincActivity implements Client
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.install_step2);
 		
-		/* setup buttons */
-		Button changePassword = (Button)findViewById(R.id.changePassword);
-		changePassword.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				showDialog(DIALOG_CHANGE_PASSWORD);
-			}
-		});
+		
 		
 		Button changeHostname = (Button)findViewById(R.id.changeHostname);
 		changeHostname.setOnClickListener(new View.OnClickListener() {

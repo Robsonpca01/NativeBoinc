@@ -1,21 +1,4 @@
-/*
- * NativeBOINC - Native BOINC Client with Manager
- * Copyright (C) 2011, Mateusz Szpakowski
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- */
+
 
 #include <stdio.h>
 #include <string.h>
@@ -27,7 +10,7 @@
 
 #include <jni.h>
 
-/* my buffered IO */
+
 
 #define MYBUFSIZ (FILENAME_MAX+1)
 
@@ -37,7 +20,6 @@ typedef struct {
 	char buf[MYBUFSIZ];
 } mybuf_t;
 
-/* my buffered IO */
 static void mygetline_init(mybuf_t* buf) {
 	buf->rest_pos = 0;
 	buf->rest = 0;
@@ -49,19 +31,18 @@ static char* mygetline(mybuf_t* buf, int fd, char* line, size_t maxlength) {
 	char* ptr2;
 	size_t next_pos2;
 	size_t next_linesize;
-	// fetch from rest
 	if (buf->rest_pos < buf->rest) {
 		size_t next_pos;
 		size_t linesize;
 		char* ptr = memchr(buf->buf + buf->rest_pos, '\n',
 				buf->rest - buf->rest_pos);
 
-		if (ptr != NULL) // not found
+		if (ptr != NULL) // não encontrado
 				{
 			next_pos = (ptrdiff_t) ptr - (ptrdiff_t) (buf->buf);
 			linesize = next_pos - buf->rest_pos;
 			if (linesize > maxlength)
-				return NULL; // line too long
+				return NULL; // linha além do tamanho máximo
 			memcpy(line, buf->buf + buf->rest_pos, linesize);
 			line[linesize] = 0;
 			buf->rest_pos = next_pos + 1;
@@ -69,19 +50,19 @@ static char* mygetline(mybuf_t* buf, int fd, char* line, size_t maxlength) {
 		} else {
 			line_pos = buf->rest - buf->rest_pos;
 			if (line_pos > maxlength)
-				return NULL; // line too long
+				return NULL; //linha além do tamanho máximo
 			memcpy(line, buf->buf + buf->rest_pos, line_pos);
 		}
 	}
 
-	// read next
+	
 	readed = read(fd, buf->buf, MYBUFSIZ);
 	if (readed < 0 || (readed == 0 && line_pos == 0)) {
 		buf->rest = 0;
 		buf->rest_pos = 0;
-		return NULL; // error
+		return NULL; // erro
 	}
-	if (readed == 0) // line is not empty
+	if (readed == 0) // lnha não vázia
 			{
 		buf->rest = 0;
 		buf->rest_pos = 0;
@@ -91,12 +72,12 @@ static char* mygetline(mybuf_t* buf, int fd, char* line, size_t maxlength) {
 
 	ptr2 = memchr(buf->buf, '\n', readed);
 	if (ptr2 == NULL
-		) // line too long
+		) // linha além do tamanho máximo
 		return NULL;
 
 	next_pos2 = (ptrdiff_t) ptr2 - (ptrdiff_t) (buf->buf);
 	next_linesize = line_pos + next_pos2;
-	if (next_linesize > maxlength) // line too long
+	if (next_linesize > maxlength) //linha além do tamanho máximo
 		return NULL;
 
 	memcpy(line + line_pos, buf->buf, next_linesize - line_pos);
@@ -123,7 +104,7 @@ JNIEXPORT jint JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_openExecsLock(
 
 	dirpath = (*env)->GetStringUTFChars(env, dirpathStr, 0);
 	if ((execsname = malloc(PATH_MAX)) == NULL)
-		abort();	// no memory for 4kB (fatal)
+		abort();	// não há memoria para4kB (erro fatal)
 	dirlen = strlen(dirpath);
 
 	memcpy(execsname, dirpath, dirlen);
@@ -139,11 +120,11 @@ JNIEXPORT jint JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_openExecsLock(
 			(*env)->ReleaseStringUTFChars(env, dirpathStr, dirpath);
 			if (errno != ENOENT)
 				(*env)->ThrowNew(env, ioexcept, "openExecsLock failed (openrdonly)");
-			return -1; // no executables
+			return -1; // não há executáveis
 		}
 
-		flock(fd, LOCK_SH); // we need readed
-	} else { // writing exex
+		flock(fd, LOCK_SH); 
+	} else { // escrevendo
 		fd = open(execsname, O_CREAT | O_RDWR,0600);
 		if (fd == -1) {
 			free(execsname);
@@ -151,10 +132,10 @@ JNIEXPORT jint JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_openExecsLock(
 
 			// throw exception
 			(*env)->ThrowNew(env, ioexcept, "openExecsLock failed (creat)");
-			return -1; // no executables
+			return -1; // não há executáveis
 		}
 
-		flock(fd, LOCK_EX); // we need write
+		flock(fd, LOCK_EX);
 	}
 	free(execsname);
 	(*env)->ReleaseStringUTFChars(env, dirpathStr, dirpath);
@@ -179,7 +160,7 @@ JNIEXPORT void JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_readExecs(JNIE
 	clearMid = (*env)->GetMethodID(env, collcls, "clear", "()V");
 
 	(*env)->CallVoidMethod(env, coll, clearMid);
-	if (fd == -1) // do nothing
+	if (fd == -1) // interrompe execução e retorna
 		return;
 
 	line = malloc(FILENAME_MAX + 1);
@@ -221,12 +202,12 @@ JNIEXPORT jboolean JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_checkExecM
 
 	filename = (*env)->GetStringUTFChars(env, filenameStr, 0);
 	mygetline_init(&buf);
-	if (lseek(fd, 0, SEEK_SET)==-1) //rewind execs file
+	if (lseek(fd, 0, SEEK_SET)==-1) 
 		goto error;
 
 	errno = 0;
 	while (mygetline(&buf, fd, line, FILENAME_MAX) != NULL) {
-		if (strcmp(filename, line) == 0) { // if found
+		if (strcmp(filename, line) == 0) { 
 			free(line);
 			(*env)->ReleaseStringUTFChars(env, filenameStr, filename);
 			return 1;
@@ -237,7 +218,7 @@ JNIEXPORT jboolean JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_checkExecM
 
 	free(line);
 	(*env)->ReleaseStringUTFChars(env, filenameStr, filename);
-	return 0; // not found
+	return 0;
 error:
 	free(line);
 	(*env)->ReleaseStringUTFChars(env, filenameStr, filename);
@@ -256,7 +237,6 @@ JNIEXPORT void JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_setExecMode(JN
 	ioexcept = (*env)->FindClass(env, "java/io/IOException");
 
 	if (fd == -1) {
-		// returns 0 if unsetting isexec (no error)
 		if (isexec) {
 			(*env)->ThrowNew(env,ioexcept,"setExecMode failed");
 			return;
@@ -271,11 +251,11 @@ JNIEXPORT void JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_setExecMode(JN
 	mygetline_init(&buf);
 
 	tmppos = 0;
-	if (lseek(fd, 0, SEEK_SET)==-1) //rewind execs file
+	if (lseek(fd, 0, SEEK_SET)==-1) 
 		goto error;
 	errno = 0;
 	while (mygetline(&buf, fd, line, FILENAME_MAX) != NULL) {
-		if (strcmp(filename, line) == 0) { // if found
+		if (strcmp(filename, line) == 0) { 
 			execpos = tmppos;
 			break;
 		}
@@ -284,8 +264,8 @@ JNIEXPORT void JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_setExecMode(JN
 	if (errno == EIO)
 		goto error;
 
-	if (isexec) { // set exec
-		if (execpos == -1) { // not yet set_exec
+	if (isexec) { 
+		if (execpos == -1) { 
 			int ret;
 			ret = lseek(fd, 0, SEEK_END);
 			if (ret != -1)
@@ -295,13 +275,12 @@ JNIEXPORT void JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_setExecMode(JN
 			if (ret == -1)
 				goto error;
 		}
-	} else { // unset exec
+	} else { 
 		if (execpos != -1) {
 			int readed;
 			off_t ipos = execpos;
 			char mybuf[256];
 
-			// move to back
 			do {
 				int ret;
 				ret = lseek(fd, ipos + filenamelen + 1, SEEK_SET);
@@ -315,7 +294,7 @@ JNIEXPORT void JNICALL Java_sk_boinc_nativeboinc_util_SDCardExecs_setExecMode(JN
 					goto error;
 				ipos += readed;
 			} while (readed == 256);
-			if (ftruncate(fd, ipos)==-1) // delete obsolete
+			if (ftruncate(fd, ipos)==-1) 
 				goto error;
 		}
 	}

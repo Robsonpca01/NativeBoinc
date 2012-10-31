@@ -17,20 +17,6 @@
 			android:summary="@string/nativeHostnameSummaryNone"
 			android:defaultValue=""
 			android:persistent="false" />
-        <CheckBoxPreference 
-            android:key="nativeRemoteAccess"
-            android:title="@string/nativeRemoteAccessTitle"
-            android:summaryOff="@string/nativeRemoteAccessSummaryOff"
-            android:summaryOn="@string/nativeRemoteAccessSummaryOn"
-            android:defaultValue="true"
-            android:persistent="true" />
-        <EditTextPreference
-            android:key="nativeAccessPassword"
-			android:title="@string/nativeAccessPasswordTitle"
-			android:summary="@string/nativeAccessPasswordSummary"
-			android:inputType="textPassword"
-			android:defaultValue=""
-			android:persistent="false" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/nativeBoincInstallation">
         <Preference

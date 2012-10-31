@@ -37,12 +37,6 @@
   		android:textSize="@dimen/labelTextSize"
   		android:paddingTop="10dip"
   		android:text="@string/installInfoFinished" />
-  	<TextView
-		android:layout_width="fill_parent"
-  		android:layout_height="wrap_content"
-  		android:textSize="@dimen/labelTextSize"
-  		android:paddingTop="10dip"
-  		android:text="@string/installWidgetFinished" />
   	<Button android:id="@+id/installFinish"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"

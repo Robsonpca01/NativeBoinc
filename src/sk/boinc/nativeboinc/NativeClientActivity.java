@@ -65,7 +65,6 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 	
 	private boolean mDoRestart = false;
 	private boolean mAllowRemoteHosts;
-	private boolean mAllowRemoteHostsDetermined = false;
 	
 	private String mOldHostname = null;
 	
@@ -158,20 +157,18 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 		private final String oldHostname;
 		private final boolean doRestart;
 		private final boolean allowRemoteHosts;
-		private final boolean allowRemoteHostsDetermined;
 		
 		public SavedState(NativeClientActivity activity) {
 			this.doRestart = activity.mDoRestart;
 			this.oldHostname = activity.mOldHostname;
 			this.allowRemoteHosts = activity.mAllowRemoteHosts;
-			this.allowRemoteHostsDetermined = activity.mAllowRemoteHostsDetermined;
+			
 		}
 		
 		public void restore(NativeClientActivity activity) {
 			activity.mDoRestart = this.doRestart;
 			activity.mOldHostname = this.oldHostname;
 			activity.mAllowRemoteHosts = this.allowRemoteHosts;
-			activity.mAllowRemoteHostsDetermined = this.allowRemoteHostsDetermined;
 		}
 	}
 	
@@ -200,8 +197,8 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 		mScreenOrientation = new ScreenOrientationHandler(this);
 		addPreferencesFromResource(R.xml.nativeboinc);
 		
-		// Display latest news
-		Preference pref = findPreference(PreferenceName.NATIVE_LATEST_NEWS);
+		
+		Preference pref;
 			
 		/* native autostart */
 		ListPreference listPref = (ListPreference)findPreference(PreferenceName.NATIVE_AUTOSTART);
@@ -239,42 +236,6 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 			}
 		});
 		
-		/* allow remote client preference */
-		CheckBoxPreference checkPref = (CheckBoxPreference)findPreference(
-				PreferenceName.NATIVE_REMOTE_ACCESS);
-		
-		if (!mAllowRemoteHostsDetermined) {
-			if (Logging.DEBUG) Log.d(TAG, "isAllowRemoteHosts (in start):"+checkPref.isChecked());
-			mAllowRemoteHosts = checkPref.isChecked();
-			mAllowRemoteHostsDetermined = true;
-		}
-	
-		/* access password preference */
-		editPref = (EditTextPreference)findPreference(PreferenceName.NATIVE_ACCESS_PASSWORD);
-		
-		editPref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-
-			@Override
-			public boolean onPreferenceChange(Preference preference,
-					Object newValue) {
-				String oldPassword = null;
-				try {
-					oldPassword = NativeBoincUtils.getAccessPassword(NativeClientActivity.this);
-				} catch(IOException ex) { }
-				
-				String newPassword = (String)newValue;
-				
-				if (!newPassword.equals(oldPassword)) { // if not same password
-					Log.d(TAG, "In changing password");
-					try {
-						NativeBoincUtils.setAccessPassword(NativeClientActivity.this, newPassword);
-					} catch(IOException ex) { }
-					
-					mDoRestart = true;
-				}
-				return true;
-			}
-		});
 		
 		/* installed binaries preference */
 		pref = (Preference)findPreference(PreferenceName.NATIVE_INSTALLED_BINARIES);
@@ -353,12 +314,10 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 	private void updatePreferencesEnabled() {
 		if (mInstaller == null) return;
 		
-		// update enabled/disabled
-		Preference pref = (Preference)findPreference(PreferenceName.NATIVE_DUMP_BOINC_DIR);
+		Preference pref;
 		//TODO
 		pref = (Preference)findPreference(PreferenceName.NATIVE_REINSTALL);
 		pref.setEnabled(!mInstaller.isBeingReinstalled());
-		pref = findPreference(PreferenceName.NATIVE_MOVE_INSTALLATION);
 		
 	}
 	
@@ -529,12 +488,10 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 	
 	/* check whether restart is required */
 	private boolean isRestartRequired() {
-		CheckBoxPreference checkPref = (CheckBoxPreference)findPreference(PreferenceName.NATIVE_REMOTE_ACCESS);
-		
 		EditTextPreference hostnamePref = (EditTextPreference)findPreference(PreferenceName.NATIVE_HOSTNAME);
 		
 		// if do restart or new allowRemoteHost is different value
-		return mDoRestart || (mAllowRemoteHosts != checkPref.isChecked()) ||
+		return mDoRestart ||
 				!(mOldHostname.equals(hostnamePref.getText()));
 	}
 
@@ -561,10 +518,7 @@ public class NativeClientActivity extends PreferenceActivity implements Abstract
 	}
 
 	private void changePreferencesEnabled(String distribName) {
-		if (distribName.equals(InstallerService.BOINC_DUMP_ITEM_NAME)) {
-			Preference pref = (Preference)findPreference(PreferenceName.NATIVE_DUMP_BOINC_DIR);
-			pref.setEnabled(true); // enable it
-		} else if (distribName.equals(InstallerService.BOINC_REINSTALL_ITEM_NAME)) {
+		if (distribName.equals(InstallerService.BOINC_REINSTALL_ITEM_NAME)) {
 			Preference pref = (Preference)findPreference(PreferenceName.NATIVE_REINSTALL);
 			pref.setEnabled(true); // enable it
 		} 

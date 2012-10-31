@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
-/* 
- * AndroBOINC - BOINC Manager for Android
- * Copyright (C) 2010, Pavol Michalec
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
--->
+
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 	<Preference
 		android:key="selectedHost"
@@ -27,20 +8,6 @@
 		android:dialogTitle="@string/selectHostDialogTitle"
 		android:persistent="false" />
 	<PreferenceCategory android:title="@string/manageCategoryOptions">
-		<Preference
-			android:key="synchronizeWithBAM"
-			android:title="@string/clientSyncBAMTitle"
-			android:summary="@string/clientSyncBAMSummary"
-			android:shouldDisableView="true"
-			android:dependency="localPreferences"
-			android:persistent="false" />
-		<Preference
-			android:key="stopUsingBAM"
-			android:title="@string/clientStopBAMTitle"
-			android:summary="@string/clientStopBAMSummary"
-			android:shouldDisableView="true"
-			android:dependency="localPreferences"
-			android:persistent="false" />
 		<Preference
 			android:key="addProject"
 			android:title="@string/clientAddProjectTitle"
@@ -52,13 +19,6 @@
 			android:key="localPreferences"
 			android:title="@string/clientLocalPrefsTitle"
 			android:summary="@string/clientLocalPrefsSummary"
-			android:shouldDisableView="true"
-			android:dependency="selectedHost"
-			android:persistent="false" />
-		<Preference
-			android:key="globalPreferences"
-			android:title="@string/clientGlobalPrefsTitle"
-			android:summary="@string/clientGlobalPrefsSummary"
 			android:shouldDisableView="true"
 			android:dependency="selectedHost"
 			android:persistent="false" />

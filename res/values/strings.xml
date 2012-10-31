@@ -230,9 +230,9 @@
     <string name="clientActivityNetworkTitle">Atividade da rede</string>
     <string name="clientActivityNetworkDialogTitle">Atividade da rede</string>
     <string name="manageCategoryAdvanced">Avançado</string>
-    <string name="clientRunBenchTitle">Executar parâmetros de CPU</string>
-    <string name="clientRunBenchSummary">Executar parâmetros de CPU BOINC</string>
-    <string name="clientRunBenchNotify">Iniciando parâmetros de CPU</string>
+    <string name="clientRunBenchTitle">Executar benchmark da CPU</string>
+    <string name="clientRunBenchSummary">Executar benchmark de CPU BOINC</string>
+    <string name="clientRunBenchNotify">Iniciando benchmark de CPU</string>
     <string name="clientDoNetCommTitle">Fazer comunicação de rede</string>
     <string name="clientDoNetCommSummary">Fazer todas as comunicações de rede pendentes</string>
     <string name="clientDoNetCommNotify">Iniciando comunicação de rede</string>
@@ -274,7 +274,7 @@
     <string name="nativeUpdateFromSDCardSummary">Atualizar cliente e aplicativos do projeto a partir do SDCard</string>
     <string name="nativeReinstallTitle">Reinstalar BOINC</string>
     <string name="nativeReinstallSummary">Fazer reinstalação do BOINC</string>
-    <string name="nativeDeleteProjectBinsTitle">Deletar binários do projeto</string>
+    <string name="nativeDeleteProjectBinsTitle">Deletar binários dos projeto</string>
     <string name="nativeDeleteProjectBinsSummary">Deleta binários do projeto(do app_info.xml)</string>
     <string name="nativeBoincDiagnostics">Opções de diagnóstico</string>
     <string name="nativeDumpBoincDirTitle">Descarregar arquivos BOINC</string>
@@ -359,19 +359,18 @@
     <string name="addingProject">Adicionando projeto…</string>
     <!-- Install Wizard Activity -->
     <string name="installWizard">Assistente de instalação</string>
-    <string name="installWelcome">Bem vindo ao NativeBOINC!</string>
-    <string name="installClientInstall">Por favor, pressione o botão \'Próximo\' para fazer o download e instalar o cliente nativo do BOINC.</string>
+    <string name="installWelcome">Bem vindo ao MobileBOINC!</string>
+    <string name="installClientInstall">Por favor, pressione o botão \'Próximo\' para instalar o cliente nativo do BOINC.</string>
     <string name="versionToInstall">Versão a instalar</string>
     <string name="placeToInstall">Lugar de instalação</string>
     <string name="installSuccessfully">Cliente nativo BOINC foi instalado com sucesso!</string>
-    <string name="installAddProject">Por favor pressione o botão \'Adicionar projeto\' para adicionar o primeiro projeto BOINCt, ou \'Sincronizar BAM\' se quiser sincronizar com cliente BAM.</string>
+    <string name="installAddProject">Por favor pressione o botão \'Adicionar projeto\' para adicionar o primeiro projeto BOINC.</string>
     <string name="installFinished">A instalação foi finalizada. Por favor pressione o botão \'Finalizar\'.</string>
     <string name="installWidgetFinished">Dica: Nós recomendamos o uso da ferramenta NativeBOINC para controlar o cliente nativo.</string>
-    <string name="installInfoFinished">Dica: Você também pode navegar no Project Wiki em \'http://nativeboinc.org/\' para obter ajuda e informações.</string>
-    <string name="installFinishedBenchmark">Durante a instalação do primeiro projeto, o BOINC pode executar parâmetros, que trabalham  por 30 segundos.</string>
+    <string name="installInfoFinished"/>
+    <string name="installFinishedBenchmark">Durante a instalação do primeiro projeto, o BOINC pode executar benchmarks, que podem levar alguns segundos.</string>
     <string name="installReadBefore">LEIA ANTES DE INSTALAR:</string>
-    <string name="installAttention2">Se a aplicação fechar inesperadamente, por favor utilize \'Forçar encerramento\' e executar novamente.      
-	    Aplicação elimina todos os clientes e inicia..</string>
+    <string name="installAttention2">Se a aplicação fechar inesperadamente, por favor utilize \'Forçar encerramento\' e execute novamente. </string>
     <string name="installAttention3">Cliente BOINC estará trabalhando em Segundo plano. Por favor utilize a opção \'Desligar\' para desligar o cliente.</string>
     <string name="installNetworkAccess1">Cliente BOINC permite que você conecte com a rede utilizando gerenciador BOINC.</string>
     <string name="installClientNotifyBegin">Instalando cliente BOINC</string>
@@ -550,7 +549,7 @@
     <string name="eventAttachedProjectMessage">Projeto a partir de %s foi anexado</string>
     <string name="eventDetachedProject">Projeto foi separado</string>
     <string name="eventDetachedProjectMessage">Projeto a partir de %s foi separado</string>
-    <string name="eventBencharkRun">Parâmetros estavam funcionando</string>
+    <string name="eventBencharkRun">benchmark funcionando</string>
     <string name="eventBencharkFinished">Parâmetro foi finalizado</string>
     <string name="eventSuspendAll">Todas as tarefas foram suspensas</string>
     <string name="eventRunTasks">As tarefas foram retomadas</string>
@@ -558,7 +557,7 @@
     <string name="clientListDownload">Fazendo download da lista de cliente</string>
     <string name="waitingForClientUpdateAndRun">Aguardando atualização e execução do cliente</string>
     <string name="finalizeProjectAppInstall">Finalizar instalação da aplicação do projeto</string>
-    <string name="waitingForBenchmarkFinish">Aguardando finalização dos parâmetros</string>
+    <string name="waitingForBenchmarkFinish">Aguardando finalização do benchmark</string>
     <!-- Error strings -->
     <string name="clientDistribNotFound">Não foi possível determinar a distribuição do cliente</string>
     <string name="installError">Erro de Instalação</string>
@@ -619,7 +618,7 @@
 		&amp;lt;b&amp;gt;MFLOPS:&amp;lt;/b&amp;gt; %1$s&amp;lt;br /&amp;gt;
 		&amp;lt;b&amp;gt;MIPS:&amp;lt;/b&amp;gt; %2$s&amp;lt;br /&amp;gt;
 		&amp;lt;b&amp;gt;Largura de banda da memória:&amp;lt;/b&amp;gt; %3$s&amp;lt;br /&amp;gt;
-		&amp;lt;b&amp;gt;Parâmetros calculados:&amp;lt;/b&amp;gt; %4$s&amp;lt;br /&amp;gt;
+		&amp;lt;b&amp;gt;benchmark calculados:&amp;lt;/b&amp;gt; %4$s&amp;lt;br /&amp;gt;
 		&amp;lt;b&amp;gt;Tamanho da memória:&amp;lt;/b&amp;gt; %5$s&amp;lt;br /&amp;gt;
 		&amp;lt;b&amp;gt;Tamanho de cache:&amp;lt;/b&amp;gt; %6$s&amp;lt;br /&amp;gt;
 		&amp;lt;b&amp;gt;Alternar tamanho:&amp;lt;/b&amp;gt; %7$s&amp;lt;br /&amp;gt;
@@ -636,6 +635,6 @@
     <string name="PGPKey">CAD10E7D</string>
     <string name="installClientSourceUrl">file:/mnt/sdcard/boinc_files/</string>
     <string name="installAppsSourceUrl">file:/mnt/sdcard/boinc_files/</string>
-      <!-- notification sources -->
+    <!-- notification sources -->
     <string name="newsRemoteFile">http://files.nativeboinc.org/news/news.xml</string>
 </resources>

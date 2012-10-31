@@ -44,18 +44,6 @@
                 android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/changePassword"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/accessPassword" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/orText"
-                    android:textSize="@dimen/labelTextSize" />
-
-                <Button
                     android:id="@+id/changeHostname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -1,21 +1,4 @@
-/* 
- * AndroBOINC - BOINC Manager for Android
- * Copyright (C) 2010, Pavol Michalec
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
+
 
 package sk.boinc.nativeboinc;
 
@@ -33,6 +16,7 @@ import sk.boinc.nativeboinc.service.ConnectionManagerService;
 import sk.boinc.nativeboinc.util.ClientId;
 import sk.boinc.nativeboinc.util.ScreenOrientationHandler;
 import sk.boinc.nativeboinc.util.StandardDialogs;
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -62,6 +46,7 @@ import android.widget.Toast;
 import edu.berkeley.boinc.lite.AccountMgrInfo;
 
 
+@TargetApi(11)
 public class ManageClientActivity extends PreferenceActivity implements ClientManageReceiver,
 		ClientAccountMgrReceiver {
 	private static final String TAG = "ManageClientActivity";
@@ -201,25 +186,7 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 			}
 		});
 		
-		// Synchronize with BAM
-		pref = findPreference("synchronizeWithBAM");
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			public boolean onPreferenceClick(Preference preference) {
-				mConnectionManager.getBAMInfo();
-				mDoGetBAMInfo = true;
-				disableBAMPreferences();
-				return true;
-			}
-		});
-		
-		// Stop using BAM
-		pref = findPreference("stopUsingBAM");
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			public boolean onPreferenceClick(Preference preference) {
-				boincStopUsingBAM();
-				return true;
-			}
-		});
+	
 		
 		// Add project
 		pref = findPreference("addProject");
@@ -873,12 +840,7 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		pref.setEnabled(false);
 	}
 	
-	private void disableBAMPreferences() {
-		Preference pref = findPreference("synchronizeWithBAM");
-		pref.setEnabled(false);
-		pref = findPreference("stopUsingBAM");
-		pref.setEnabled(false);
-	}
+	
 	
 	private void updateParticularPreferences() {
 		if (Logging.DEBUG) Log.d(TAG, "update particular prefs");
@@ -892,18 +854,12 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 			pref = findPreference("doNetworkCommunication");
 			pref.setEnabled(!mConnectionManager.isOpBeingExecuted(BoincOp.DoNetworkComm));
 			
-			boolean bamIsWorking = mConnectionManager.isOpBeingExecuted(BoincOp.GetBAMInfo) ||
-					mConnectionManager.isOpBeingExecuted(BoincOp.SyncWithBAM) ||
-					mConnectionManager.isOpBeingExecuted(BoincOp.StopUsingBAM);
-			pref = findPreference("synchronizeWithBAM");
-			pref.setEnabled(!bamIsWorking);
-			pref = findPreference("stopUsingBAM");
-			pref.setEnabled(!bamIsWorking);
+			
+		
 		} else {
 			disableGlobalPreferencesPreference();
 			disableRunBenchmarkPreference();
 			disableDoNetworkCommPreference();
-			disableBAMPreferences();
 		}
 	}
 	
@@ -982,21 +938,14 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 				mSelectedClient = null;
 			}
 			else {
-				/*if (Logging.DEBUG) Log.d(TAG, "Selected new client: " + mSelectedClient.getNickname() +
-						", while already connected to: " + mConnectedClient.getNickname() +
-						", disconnecting it first");*/
+			
 				boincDisconnect();
 				// The boincConnect() will be triggered after the clientDisconnected() notification
 			}
 		}
 	}
 	
-	/* used by synchronizeWithBAM */
-	private void boincStopUsingBAM() {
-		mConnectionManager.stopUsingBAM();
-		Toast.makeText(this, getString(R.string.clientStopBAMNotify), Toast.LENGTH_LONG).show();
-		disableBAMPreferences();
-	}
+	
 	
 	private void boincClearLocalPrefs() {
 		mConnectionManager.setGlobalPrefsOverride("");
