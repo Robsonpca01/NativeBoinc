@@ -32,9 +32,9 @@ import java.util.ArrayList;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import sk.boinc.mobileboinc.debug.Debugging;
-import sk.boinc.mobileboinc.debug.Logging;
-import sk.boinc.mobileboinc.debug.NetStats;
+import sk.boinc.nativeboinc.debug.Debugging;
+import sk.boinc.nativeboinc.debug.Logging;
+import sk.boinc.nativeboinc.debug.NetStats;
 import android.util.Log;
 import android.util.Xml;
 

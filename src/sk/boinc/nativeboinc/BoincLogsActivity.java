@@ -7,8 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
-import sk.boinc.mobileboinc.installer.InstallerService;
-import sk.boinc.nativeboinc.R;
+import sk.boinc.nativeboinc.installer.InstallerService;
 import sk.boinc.nativeboinc.util.FileUtils;
 import sk.boinc.nativeboinc.util.StandardDialogs;
 import android.app.AlertDialog;
@@ -27,6 +26,10 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
+/**
+ * @author mat
+ *
+ */
 public class BoincLogsActivity extends AbstractBoincActivity {
 
 	private static final int LOGS_FILENAME_DIALOG = 1;

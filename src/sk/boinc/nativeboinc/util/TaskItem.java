@@ -3,10 +3,10 @@
  */
 package sk.boinc.nativeboinc.util;
 
-import sk.boinc.mobileboinc.bridge.Formatter;
-import sk.boinc.mobileboinc.bridge.TaskInfoCreator;
-import sk.boinc.mobileboinc.clientconnection.ProjectInfo;
-import sk.boinc.mobileboinc.clientconnection.TaskInfo;
+import sk.boinc.nativeboinc.bridge.Formatter;
+import sk.boinc.nativeboinc.bridge.TaskInfoCreator;
+import sk.boinc.nativeboinc.clientconnection.ProjectInfo;
+import sk.boinc.nativeboinc.clientconnection.TaskInfo;
 import edu.berkeley.boinc.lite.App;
 import edu.berkeley.boinc.lite.Project;
 import edu.berkeley.boinc.lite.Result;
@@ -14,7 +14,10 @@ import edu.berkeley.boinc.lite.Workunit;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-
+/**
+ * @author mat
+ *
+ */
 public class TaskItem implements Parcelable {
 	
 	public TaskInfo taskInfo = new TaskInfo();

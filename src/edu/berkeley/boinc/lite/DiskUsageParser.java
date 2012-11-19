@@ -4,7 +4,7 @@ package edu.berkeley.boinc.lite;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import sk.boinc.mobileboinc.debug.Logging;
+import sk.boinc.nativeboinc.debug.Logging;
 import android.util.Log;
 
 public class DiskUsageParser extends BoincBaseParser {

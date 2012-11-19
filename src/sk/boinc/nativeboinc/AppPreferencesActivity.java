@@ -1,7 +1,6 @@
 package sk.boinc.nativeboinc;
 
-import sk.boinc.mobileboinc.debug.Logging;
-import sk.boinc.nativeboinc.R;
+import sk.boinc.nativeboinc.debug.Logging;
 import sk.boinc.nativeboinc.util.NetStatsStorage;
 import sk.boinc.nativeboinc.util.PreferenceName;
 import sk.boinc.nativeboinc.util.ScreenOrientationHandler;

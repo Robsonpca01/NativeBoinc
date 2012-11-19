@@ -5,8 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import sk.boinc.mobileboinc.installer.InstallerService;
-import sk.boinc.nativeboinc.R;
+import sk.boinc.nativeboinc.installer.InstallerService;
 import sk.boinc.nativeboinc.util.NotificationId;
 import sk.boinc.nativeboinc.util.ProgressItem;
 import android.app.Notification;
@@ -16,7 +15,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 
-
+/**
+ * @author mat
+ *
+ */
 public class NotificationController {
 
 	//private static final String TAG = "NotificationsController";

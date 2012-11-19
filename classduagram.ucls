@@ -546,9 +546,9 @@
     </display>  
   </class>  
   <class id="60" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.mobileboinc.bridge.ClientBridgeWorkerHandler.ConnectionAliveChecker" 
+    name="sk.boinc.nativeboinc.bridge.ClientBridgeWorkerHandler.ConnectionAliveChecker" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridgeWorkerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridgeWorkerHandler.java" 
     binary="false">    
     <position height="129" width="163" x="8884" y="3859"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -556,9 +556,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="61" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.HostInfoCreator" 
+  <class id="61" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.HostInfoCreator" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/HostInfoCreator.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/HostInfoCreator.java" 
     binary="false">    
     <position height="95" width="195" x="4461" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -566,9 +566,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="62" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.ClientBridge.ReplyHandler" 
+  <class id="62" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.ClientBridge.ReplyHandler" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridge.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridge.java" binary="false">    
     <position height="537" width="290" x="9087" y="3859"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
@@ -576,9 +576,9 @@
     </display>  
   </class>  
   <class id="63" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.mobileboinc.bridge.ClientBridgeWorkerHandler.ProjectAttachCall" 
+    name="sk.boinc.nativeboinc.bridge.ClientBridgeWorkerHandler.ProjectAttachCall" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridgeWorkerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridgeWorkerHandler.java" 
     binary="false">    
     <position height="146" width="227" x="6981" y="3859"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -587,9 +587,9 @@
     </display>  
   </class>  
   <class id="64" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.mobileboinc.bridge.ClientBridgeWorkerHandler.LookupAccountCall" 
+    name="sk.boinc.nativeboinc.bridge.ClientBridgeWorkerHandler.LookupAccountCall" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridgeWorkerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridgeWorkerHandler.java" 
     binary="false">    
     <position height="95" width="197" x="8280" y="3859"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -597,9 +597,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="65" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.ClientBridgeWorkerThread" 
+  <class id="65" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.ClientBridgeWorkerThread" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridgeWorkerThread.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridgeWorkerThread.java" 
     binary="false">    
     <position height="792" width="391" x="8654" y="1039"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -607,9 +607,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="66" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.ClientBridgeWorkerHandler" 
+  <class id="66" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.ClientBridgeWorkerHandler" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridgeWorkerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridgeWorkerHandler.java" 
     binary="false">    
     <position height="1948" width="309" x="8280" y="1871"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -618,9 +618,9 @@
     </display>  
   </class>  
   <class id="67" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.mobileboinc.bridge.ClientBridgeWorkerHandler.CreateAccountCall" 
+    name="sk.boinc.nativeboinc.bridge.ClientBridgeWorkerHandler.CreateAccountCall" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridgeWorkerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridgeWorkerHandler.java" 
     binary="false">    
     <position height="95" width="194" x="8046" y="3859"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -628,18 +628,18 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="68" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.ClientBridge" 
+  <class id="68" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.ClientBridge" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridge.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridge.java" binary="false">    
     <position height="962" width="318" x="8769" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="69" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.ClientBridgeCallback" 
+  <interface id="69" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.ClientBridgeCallback" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridgeCallback.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridgeCallback.java" 
     binary="false">    
     <position height="78" width="208" x="7366" y="1039"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -647,18 +647,18 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="70" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.AutoRefresh.UpdateRequest" 
+  <class id="70" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.AutoRefresh.UpdateRequest" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/AutoRefresh.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/AutoRefresh.java" binary="false">    
     <position height="146" width="188" x="8035" y="1871"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="71" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.ModeInfoCreator" 
+  <class id="71" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.ModeInfoCreator" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ModeInfoCreator.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ModeInfoCreator.java" 
     binary="false">    
     <position height="95" width="154" x="3669" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -666,18 +666,18 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="72" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.Formatter" 
+  <class id="72" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.Formatter" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/Formatter.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/Formatter.java" binary="false">    
     <position height="350" width="192" x="7814" y="3859"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="73" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.ProjectInfoCreator" 
+  <class id="73" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.ProjectInfoCreator" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ProjectInfoCreator.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ProjectInfoCreator.java" 
     binary="false">    
     <position height="95" width="305" x="3863" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -686,9 +686,9 @@
     </display>  
   </class>  
   <class id="74" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.mobileboinc.bridge.ClientBridgeWorkerHandler.AccountMgrRPCCall" 
+    name="sk.boinc.nativeboinc.bridge.ClientBridgeWorkerHandler.AccountMgrRPCCall" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridgeWorkerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridgeWorkerHandler.java" 
     binary="false">    
     <position height="197" width="327" x="8517" y="3859"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -696,9 +696,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="75" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.TransferInfoCreator" 
+  <class id="75" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.TransferInfoCreator" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/TransferInfoCreator.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/TransferInfoCreator.java" 
     binary="false">    
     <position height="129" width="247" x="8314" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -706,9 +706,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="76" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.MessageInfoCreator" 
+  <class id="76" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.MessageInfoCreator" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/MessageInfoCreator.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/MessageInfoCreator.java" 
     binary="false">    
     <position height="95" width="221" x="1644" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -716,18 +716,18 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="77" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.AutoRefresh" 
+  <class id="77" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.AutoRefresh" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/AutoRefresh.java" binary="false">    
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/AutoRefresh.java" binary="false">    
     <position height="418" width="325" x="8035" y="1039"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="78" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.TaskInfoCreator" 
+  <class id="78" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.TaskInfoCreator" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/TaskInfoCreator.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/TaskInfoCreator.java" 
     binary="false">    
     <position height="129" width="307" x="6160" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -736,9 +736,9 @@
     </display>  
   </class>  
   <class id="79" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.mobileboinc.bridge.ClientBridgeWorkerHandler.GetProjectConfigCall" 
+    name="sk.boinc.nativeboinc.bridge.ClientBridgeWorkerHandler.GetProjectConfigCall" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/ClientBridgeWorkerHandler.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/ClientBridgeWorkerHandler.java" 
     binary="false">    
     <position height="112" width="181" x="7593" y="3859"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -746,9 +746,9 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="80" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.mobileboinc.bridge.VersionInfoCreator" 
+  <class id="80" corner="BOTTOM_RIGHT" language="java" name="sk.boinc.nativeboinc.bridge.VersionInfoCreator" 
     project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/bridge/VersionInfoCreator.java" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/bridge/VersionInfoCreator.java" 
     binary="false">    
     <position height="95" width="176" x="2134" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
@@ -757,8 +757,8 @@
     </display>  
   </class>  
   <interface id="81" corner="BOTTOM_RIGHT" language="java" 
-    name="sk.boinc.mobileboinc.clientconnection.AutoRefreshListener" project="sk.boinc.nativeboinc.BoincManagerActivity" 
-    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/mobileboinc/clientconnection/AutoRefreshListener.java" 
+    name="sk.boinc.nativeboinc.clientconnection.AutoRefreshListener" project="sk.boinc.nativeboinc.BoincManagerActivity" 
+    file="/sk.boinc.nativeboinc.BoincManagerActivity/src/sk/boinc/nativeboinc/clientconnection/AutoRefreshListener.java" 
     binary="false">    
     <position height="78" width="164" x="6507" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      

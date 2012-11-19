@@ -2,15 +2,14 @@ package sk.boinc.nativeboinc;
 
 import java.io.IOException;
 
-import sk.boinc.mobileboinc.debug.Logging;
-import sk.boinc.mobileboinc.installer.AbstractInstallerListener;
-import sk.boinc.mobileboinc.installer.InstallOp;
-import sk.boinc.mobileboinc.installer.InstallerProgressListener;
-import sk.boinc.mobileboinc.installer.InstallerService;
-import sk.boinc.mobileboinc.nativeclient.AbstractNativeBoincListener;
-import sk.boinc.mobileboinc.nativeclient.NativeBoincService;
-import sk.boinc.mobileboinc.nativeclient.NativeBoincUtils;
-import sk.boinc.nativeboinc.R;
+import sk.boinc.nativeboinc.debug.Logging;
+import sk.boinc.nativeboinc.installer.AbstractInstallerListener;
+import sk.boinc.nativeboinc.installer.InstallOp;
+import sk.boinc.nativeboinc.installer.InstallerProgressListener;
+import sk.boinc.nativeboinc.installer.InstallerService;
+import sk.boinc.nativeboinc.nativeclient.AbstractNativeBoincListener;
+import sk.boinc.nativeboinc.nativeclient.NativeBoincService;
+import sk.boinc.nativeboinc.nativeclient.NativeBoincUtils;
 import sk.boinc.nativeboinc.util.PreferenceName;
 import sk.boinc.nativeboinc.util.ScreenOrientationHandler;
 import sk.boinc.nativeboinc.util.StandardDialogs;

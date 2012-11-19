@@ -3,17 +3,16 @@
 package sk.boinc.nativeboinc;
 
 import hal.android.components.FixedProgressDialog;
-import sk.boinc.mobileboinc.clientconnection.BoincOp;
-import sk.boinc.mobileboinc.clientconnection.ClientAccountMgrReceiver;
-import sk.boinc.mobileboinc.clientconnection.ClientManageReceiver;
-import sk.boinc.mobileboinc.clientconnection.HostInfo;
-import sk.boinc.mobileboinc.clientconnection.ModeInfo;
-import sk.boinc.mobileboinc.clientconnection.NoConnectivityException;
-import sk.boinc.mobileboinc.clientconnection.PollOp;
-import sk.boinc.mobileboinc.clientconnection.VersionInfo;
-import sk.boinc.mobileboinc.debug.Logging;
-import sk.boinc.mobileboinc.service.ConnectionManagerService;
-import sk.boinc.nativeboinc.R;
+import sk.boinc.nativeboinc.clientconnection.BoincOp;
+import sk.boinc.nativeboinc.clientconnection.ClientAccountMgrReceiver;
+import sk.boinc.nativeboinc.clientconnection.ClientManageReceiver;
+import sk.boinc.nativeboinc.clientconnection.HostInfo;
+import sk.boinc.nativeboinc.clientconnection.ModeInfo;
+import sk.boinc.nativeboinc.clientconnection.NoConnectivityException;
+import sk.boinc.nativeboinc.clientconnection.PollOp;
+import sk.boinc.nativeboinc.clientconnection.VersionInfo;
+import sk.boinc.nativeboinc.debug.Logging;
+import sk.boinc.nativeboinc.service.ConnectionManagerService;
 import sk.boinc.nativeboinc.util.ClientId;
 import sk.boinc.nativeboinc.util.ScreenOrientationHandler;
 import sk.boinc.nativeboinc.util.StandardDialogs;

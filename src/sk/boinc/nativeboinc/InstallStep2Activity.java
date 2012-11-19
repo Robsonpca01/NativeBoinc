@@ -4,14 +4,13 @@ import hal.android.components.FixedProgressDialog;
 
 import java.io.IOException;
 
-import sk.boinc.mobileboinc.clientconnection.BoincOp;
-import sk.boinc.mobileboinc.clientconnection.ClientReceiver;
-import sk.boinc.mobileboinc.clientconnection.NoConnectivityException;
-import sk.boinc.mobileboinc.clientconnection.VersionInfo;
-import sk.boinc.mobileboinc.debug.Logging;
-import sk.boinc.mobileboinc.nativeclient.NativeBoincStateListener;
-import sk.boinc.mobileboinc.nativeclient.NativeBoincUtils;
-import sk.boinc.nativeboinc.R;
+import sk.boinc.nativeboinc.clientconnection.BoincOp;
+import sk.boinc.nativeboinc.clientconnection.ClientReceiver;
+import sk.boinc.nativeboinc.clientconnection.NoConnectivityException;
+import sk.boinc.nativeboinc.clientconnection.VersionInfo;
+import sk.boinc.nativeboinc.debug.Logging;
+import sk.boinc.nativeboinc.nativeclient.NativeBoincStateListener;
+import sk.boinc.nativeboinc.nativeclient.NativeBoincUtils;
 import sk.boinc.nativeboinc.util.ClientId;
 import sk.boinc.nativeboinc.util.HostListDbAdapter;
 import sk.boinc.nativeboinc.util.StandardDialogs;

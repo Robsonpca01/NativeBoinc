@@ -18,7 +18,7 @@
  */
 package sk.boinc.nativeboinc.util;
 
-import sk.boinc.mobileboinc.debug.Logging;
+import sk.boinc.nativeboinc.debug.Logging;
 import android.os.Handler;
 import android.util.Log;
 

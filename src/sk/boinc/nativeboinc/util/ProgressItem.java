@@ -4,6 +4,10 @@
 package sk.boinc.nativeboinc.util;
 
 
+/**
+ * @author mat
+ *
+ */
 public class ProgressItem {
 	public static final int STATE_IN_PROGRESS = 0;
 	public static final int STATE_CANCELLED = 1;

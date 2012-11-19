@@ -21,7 +21,7 @@ package edu.berkeley.boinc.nativeboinc;
 
 import java.io.IOException;
 
-import sk.boinc.mobileboinc.debug.Logging;
+import sk.boinc.nativeboinc.debug.Logging;
 import android.util.Log;
 import edu.berkeley.boinc.lite.RpcClient;
 import edu.berkeley.boinc.lite.SimpleReplyParser;
