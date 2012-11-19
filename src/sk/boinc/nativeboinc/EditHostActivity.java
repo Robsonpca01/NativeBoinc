@@ -19,6 +19,7 @@
 
 package sk.boinc.nativeboinc;
 
+import sk.boinc.nativeboinc.R;
 import sk.boinc.nativeboinc.util.ClientId;
 import sk.boinc.nativeboinc.util.HostListDbAdapter;
 import android.content.Intent;

@@ -1,30 +1,13 @@
-/* 
- * NativeBOINC - Native BOINC Client with Manager
- * Copyright (C) 2011, Mateusz Szpakowski
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
+
 package sk.boinc.nativeboinc;
 
 import edu.berkeley.boinc.nativeboinc.ClientEvent;
-import sk.boinc.nativeboinc.installer.InstallOp;
-import sk.boinc.nativeboinc.installer.InstalledBinary;
-import sk.boinc.nativeboinc.installer.InstallerProgressListener;
-import sk.boinc.nativeboinc.installer.InstallerService;
-import sk.boinc.nativeboinc.nativeclient.MonitorListener;
-import sk.boinc.nativeboinc.nativeclient.NativeBoincService;
+import sk.boinc.mobileboinc.installer.InstallOp;
+import sk.boinc.mobileboinc.installer.InstalledBinary;
+import sk.boinc.mobileboinc.installer.InstallerProgressListener;
+import sk.boinc.mobileboinc.installer.InstallerService;
+import sk.boinc.mobileboinc.nativeclient.MonitorListener;
+import sk.boinc.mobileboinc.nativeclient.NativeBoincService;
 import sk.boinc.nativeboinc.util.ScreenOrientationHandler;
 import sk.boinc.nativeboinc.util.StandardDialogs;
 import android.app.Dialog;
@@ -39,10 +22,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 
-/**
- * @author mat
- *
- */
+
 public class InstalledBinariesActivity extends ListActivity implements InstallerProgressListener,
 	MonitorListener {
 	

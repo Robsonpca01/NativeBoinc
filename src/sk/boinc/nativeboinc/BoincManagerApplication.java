@@ -8,11 +8,12 @@ import java.io.Reader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import sk.boinc.nativeboinc.debug.Logging;
-import sk.boinc.nativeboinc.nativeclient.NativeBoincService;
-import sk.boinc.nativeboinc.nativeclient.NativeBoincStateListener;
-import sk.boinc.nativeboinc.nativeclient.NativeBoincUtils;
-import sk.boinc.nativeboinc.service.ConnectionManagerService;
+import sk.boinc.mobileboinc.debug.Logging;
+import sk.boinc.mobileboinc.nativeclient.NativeBoincService;
+import sk.boinc.mobileboinc.nativeclient.NativeBoincStateListener;
+import sk.boinc.mobileboinc.nativeclient.NativeBoincUtils;
+import sk.boinc.mobileboinc.service.ConnectionManagerService;
+import sk.boinc.nativeboinc.R;
 import sk.boinc.nativeboinc.util.ActivityVisibilityTracker;
 import sk.boinc.nativeboinc.util.NativeClientAutostart;
 import sk.boinc.nativeboinc.util.PreferenceName;

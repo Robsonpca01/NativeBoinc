@@ -3,10 +3,7 @@
  */
 package sk.boinc.nativeboinc.util;
 
-/**
- * @author mat
- *
- */
+
 public class VersionUtil {
 	/**
 	 * compares this version with specified version and returns -1, 0, -1 for less, equal, greater

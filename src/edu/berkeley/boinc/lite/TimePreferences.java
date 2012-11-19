@@ -3,10 +3,7 @@
  */
 package edu.berkeley.boinc.lite;
 
-/**
- * @author mat
- *
- */
+
 public class TimePreferences {
 	public double start_hour, end_hour;
 	

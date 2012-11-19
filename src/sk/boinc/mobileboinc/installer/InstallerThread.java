@@ -1,0 +1,196 @@
+
+
+package sk.boinc.mobileboinc.installer;
+
+import java.util.ArrayList;
+
+import sk.boinc.mobileboinc.debug.Logging;
+import sk.boinc.nativeboinc.util.UpdateItem;
+import android.os.ConditionVariable;
+import android.os.Looper;
+import android.util.Log;
+
+public class InstallerThread extends Thread {
+	private final static String TAG = "InstallerThread";
+	
+	private ConditionVariable mLock;
+	private InstallerService mInstallerService;
+	private InstallerService.ListenerHandler mListenerHandler;
+	
+	private InstallerHandler mHandler;
+	
+	public InstallerThread(ConditionVariable lock, final InstallerService installerService,
+			final InstallerService.ListenerHandler listenerHandler) {
+		mListenerHandler = listenerHandler;
+		mLock = lock;
+		mInstallerService = installerService;
+		setDaemon(true);
+	}
+	
+	public InstallerHandler getInstallerHandler() {
+		return mHandler;
+	}
+	
+	@Override
+	public void run() {
+		if (Logging.DEBUG) Log.d(TAG, "run() - Started " + Thread.currentThread().toString());
+		Looper.prepare();
+		
+		mHandler = new InstallerHandler(mInstallerService, mListenerHandler);
+		
+		if (mLock != null) {
+			mLock.open();
+			mLock = null;
+		}
+		
+		// cleanup variable dependencies
+		mListenerHandler = null;
+		mInstallerService = null;
+		
+		Looper.loop();
+		
+		if (mLock != null) {
+			mLock.open();
+			mLock = null;
+		}
+
+		mHandler = null;
+		if (Logging.DEBUG) Log.d(TAG, "run() - Finished" + Thread.currentThread().toString());
+	}
+	
+	public void stopThread() {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				if (Logging.DEBUG) Log.d(TAG, "Stopping InstallerThread");
+				Looper.myLooper().quit();
+			}
+		});
+	}
+	
+	public void updateClientDistrib(final int channelId) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.updateClientDistrib(channelId);
+			}
+		});
+	}
+	
+	public void updateProjectDistribList(final int channelId, final boolean excludeAttachedProjects) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.updateProjectDistribList(channelId, excludeAttachedProjects);
+			}
+		});
+	}
+	
+	public void installClientAutomatically() {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.installClientAutomatically(true);
+			}
+		});
+	}
+	
+	public void updateClientFromSDCard() {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				//mHandler.installClientAutomatically(true);
+			}
+		});
+	}
+	
+	public void installProjectApplicationAutomatically(final String projectUrl) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.installProjectApplicationsAutomatically(projectUrl);
+			}
+		});
+	}
+	
+	public void updateProjectApplicationFromSDCard(final String projectUrl) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				//mHandler.installProjectApplicationsAutomatically(projectUrl);
+			}
+		});
+	}
+	
+	public void reinstallUpdateItems(final ArrayList<UpdateItem> updateItems) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.reinstallUpdateItems(updateItems);
+			}
+		});
+	}
+	
+	public void updateDistribsFromSDCard(final String dirPath, final String[] distribNames) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.updateDistribsFromSDCard(dirPath, distribNames);
+			}
+		});
+	}
+	
+	public void getBinariesToUpdateOrInstall(final int channelId) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.getBinariesToUpdateOrInstall(channelId);
+			}
+		});
+	}
+	
+	public void getBinariesToUpdateFromSDCard(final int channelId, final String path) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.getBinariesToUpdateFromSDCard(channelId, path);
+			}
+		});
+	}
+	
+	public void deleteProjectBinaries(final int channelId, final ArrayList<String> projectNames) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.deleteProjectBinaries(channelId, projectNames);
+			}
+		});
+	}
+	
+	public void dumpBoincFiles(final String directory) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.dumpBoincFiles(directory);
+			}
+		});
+	}
+	
+	public void reinstallBoinc() {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.reinstallBoinc();
+			}
+		});
+	}
+	
+	public void moveInstallationTo() {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				mHandler.moveInstallationTo();
+			}
+		});
+	}
+}

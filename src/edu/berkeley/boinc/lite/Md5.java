@@ -21,7 +21,7 @@ package edu.berkeley.boinc.lite;
 
 import java.security.MessageDigest;
 
-import sk.boinc.nativeboinc.debug.Logging;
+import sk.boinc.mobileboinc.debug.Logging;
 import android.util.Log;
 
 /**

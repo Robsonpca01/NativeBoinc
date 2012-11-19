@@ -2,16 +2,17 @@
 package sk.boinc.nativeboinc;
 
 import hal.android.components.FixedProgressDialog;
-import sk.boinc.nativeboinc.clientconnection.BoincOp;
-import sk.boinc.nativeboinc.clientconnection.ClientPollReceiver;
-import sk.boinc.nativeboinc.clientconnection.NoConnectivityException;
-import sk.boinc.nativeboinc.clientconnection.VersionInfo;
-import sk.boinc.nativeboinc.debug.Logging;
-import sk.boinc.nativeboinc.installer.InstallerService;
-import sk.boinc.nativeboinc.nativeclient.MonitorListener;
-import sk.boinc.nativeboinc.nativeclient.NativeBoincService;
-import sk.boinc.nativeboinc.nativeclient.NativeBoincStateListener;
-import sk.boinc.nativeboinc.service.ConnectionManagerService;
+import sk.boinc.mobileboinc.clientconnection.BoincOp;
+import sk.boinc.mobileboinc.clientconnection.ClientPollReceiver;
+import sk.boinc.mobileboinc.clientconnection.NoConnectivityException;
+import sk.boinc.mobileboinc.clientconnection.VersionInfo;
+import sk.boinc.mobileboinc.debug.Logging;
+import sk.boinc.mobileboinc.installer.InstallerService;
+import sk.boinc.mobileboinc.nativeclient.MonitorListener;
+import sk.boinc.mobileboinc.nativeclient.NativeBoincService;
+import sk.boinc.mobileboinc.nativeclient.NativeBoincStateListener;
+import sk.boinc.mobileboinc.service.ConnectionManagerService;
+import sk.boinc.nativeboinc.R;
 import sk.boinc.nativeboinc.util.ActivityVisibilityTracker;
 import sk.boinc.nativeboinc.util.ClientId;
 import sk.boinc.nativeboinc.util.HostListDbAdapter;

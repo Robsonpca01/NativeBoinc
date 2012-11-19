@@ -19,7 +19,7 @@
 
 package sk.boinc.nativeboinc.util;
 
-import sk.boinc.nativeboinc.debug.Logging;
+import sk.boinc.mobileboinc.debug.Logging;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;

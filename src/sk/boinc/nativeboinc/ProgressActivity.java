@@ -1,21 +1,4 @@
-/* 
- * NativeBOINC - Native BOINC Client with Manager
- * Copyright (C) 2011, Mateusz Szpakowski
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
+
 
 package sk.boinc.nativeboinc;
 
@@ -24,10 +7,11 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-import sk.boinc.nativeboinc.debug.Logging;
-import sk.boinc.nativeboinc.installer.InstallOp;
-import sk.boinc.nativeboinc.installer.InstallerProgressListener;
-import sk.boinc.nativeboinc.installer.InstallerService;
+import sk.boinc.mobileboinc.debug.Logging;
+import sk.boinc.mobileboinc.installer.InstallOp;
+import sk.boinc.mobileboinc.installer.InstallerProgressListener;
+import sk.boinc.mobileboinc.installer.InstallerService;
+import sk.boinc.nativeboinc.R;
 import sk.boinc.nativeboinc.util.ProgressItem;
 import android.content.Context;
 import android.content.Intent;
@@ -43,10 +27,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-/**
- * @author mat
- *
- */
+
 public class ProgressActivity extends ServiceBoincActivity implements InstallerProgressListener {
 	
 	private static final String TAG = "ProgressActivity";

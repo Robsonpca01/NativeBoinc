@@ -25,14 +25,15 @@ import java.util.ArrayList;
 
 import edu.berkeley.boinc.lite.Message;
 
-import sk.boinc.nativeboinc.bridge.AutoRefresh;
-import sk.boinc.nativeboinc.clientconnection.AutoRefreshListener;
-import sk.boinc.nativeboinc.clientconnection.BoincOp;
-import sk.boinc.nativeboinc.clientconnection.ClientUpdateMessagesReceiver;
-import sk.boinc.nativeboinc.clientconnection.MessageInfo;
-import sk.boinc.nativeboinc.clientconnection.VersionInfo;
-import sk.boinc.nativeboinc.debug.Logging;
-import sk.boinc.nativeboinc.service.ConnectionManagerService;
+import sk.boinc.mobileboinc.bridge.AutoRefresh;
+import sk.boinc.mobileboinc.clientconnection.AutoRefreshListener;
+import sk.boinc.mobileboinc.clientconnection.BoincOp;
+import sk.boinc.mobileboinc.clientconnection.ClientUpdateMessagesReceiver;
+import sk.boinc.mobileboinc.clientconnection.MessageInfo;
+import sk.boinc.mobileboinc.clientconnection.VersionInfo;
+import sk.boinc.mobileboinc.debug.Logging;
+import sk.boinc.mobileboinc.service.ConnectionManagerService;
+import sk.boinc.nativeboinc.R;
 import sk.boinc.nativeboinc.util.ClientId;
 import sk.boinc.nativeboinc.util.PreferenceName;
 import sk.boinc.nativeboinc.util.ScreenOrientationHandler;

@@ -1,10 +1,7 @@
 
 package edu.berkeley.boinc.lite;
 
-/**
- * @author mat
- *
- */
+
 public class GlobalPreferences {
 	public boolean run_on_batteries;
     // poorly named; what it really means is:

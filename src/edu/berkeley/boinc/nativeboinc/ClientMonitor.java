@@ -27,7 +27,7 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import sk.boinc.nativeboinc.debug.Logging;
+import sk.boinc.mobileboinc.debug.Logging;
 import android.util.Log;
 
 /**

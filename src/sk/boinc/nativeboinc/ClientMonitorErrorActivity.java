@@ -3,6 +3,7 @@
  */
 package sk.boinc.nativeboinc;
 
+import sk.boinc.nativeboinc.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
