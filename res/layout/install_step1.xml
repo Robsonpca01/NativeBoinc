@@ -58,11 +58,6 @@
 		  		android:layout_height="wrap_content"
 		  		android:textSize="@dimen/labelTextSize"
 		  		android:text="@string/installAttention2" />
-		  	<TextView
-		  		android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:textSize="@dimen/labelTextSize"
-		  		android:text="@string/installAttention3" />
 	  	</LinearLayout>
 	</ScrollView>
   	<LinearLayout

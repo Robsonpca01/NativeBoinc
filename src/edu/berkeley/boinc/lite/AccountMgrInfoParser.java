@@ -22,10 +22,7 @@ package edu.berkeley.boinc.lite;
 import sk.boinc.nativeboinc.debug.Logging;
 import android.util.Log;
 
-/**
- * @author mat
- *
- */
+
 public class AccountMgrInfoParser extends BoincBaseParser {
 	private static final String TAG = "AccountMgrInfoParser";
 

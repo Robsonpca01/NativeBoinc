@@ -55,7 +55,7 @@
     <string name="noText">Não</string>
     <string name="orText">ou</string>
     <string name="installedBinaries">Binários instalados</string>
-    <string name="boincClient">Cliente BOINC</string>
+    <string name="boincClient">Mobile BOINC</string>
     <!-- Units -->
     <string name="unitKiB">KiB</string>
     <string name="unitMiB">MiB</string>
@@ -114,7 +114,7 @@
     <string name="prefAutoConnectTitle">Conectar automaticamente</string>
     <string name="prefAutoConnectDisabled">Não conectar automaticamente ao iniciar</string>
     <string name="prefAutoConnectEnabled">Conectar ao cliente recentemente conectado ao iniciar</string>
-    <string name="prefCategoryNativeBoinc">Cliente BOINC Nativo</string>
+    <string name="prefCategoryNativeBoinc">Mobile BOINC Nativo</string>
     <string name="prefPowerSaving">Economia de energia</string>
     <string name="prefPowerSavingOnDisabled">Evitar bloqueio de tela e underclocking da CPU</string>
     <string name="prefPowerSavingOnEnabled">Permitir bloqueio de tela e underclocking da CPU</string>
@@ -205,7 +205,7 @@
     <string name="noHostConnected">Sem host conectado</string>
     <string name="clientConnecting">Conectando cliente…</string>
     <string name="selectHostTitle">Host atual</string>
-    <string name="selectHostNoneAvailable">Sem cliente BOINC configurado.</string>
+    <string name="selectHostNoneAvailable">Sem Mobile BOINC configurado.</string>
     <string name="selectHostDialogTitle">Selecionar host</string>
     <string name="clientNameNone">Nenhum</string>
     <string name="clientIdNone">0</string>
@@ -213,7 +213,7 @@
     <string name="clientAddProjectTitle">Adicionar projeto BOINC</string>
     <string name="clientAddProjectSummary">Adicionar projeto BOINC</string>
     <string name="clientUpdateTitle">Atualizar binários</string>
-    <string name="clientUpdateSummary">Atualizar cliente BOINC ou aplicações de projetos</string>
+    <string name="clientUpdateSummary">Atualizar Mobile BOINC ou aplicações de projetos</string>
     <string name="clientSyncBAMTitle">Sincronizar com BAM</string>
     <string name="clientSyncBAMSummary">Tentar sincronizar com gerenciador BAM</string>
     <string name="clientSyncBAMNotify">Sincronizar com gerenciador BAM </string>
@@ -260,7 +260,7 @@
     <string name="nativeAccessPasswordTitle">Senha de acesso</string>
     <string name="nativeAccessPasswordSummary">Trocar senha de acesso para cliente</string>
     <string name="nativeAccessListTitle">Acesso a lista de host</string>
-    <string name="nativeAccessListSummary">Lista de hosts que possuem acesso ao cliente BOINC</string>
+    <string name="nativeAccessListSummary">Lista de hosts que possuem acesso ao Mobile BOINC</string>
     <string name="nativeBoincInstallation">Opções de instalação</string>
     <string name="nativeMoveToSDCardTitle">Mover para a memória do SDCard</string>
     <string name="nativeMoveToSDCardSummary">Mover BOINC para a memória do SDCard</string>
@@ -280,7 +280,7 @@
     <string name="nativeDumpBoincDirTitle">Descarregar arquivos BOINC</string>
     <string name="nativeDumpBoincDirSummary">Descarregar todo o diretório do BOINC no SDCard</string>
     <string name="nativeShowLogsTitle">Exibir logs</string>
-    <string name="nativeShowLogsSummary">Exibir últimos logs do cliente BOINC</string>
+    <string name="nativeShowLogsSummary">Exibir últimos logs do Mobile BOINC</string>
     <string name="nativeBoincLogs">Últimos logs do BOINC</string>
     <string name="nativeBoincLogsHelp">Para ter opções, por favor pressione o botão Menu.</string>
     <string name="updateFromSDCard">Atualizar binários a partir do SDCard</string>
@@ -332,7 +332,7 @@
     <string name="otherProject">Outro projeto</string>
     <string name="otherProjectDetails">Escolher outro projeto</string>
     <string name="projectsFromClient">Exibir projetos a partir do cliente</string>
-    <string name="projectsFromClientDetails">Exibir lista de projetos a partir do cliente BOINC</string>
+    <string name="projectsFromClientDetails">Exibir lista de projetos a partir do Mobile BOINC</string>
     <string name="projectListHelp"> Esta é a lista de projetos suportados. Para obter informações sobre o projeto, por favor pressione entradas mais antigas.</string>
     <string name="projectUrl">Entre com a URL do projeto</string>
     <!-- Host edit dialog -->
@@ -360,10 +360,10 @@
     <!-- Install Wizard Activity -->
     <string name="installWizard">Assistente de instalação</string>
     <string name="installWelcome">Bem vindo ao MobileBOINC!</string>
-    <string name="installClientInstall">Por favor, pressione o botão \'Próximo\' para instalar o cliente nativo do BOINC.</string>
+    <string name="installClientInstall">Por favor, pressione o botão \'Próximo\' para instalar o Mobile BOINC.</string>
     <string name="versionToInstall">Versão a instalar</string>
     <string name="placeToInstall">Lugar de instalação</string>
-    <string name="installSuccessfully">Cliente nativo BOINC foi instalado com sucesso!</string>
+    <string name="installSuccessfully">O Mobile BOINC foi instalado com sucesso!</string>
     <string name="installAddProject">Por favor pressione o botão \'Adicionar projeto\' para adicionar o primeiro projeto BOINC.</string>
     <string name="installFinished">A instalação foi finalizada. Por favor pressione o botão \'Finalizar\'.</string>
     <string name="installWidgetFinished">Dica: Nós recomendamos o uso da ferramenta NativeBOINC para controlar o cliente nativo.</string>
@@ -371,10 +371,10 @@
     <string name="installFinishedBenchmark">Durante a instalação do primeiro projeto, o BOINC pode executar benchmarks, que podem levar alguns segundos.</string>
     <string name="installReadBefore">LEIA ANTES DE INSTALAR:</string>
     <string name="installAttention2">Se a aplicação fechar inesperadamente, por favor utilize \'Forçar encerramento\' e execute novamente. </string>
-    <string name="installAttention3">Cliente BOINC estará trabalhando em Segundo plano. Por favor utilize a opção \'Desligar\' para desligar o cliente.</string>
-    <string name="installNetworkAccess1">Cliente BOINC permite que você conecte com a rede utilizando gerenciador BOINC.</string>
-    <string name="installClientNotifyBegin">Instalando cliente BOINC</string>
-    <string name="installClientNotifyFinish">Cliente BOINC foi instalado</string>
+    <string name="installAttention3">O Mobile BOINC estará trabalhando em Segundo plano. Por favor utilize a opção \'Desligar\' para desligar o cliente.</string>
+    <string name="installNetworkAccess1">O Mobile BOINC permite que você conecte com a rede utilizando gerenciador BOINC.</string>
+    <string name="installClientNotifyBegin">Instalando Mobile BOINC</string>
+    <string name="installClientNotifyFinish">Mobile BOINC foi instalado</string>
     <string name="installProjectNotifyBegin">Instalando aplicações para </string>
     <string name="installProjectBegin">Instalando aplicações</string>
     <string name="installProjectNotifyFinish">Aplicações instaladas</string>
@@ -444,7 +444,7 @@
     <string name="updateBinaries">Atualizar binários</string>
     <string name="updateNewAvailable">Novos binários disponíveis</string>
     <string name="updateNoNew">Sem novos binários</string>
-    <string name="updateBoincClient">Cliente BOINC</string>
+    <string name="updateBoincClient">Mobile BOINC</string>
     <string name="updateUpdating">Atualizando</string>
     <!-- Delete project binaries -->
     <string name="deleteProjectBins">Deletar binários do projeto</string>
@@ -597,7 +597,7 @@
     <string name="unexpectedError">Erro Inesperado</string>
     <string name="errorNumFormat">(erro: %d)</string>
     <string name="cantAuthorizeClientMonitor">Não pode autorizar monitoramento de cliente!</string>
-    <string name="cantAuthorizeClientMonitorMessage">Não pode autorizar monitoramento de cliente! Você não pode instalar binários de projetos automaticamente (você pode utilizar a opção Atualizar binários depois de adicionar projeto) ou receber eventos de clientes. Você pode reiniciar o cliente BOINC (recomendado).</string>
+    <string name="cantAuthorizeClientMonitorMessage">Não pode autorizar monitoramento de cliente! Você não pode instalar binários de projetos automaticamente (você pode utilizar a opção Atualizar binários depois de adicionar projeto) ou receber eventos de clientes. Você pode reiniciar o Mobile BOINC (recomendado).</string>
     <string name="cantDeleteProjectBins">Não pode\ deletar binários do projeto</string>
     <!-- HostInfo display -->
     <string name="hostInfoPart1">
