@@ -5,12 +5,12 @@
     <string name="app_desc">Mobile BOINC para Android com AndroBOINC</string>
     <string name="service_desc">Permitir participação em projetos BOINC para dispositivos Android</string>
     <string name="install_service_desc">Serviço de instalação do cliente nativo e aplicação BOINC </string>
-    <string name="nboinc_service_desc">Serviço de cliente nativo do BOINC</string>
+    <string name="nboinc_service_desc">Serviço do cliente BOINC</string>
     <string name="newsHandlerDesc">Processador de notícias</string>
     <!--nomes dos widgets -->
     <string name="widget2x1">BOINC nativo pequeno</string>
     <string name="widgetTablet">BOINC nativo grande</string>
-    <string name="autostartReceiver">Inicio automático do recebedor</string>
+    <string name="autostartReceiver">Inicio automático do receiver</string>
     <!-- Strings genéricas -->
     <string name="back">Voltar</string>
     <string name="next">Próximo</string>
@@ -23,7 +23,7 @@
     <string name="close">Fechar</string>
     <string name="connecting">Conectando…</string>
     <string name="disabled">Desabilitado</string>
-    <string name="dismiss">Recusar</string>
+    <string name="dismiss">Dismiss</string>
     <string name="error">Erro</string>
     <string name="homepage">Página inicial</string>
     <string name="license">Licença</string>
@@ -38,7 +38,7 @@
     <string name="sent">Enviado</string>
     <string name="shutdown">Desligar</string>
     <string name="sources">Código fonte</string>
-    <string name="taskSuspendedByUser">Tarefa suspense pelo usuário</string>
+    <string name="taskSuspendedByUser">Tarefa suspensa pelo usuário</string>
     <string name="unknown">desconhecido</string>
     <string name="upgradedTo">Atualizado para</string>
     <string name="warning">Aviso</string>
@@ -92,11 +92,9 @@
     <string name="menuNativeClient">Cliente nativo</string>
     <!-- About -->
     <string name="aboutTitle">Informação Básica</string>
-    <string name="aboutHomepageUrl">http://nativeboinc.org/</string>
+    <string name="aboutHomepageUrl"></string>
     <string name="aboutText">
-		%1$s é de total direito do cliente nativo do BOINC para Android        integrado com gerenciador AndroBOINC v1.6.7b3.\n
-		Obrigado por utilizar meu programa.\n
-		Copyright © 2012 matszpk\n
+		%1$s Obrigado por utilizar meu programa.\n
 		Original AndroBOINC por Pavel Michalec (Paulo M.)\n
 		\n
 		Obrigado a:\n
@@ -134,8 +132,7 @@
     <string name="prefNetworkUsageDisabled">Estatísticas NÃO são coletadas</string>
     <string name="prefNetworkUsageNull">Recebido: 0B, Enviado: 0B</string>
     <string name="prefNetworkUsageDisclaimer">
-		Os numeros exibidos aqui em uso de rede não estão exatos
-		Não depender deles.
+		Os numeros aqui exibidos não são exatos.
 	</string>
     <string name="prefOptOutText">Não mostrar esta informação novamente.</string>
     <string name="prefCategoryAbout">Sobre</string>
@@ -155,7 +152,7 @@
     <string name="localPrefUseGPUInUse">Utilizar GPU enquanto o dispositivo estiver em uso</string>
     <string name="localPrefComputeIdleFor">Somente depois que o dispositivo estiver inativo por</string>
     <string name="minutes">min</string>
-    <string name="localPrefComputeUsageLessThan">WEnquanto o uso do processador estiver menor que</string>
+    <string name="localPrefComputeUsageLessThan">Enquanto o uso do processador estiver menor que</string>
     <string name="percent">%</string>
     <string name="localPrefSwitchBetween">Alternar entre as aplicações a cada</string>
     <string name="localPrefBatteryNL">Enquanto a carga da bateria não estiver menor que</string>
@@ -179,8 +176,8 @@
     <string name="localPrefGBDisk">GB espaço de disco</string>
     <string name="localPrefGBDiskFree">GB espaço de disco livre</string>
     <string name="localPrefPercentTotalDisk">% total de disco livre</string>
-    <string name="localPrefMemoryWhenInUse">% enquanto o dispositivo esta em uso</string>
-    <string name="localPrefMemoryWhenInIdle">% enquanto o dispositivo esta inativo</string>
+    <string name="localPrefMemoryWhenInUse">% enquanto o dispositivo está em uso</string>
+    <string name="localPrefMemoryWhenInIdle">% enquanto o dispositivo está inativo</string>
     <string name="localPrefCheckpointToDisk">Ponto de verificação para o disco, no máximo, a cada</string>
     <string name="seconds">seg</string>
     <string name="localPrefWrong">Valor errado!</string>
@@ -223,7 +220,7 @@
     <string name="clientLocalPrefsTitle">Preferências Locais</string>
     <string name="clientLocalPrefsSummary">Preferências Locais para cliente</string>
     <string name="clientGlobalPrefsTitle">Utilizar preferência global</string>
-    <string name="clientGlobalPrefsSummary">Utilizar preferência global (baseado em web)</string>
+    <string name="clientGlobalPrefsSummary">Utilizar preferência global </string>
     <string name="manageCategoryActivity">Atividade</string>
     <string name="clientActivityRunTitle">Modo de execução</string>
     <string name="clientActivityRunDialogTitle">Modo de execução</string>
@@ -237,10 +234,10 @@
     <string name="clientDoNetCommSummary">Fazer todas as comunicações de rede pendentes</string>
     <string name="clientDoNetCommNotify">Iniciando comunicação de rede</string>
     <string name="clientShutdownTitle">Desligar cliente</string>
-    <string name="clientShutdownSummary">Desligar o núcleo do cliente conectado no momento</string>
-    <string name="clientShutdownNotify">Desligando o núcleo do cliente conectado no momento </string>
-    <string name="warnShutdownText">O núcleo do cliente conectado será desligado. Este gerenciador não pode iniciar o cliente posteriormente.</string>
-    <!--  NativeClient activity -->
+    <string name="clientShutdownSummary">Desligar o core client conectado no momento</string>
+    <string name="clientShutdownNotify">Desligando o core client conectado no momento </string>
+    <string name="warnShutdownText">O core client conectado será desligado. Este gerenciador não poderá iniciar o cliente posteriormente.</string>
+    <!--  Native Client activity -->
     <string name="nativeAutostart">Inicializando cliente</string>
     <string name="nativeAutostartTitle">Inicio automático do cliente</string>
     <string name="newsAndUpdates">Notícias e atualizações</string>
@@ -389,7 +386,7 @@
     <string name="description">Descrição</string>
     <string name="changes">Mudanças</string>
     <string name="noInstallOpsText">Sem operações em segundo plano.</string>
-    <string name="installProgressText">NativeBOINC está executando algumas operações em segundo plano..</string>
+    <string name="installProgressText">Mobile BOINC está executando algumas operações em segundo plano..</string>
     <string name="operationsProgress">Progresso das operações</string>
     <!-- ProjectsActivity -->
     <string name="projectCtxMenuTitle">Comandos</string>

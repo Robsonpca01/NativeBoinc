@@ -1,5 +1,3 @@
-
-
 package sk.boinc.nativeboinc;
 
 import hal.android.components.FixedProgressDialog;
@@ -45,10 +43,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import edu.berkeley.boinc.lite.AccountMgrInfo;
 
-
 @TargetApi(11)
-public class ManageClientActivity extends PreferenceActivity implements ClientManageReceiver,
-		ClientAccountMgrReceiver {
+public class ManageClientActivity extends PreferenceActivity implements
+		ClientManageReceiver, ClientAccountMgrReceiver {
 	private static final String TAG = "ManageClientActivity";
 
 	private static final int DIALOG_WARN_SHUTDOWN = 0;
@@ -57,28 +54,28 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 	private static final int DIALOG_ATTACH_BAM_PROGRESS = 3;
 
 	private static final int ACTIVITY_SELECT_HOST = 1;
-	
+
 	private int mConnectProgressIndicator = -1;
 	private boolean mProgressDialogAllowed = false;
 	private ModeInfo mClientMode = null;
 	private boolean mDoUpdateHostInfo = false;
 	private HostInfo mHostInfo = null;
-	
+
 	private boolean mPeriodicModeRetrievalAllowed = false;
-	
+
 	private ConnectionManagerService mConnectionManager = null;
 	private boolean mDelayedObserverRegistration = false;
 	private ClientId mConnectedClient = null;
 	private ClientId mSelectedClient = null;
-	
+
 	private boolean mDoGetBAMInfo = false;
 	private AccountMgrInfo mBAMInfo = null;
 	private boolean mSyncingBAMInProgress = false;
-	
+
 	private boolean mShowShutdownDialog = false;
-	
+
 	private ScreenOrientationHandler mScreenOrientation;
-	
+
 	private static class SavedState {
 		private final boolean doUpdateHostInfo;
 		private final HostInfo hostInfo;
@@ -86,7 +83,7 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		private final AccountMgrInfo bamInfo;
 		private final boolean syncingBAMInProgress;
 		private final boolean showShutdownDialog;
-		
+
 		public SavedState(ManageClientActivity activity) {
 			doUpdateHostInfo = activity.mDoUpdateHostInfo;
 			hostInfo = activity.mHostInfo;
@@ -94,12 +91,14 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 			bamInfo = activity.mBAMInfo;
 			syncingBAMInProgress = activity.mSyncingBAMInProgress;
 			showShutdownDialog = activity.mShowShutdownDialog;
-			
+
 		}
+
 		public void restoreState(ManageClientActivity activity) {
 			activity.mDoUpdateHostInfo = doUpdateHostInfo;
 			activity.mHostInfo = hostInfo;
-			if (Logging.DEBUG) Log.d(TAG, "restored: mHostInfo=" + activity.mHostInfo);
+			if (Logging.DEBUG)
+				Log.d(TAG, "restored: mHostInfo=" + activity.mHostInfo);
 			activity.mDoGetBAMInfo = doGetBAMInfo;
 			activity.mBAMInfo = bamInfo;
 			activity.mSyncingBAMInProgress = syncingBAMInProgress;
@@ -110,34 +109,41 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 	private ServiceConnection mServiceConnection = new ServiceConnection() {
 		@Override
 		public void onServiceConnected(ComponentName name, IBinder service) {
-			mConnectionManager = ((ConnectionManagerService.LocalBinder)service).getService();
-			if (Logging.DEBUG) Log.d(TAG, "onServiceConnected()");
+			mConnectionManager = ((ConnectionManagerService.LocalBinder) service)
+					.getService();
+			if (Logging.DEBUG)
+				Log.d(TAG, "onServiceConnected()");
 			if (mDelayedObserverRegistration) {
-				mConnectionManager.registerStatusObserver(ManageClientActivity.this);
+				mConnectionManager
+						.registerStatusObserver(ManageClientActivity.this);
 				mDelayedObserverRegistration = false;
 			}
 			if (mSelectedClient != null) {
-				// Some client was selected at the time when service was not bound yet
+				// Some client was selected at the time when service was not
+				// bound yet
 				// Now the service is available, so connection can proceed
 				connectOrReconnect();
 			}
-			
+
 			updateActivityState();
 		}
 
 		@Override
 		public void onServiceDisconnected(ComponentName name) {
 			if (mConnectionManager != null)
-				mConnectionManager.unregisterStatusObserver(ManageClientActivity.this);
+				mConnectionManager
+						.unregisterStatusObserver(ManageClientActivity.this);
 			mConnectionManager = null;
-			// This should not happen normally, because it's local service 
+			// This should not happen normally, because it's local service
 			// running in the same process...
-			if (Logging.WARNING) Log.w(TAG, "onServiceDisconnected()");
+			if (Logging.WARNING)
+				Log.w(TAG, "onServiceDisconnected()");
 			// We also reset client reference to prevent mess
 			mConnectedClient = null;
 			mSelectedClient = null;
 			if (mSyncingBAMInProgress)
-				StandardDialogs.dismissDialog(ManageClientActivity.this, DIALOG_ATTACH_BAM_PROGRESS);
+				StandardDialogs.dismissDialog(ManageClientActivity.this,
+						DIALOG_ATTACH_BAM_PROGRESS);
 			mDoGetBAMInfo = false;
 			mSyncingBAMInProgress = false;
 			setProgressBarIndeterminateVisibility(false);
@@ -145,19 +151,22 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 			updateParticularPreferences();
 		}
 	};
-	
+
 	private void doBindService() {
-		if (Logging.DEBUG) Log.d(TAG, "doBindService()");
-		bindService(new Intent(ManageClientActivity.this, ConnectionManagerService.class),
-				mServiceConnection, Context.BIND_AUTO_CREATE);
+		if (Logging.DEBUG)
+			Log.d(TAG, "doBindService()");
+		bindService(new Intent(ManageClientActivity.this,
+				ConnectionManagerService.class), mServiceConnection,
+				Context.BIND_AUTO_CREATE);
 	}
-	
+
 	private void doUnbindService() {
-		if (Logging.DEBUG) Log.d(TAG, "doUnbindService()");
+		if (Logging.DEBUG)
+			Log.d(TAG, "doUnbindService()");
 		unbindService(mServiceConnection);
 		mConnectionManager = null;
 	}
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// The super-class PreferenceActivity calls setContentView()
@@ -185,67 +194,51 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 				return true;
 			}
 		});
-		
-	
-		
+
 		// Add project
 		pref = findPreference("addProject");
 		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 			public boolean onPreferenceClick(Preference preference) {
-				startActivity(new Intent(ManageClientActivity.this, ProjectListActivity.class));
+				startActivity(new Intent(ManageClientActivity.this,
+						ProjectListActivity.class));
 				return true;
 			}
 		});
-		
+
 		// Local preferences
 		pref = findPreference("localPreferences");
 		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 			public boolean onPreferenceClick(Preference preference) {
-				startActivity(new Intent(ManageClientActivity.this, LocalPreferencesActivity.class));
-				return true;
-			}
-		});
-		
-		// Global preferences
-		pref = findPreference("globalPreferences");
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			public boolean onPreferenceClick(Preference preference) {
-				boincClearLocalPrefs();
+				startActivity(new Intent(ManageClientActivity.this,
+						LocalPreferencesActivity.class));
 				return true;
 			}
 		});
 
 		// Run mode
-		listPref = (ListPreference)findPreference("actRunMode");
+		listPref = (ListPreference) findPreference("actRunMode");
 		listPref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-			public boolean onPreferenceChange(Preference preference, Object newValue) {
-				ListPreference listPref = (ListPreference)preference;
+			public boolean onPreferenceChange(Preference preference,
+					Object newValue) {
+				ListPreference listPref = (ListPreference) preference;
 				CharSequence[] actRunDesc = listPref.getEntries();
-				int idx = listPref.findIndexOfValue((String)newValue);
+				int idx = listPref.findIndexOfValue((String) newValue);
 				listPref.setSummary(actRunDesc[idx]);
-				boincChangeRunMode(Integer.parseInt((String)newValue));
+				boincChangeRunMode(Integer.parseInt((String) newValue));
 				return true;
 			}
 		});
 
 		// Network mode
-		listPref = (ListPreference)findPreference("actNetworkMode");
+		listPref = (ListPreference) findPreference("actNetworkMode");
 		listPref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-			public boolean onPreferenceChange(Preference preference, Object newValue) {
-				ListPreference listPref = (ListPreference)preference;
+			public boolean onPreferenceChange(Preference preference,
+					Object newValue) {
+				ListPreference listPref = (ListPreference) preference;
 				CharSequence[] actNetworkDesc = listPref.getEntries();
-				int idx = listPref.findIndexOfValue((String)newValue);
+				int idx = listPref.findIndexOfValue((String) newValue);
 				listPref.setSummary(actNetworkDesc[idx]);
-				boincChangeNetworkMode(Integer.parseInt((String)newValue));
-				return true;
-			}
-		});
-
-		// Run CPU benchmarks
-		pref = findPreference("runBenchmark");
-		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-			public boolean onPreferenceClick(Preference preference) {
-				boincRunCpuBenchmarks();
+				boincChangeNetworkMode(Integer.parseInt((String) newValue));
 				return true;
 			}
 		});
@@ -264,60 +257,68 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 			public boolean onPreferenceClick(Preference preference) {
 				mShowShutdownDialog = true;
-				Bundle args = new Bundle(); 
-				args.putBoolean("IsNative", mConnectionManager.isNativeConnected());
+				Bundle args = new Bundle();
+				args.putBoolean("IsNative",
+						mConnectionManager.isNativeConnected());
 				showDialog(DIALOG_WARN_SHUTDOWN, args);
 				return true;
 			}
 		});
-		
+
 		// Restore state on configuration change (if applicable)
-		final SavedState savedState = (SavedState)getLastNonConfigurationInstance();
+		final SavedState savedState = (SavedState) getLastNonConfigurationInstance();
 		if (savedState != null) {
-			// Yes, we have the saved state, this is activity re-creation after configuration change
+			// Yes, we have the saved state, this is activity re-creation after
+			// configuration change
 			savedState.restoreState(this);
 		}
 	}
-	
+
 	private void updateActivityState() {
 		if (mConnectionManager != null && mConnectionManager.isWorking())
 			setProgressBarIndeterminateVisibility(true);
 		else
 			setProgressBarIndeterminateVisibility(false);
-		
+
 		if (mConnectionManager == null)
 			return;
-		
-		boolean isError = mConnectionManager.handlePendingClientErrors(null, this);
-		// get error for account mgr operations 
+
+		boolean isError = mConnectionManager.handlePendingClientErrors(null,
+				this);
+		// get error for account mgr operations
 		isError |= mConnectionManager.handlePendingPollErrors(null, this);
 		if (mConnectedClient == null) {
-			clientDisconnected(mConnectionManager.isDisconnectedByManager()); // if disconnected
+			clientDisconnected(mConnectionManager.isDisconnectedByManager()); // if
+																				// disconnected
 			isError = true;
 		}
-		
-		if (isError) return;
-		
+
+		if (isError)
+			return;
+
 		// check pending of account mgr
 		if (mDoGetBAMInfo) {
-			AccountMgrInfo bamInfo = (AccountMgrInfo)mConnectionManager.getPendingOutput(BoincOp.GetBAMInfo);
+			AccountMgrInfo bamInfo = (AccountMgrInfo) mConnectionManager
+					.getPendingOutput(BoincOp.GetBAMInfo);
 			if (bamInfo != null)
 				currentBAMInfo(bamInfo);
 		}
-		
+
 		if (mDoUpdateHostInfo) {
-			HostInfo hostInfo = (HostInfo)mConnectionManager.getPendingOutput(BoincOp.UpdateHostInfo);
+			HostInfo hostInfo = (HostInfo) mConnectionManager
+					.getPendingOutput(BoincOp.UpdateHostInfo);
 			if (hostInfo != null)
 				updatedHostInfo(hostInfo);
-			else // otherwise show dialog
+			else
+				// otherwise show dialog
 				showProgressDialog(PROGRESS_INITIAL_DATA);
 		}
-		
+
 		if (mSyncingBAMInProgress) {
 			if (!mConnectionManager.isOpBeingExecuted(BoincOp.SyncWithBAM))
 				onAfterAccountMgrRPC();
 		}
-		
+
 		// update particular prefs
 		updateParticularPreferences();
 	}
@@ -325,102 +326,116 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 	@Override
 	protected void onResume() {
 		super.onResume();
-		if (Logging.DEBUG) Log.d(TAG, "Resume");
+		if (Logging.DEBUG)
+			Log.d(TAG, "Resume");
 		// setup orientation
 		mScreenOrientation.setOrientation();
-		
-		// We are in foreground, so we want to receive notification when data are updated
+
+		// We are in foreground, so we want to receive notification when data
+		// are updated
 		if (mConnectionManager != null) {
 			// register right now
-			mConnectionManager.registerStatusObserver(ManageClientActivity.this);
+			mConnectionManager
+					.registerStatusObserver(ManageClientActivity.this);
 			// Check, whether we are connected now or not
 			mConnectedClient = mConnectionManager.getClientId();
-		}
-		else {
-			// During creation of activity, we'll receive onServiceConnected() callback afterwards
+		} else {
+			// During creation of activity, we'll receive onServiceConnected()
+			// callback afterwards
 			mDelayedObserverRegistration = true;
-			// We force the "No host connected" display for now (can change as soon as we register as observer)
+			// We force the "No host connected" display for now (can change as
+			// soon as we register as observer)
 			mConnectedClient = null;
 		}
 		// Display currently connected host (or "No host connected")
 		refreshClientName();
-		
+
 		// Progress dialog is allowed since now
 		mProgressDialogAllowed = true;
 
 		if (mSelectedClient != null) {
-			// We just returned from activity which selected client to connect to
+			// We just returned from activity which selected client to connect
+			// to
 			if (mConnectionManager != null) {
 				// Service is bound, we can use it
 				connectOrReconnect();
-			}
-			else {
-				// Service not bound at the moment (too slow start? or disconnected itself?)
-				if (Logging.INFO)Log.i(TAG,
-					"onResume() - Client selected, but service not yet available => binding again");
+			} else {
+				// Service not bound at the moment (too slow start? or
+				// disconnected itself?)
+				if (Logging.INFO)
+					Log.i(TAG,
+							"onResume() - Client selected, but service not yet available => binding again");
 				doBindService();
 			}
-		}
-		else {
+		} else {
 			// Connection to another client is NOT to be started
-			// If we are connected, we should also display current run/network mode
+			// If we are connected, we should also display current run/network
+			// mode
 			if (mConnectedClient != null) {
 				// We are connected - retrieve the current mode
-				// Maybe the old one we have is correct, but we are not sure - so we disable it for now
+				// Maybe the old one we have is correct, but we are not sure -
+				// so we disable it for now
 				// The values are still visible, but they are grayed out
 				refreshClientModePending();
 				mConnectionManager.updateClientMode();
-			}
-			else {
+			} else {
 				// We are not connected - update display accordingly
 				mClientMode = null;
 				refreshClientMode();
 			}
 		}
-		
+
 		updateActivityState();
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		if (Logging.DEBUG) Log.d(TAG, "Pause");
+		if (Logging.DEBUG)
+			Log.d(TAG, "Pause");
 		// No more repeated displays
 		mPeriodicModeRetrievalAllowed = false;
 		mProgressDialogAllowed = false;
 		dismissProgressDialogs();
-		// Do not receive notifications about state and data availability, as we are not front activity now
+		// Do not receive notifications about state and data availability, as we
+		// are not front activity now
 		// We will change that when we resume again
 		if (mConnectionManager != null) {
 			mConnectionManager.unregisterStatusObserver(this);
 			mConnectedClient = null; // will be again retrieved in onResume();
 		}
-		// In case of servicce binding unfinished (i.e. this activity is created and 
-		// service bind is triggered, but callback onServiceConnected() not received yet),
-		// we will NOT register observer at the time of onServiceConnected(), as we are in
+		// In case of servicce binding unfinished (i.e. this activity is created
+		// and
+		// service bind is triggered, but callback onServiceConnected() not
+		// received yet),
+		// we will NOT register observer at the time of onServiceConnected(), as
+		// we are in
 		// background now and we do not want to observe connection
 		mDelayedObserverRegistration = false;
-		// If we did not perform deferred connect so far, we needn't do that anymore
+		// If we did not perform deferred connect so far, we needn't do that
+		// anymore
 		mSelectedClient = null;
 	}
 
 	@Override
 	protected void onDestroy() {
-		if (Logging.DEBUG) Log.d(TAG, "onDestroy()");
+		if (Logging.DEBUG)
+			Log.d(TAG, "onDestroy()");
 		mScreenOrientation = null;
 		doUnbindService();
 		super.onDestroy();
 	}
-	
+
 	@Override
 	public Object onRetainNonConfigurationInstance() {
 		return new SavedState(this);
 	}
-	
+
 	@Override
 	public void onBackPressed() {
 		if (mConnectionManager != null)
-			mConnectionManager.cancelPollOperations(PollOp.POLL_BAM_OPERATION_MASK);
+			mConnectionManager
+					.cancelPollOperations(PollOp.POLL_BAM_OPERATION_MASK);
 		finish();
 	}
 
@@ -429,47 +444,50 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		Dialog dialog = StandardDialogs.onCreateDialog(this, dialogId, args);
 		if (dialog != null)
 			return dialog;
-		
+
 		ProgressDialog progressDialog;
 		switch (dialogId) {
 		case DIALOG_WARN_SHUTDOWN: {
-			if (mShowShutdownDialog &&  mConnectionManager != null && mConnectedClient == null) {
+			if (mShowShutdownDialog && mConnectionManager != null
+					&& mConnectedClient == null) {
 				mShowShutdownDialog = false;
 				return null; // do not create
 			}
-			
+
 			int messageId = R.string.warnShutdownText;
 			if (args.getBoolean("IsNative")) // if native
 				messageId = R.string.shutdownAskText;
-				
-        	return new AlertDialog.Builder(this)
-        		.setIcon(android.R.drawable.ic_dialog_alert)
-        		.setTitle(R.string.warning)
-        		.setMessage(messageId)
-        		.setPositiveButton(R.string.shutdown,
-        			new DialogInterface.OnClickListener() {
-        				public void onClick(DialogInterface dialog, int whichButton) {
-        					mShowShutdownDialog = false;
-        					boincShutdownClient();
-        				}
-        			})
-        		.setNegativeButton(R.string.cancel,
-    				new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							mShowShutdownDialog = false;
-						}
-					})
-				.setOnCancelListener(new DialogInterface.OnCancelListener() {
-					@Override
-					public void onCancel(DialogInterface dialog) {
-						mShowShutdownDialog = false;
-					}
-				})
-        		.create();
+
+			return new AlertDialog.Builder(this)
+					.setIcon(android.R.drawable.ic_dialog_alert)
+					.setTitle(R.string.warning)
+					.setMessage(messageId)
+					.setPositiveButton(R.string.shutdown,
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int whichButton) {
+									mShowShutdownDialog = false;
+									boincShutdownClient();
+								}
+							})
+					.setNegativeButton(R.string.cancel,
+							new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialog,
+										int which) {
+									mShowShutdownDialog = false;
+								}
+							})
+					.setOnCancelListener(
+							new DialogInterface.OnCancelListener() {
+								@Override
+								public void onCancel(DialogInterface dialog) {
+									mShowShutdownDialog = false;
+								}
+							}).create();
 		}
 		case DIALOG_RETRIEVAL_PROGRESS:
-			if ( (mConnectProgressIndicator == -1) || !mProgressDialogAllowed ) {
+			if ((mConnectProgressIndicator == -1) || !mProgressDialogAllowed) {
 				return null;
 			}
 			progressDialog = new FixedProgressDialog(this);
@@ -492,18 +510,19 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 			return progressDialog;
 		case DIALOG_HOST_INFO:
 			return new AlertDialog.Builder(this)
-				.setIcon(android.R.drawable.ic_dialog_info)
-				.setTitle(R.string.menuHostInfo)
-				.setView(LayoutInflater.from(this).inflate(R.layout.dialog, null))
-				.setNegativeButton(R.string.ok, null)
-				.setOnCancelListener(new OnCancelListener() {
-					@Override
-					public void onCancel(DialogInterface dialog) {
-						// We don't need data anymore - allow them to be garbage collected
-						mHostInfo = null;
-					}
-				})
-				.create();
+					.setIcon(android.R.drawable.ic_dialog_info)
+					.setTitle(R.string.menuHostInfo)
+					.setView(
+							LayoutInflater.from(this).inflate(R.layout.dialog,
+									null)).setNegativeButton(R.string.ok, null)
+					.setOnCancelListener(new OnCancelListener() {
+						@Override
+						public void onCancel(DialogInterface dialog) {
+							// We don't need data anymore - allow them to be
+							// garbage collected
+							mHostInfo = null;
+						}
+					}).create();
 		}
 		return null;
 	}
@@ -512,10 +531,10 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 	protected void onPrepareDialog(int dialogId, Dialog dialog, Bundle args) {
 		if (StandardDialogs.onPrepareDialog(this, dialogId, dialog, args))
 			return;
-		
+
 		switch (dialogId) {
 		case DIALOG_RETRIEVAL_PROGRESS: {
-			ProgressDialog pd = (ProgressDialog)dialog;
+			ProgressDialog pd = (ProgressDialog) dialog;
 			switch (mConnectProgressIndicator) {
 			case PROGRESS_CONNECTING:
 				pd.setMessage(getString(R.string.connecting));
@@ -524,20 +543,22 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 				pd.setMessage(getString(R.string.authorization));
 				break;
 			case PROGRESS_INITIAL_DATA:
-				pd.setMessage(getString(R.string.retrievingData));				
+				pd.setMessage(getString(R.string.retrievingData));
 				break;
 			default:
-				if (Logging.ERROR) Log.e(TAG, "Unhandled progress indicator: " + mConnectProgressIndicator);
+				if (Logging.ERROR)
+					Log.e(TAG, "Unhandled progress indicator: "
+							+ mConnectProgressIndicator);
 			}
 			break;
 		}
 		case DIALOG_ATTACH_BAM_PROGRESS: {
-			ProgressDialog pd = (ProgressDialog)dialog;
+			ProgressDialog pd = (ProgressDialog) dialog;
 			pd.setMessage(getString(R.string.synchronizingBAM));
 			break;
 		}
 		case DIALOG_HOST_INFO:
-			TextView text = (TextView)dialog.findViewById(R.id.dialogText);
+			TextView text = (TextView) dialog.findViewById(R.id.dialogText);
 			text.setText(Html.fromHtml(mHostInfo.htmlText));
 			break;
 		}
@@ -576,9 +597,11 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (Logging.DEBUG) Log.d(TAG, "onActivityResult()");
-		if (requestCode == ACTIVITY_SELECT_HOST && resultCode == RESULT_OK) 
-			// Finished successfully - selected the host to which we should connect
+		if (Logging.DEBUG)
+			Log.d(TAG, "onActivityResult()");
+		if (requestCode == ACTIVITY_SELECT_HOST && resultCode == RESULT_OK)
+			// Finished successfully - selected the host to which we should
+			// connect
 			mSelectedClient = data.getParcelableExtra(ClientId.TAG);
 	}
 
@@ -586,7 +609,8 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 	public void clientConnectionProgress(BoincOp boincOp, int progress) {
 		switch (progress) {
 		case PROGRESS_INITIAL_DATA:
-			// We are already connected, so hopefully we can display client ID in title bar
+			// We are already connected, so hopefully we can display client ID
+			// in title bar
 			// as well as progress spinner
 			ClientId clientId = mConnectionManager.getClientId();
 			if (clientId != null) {
@@ -597,20 +621,22 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		case PROGRESS_CONNECTING:
 		case PROGRESS_AUTHORIZATION_PENDING:
 			// Update dialog to display corresponding status, i.e.
-			// "Connecting", "Authorization", "Retrieving" 
+			// "Connecting", "Authorization", "Retrieving"
 			showProgressDialog(progress);
 			break;
 		case PROGRESS_XFER_STARTED:
 			break;
 		case PROGRESS_XFER_FINISHED:
-			if (boincOp.equals(BoincOp.RunBenchmarks) || boincOp.equals(BoincOp.DoNetworkComm) ||
-					boincOp.equals(BoincOp.GlobalPrefsOverride))
+			if (boincOp.equals(BoincOp.RunBenchmarks)
+					|| boincOp.equals(BoincOp.DoNetworkComm)
+					|| boincOp.equals(BoincOp.GlobalPrefsOverride))
 				updateParticularPreferences();
 			break;
 		case PROGRESS_XFER_POLL:
 			break;
 		default:
-			if (Logging.ERROR) Log.e(TAG, "Unhandled progress indicator: " + progress);
+			if (Logging.ERROR)
+				Log.e(TAG, "Unhandled progress indicator: " + progress);
 		}
 	}
 
@@ -620,35 +646,42 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		refreshClientName();
 		if (mConnectedClient != null) {
 			// Connected client is retrieved
-			if (Logging.DEBUG) Log.d(TAG, "Client " + mConnectedClient.getNickname() + " is connected");
+			if (Logging.DEBUG)
+				Log.d(TAG, "Client " + mConnectedClient.getNickname()
+						+ " is connected");
 			// Trigger retrieval of client run/network modes
 			mPeriodicModeRetrievalAllowed = true;
 			if (mConnectProgressIndicator != -1) {
 				// We are still showing dialog about connection progress
-				// Connect was just initiated by us (not reported by registering as observer)
+				// Connect was just initiated by us (not reported by registering
+				// as observer)
 				// We will update the dialog text now
 				showProgressDialog(PROGRESS_INITIAL_DATA);
 			}
 			mConnectionManager.updateClientMode();
-			
+
 			updatePreferencesEnabled();
-			
+
 			if (Build.VERSION.SDK_INT >= 11)
 				invalidateOptionsMenu();
-			
+
 			// update preferences
 			updateParticularPreferences();
-		}
-		else {
+		} else {
 			// Received connected notification, but client is unknown!
-			if (Logging.ERROR) Log.e(TAG, "Client not connected despite notification");
-		}
+			if (Logging.ERROR)
+				Log.e(TAG, "Client not connected despite notification");
+		} 
 	}
 
 	@Override
 	public void clientDisconnected(boolean disconnectedByManager) {
-		if (Logging.DEBUG) Log.d(TAG, "Client " + ( (mConnectedClient != null) ?
-				mConnectedClient.getNickname() : "<not connected>" ) + " is disconnected");
+		if (Logging.DEBUG)
+			Log.d(TAG,
+					"Client "
+							+ ((mConnectedClient != null) ? mConnectedClient
+									.getNickname() : "<not connected>")
+							+ " is disconnected");
 		mConnectedClient = null;
 		refreshClientName();
 		mClientMode = null;
@@ -669,11 +702,11 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		}
 		if (Build.VERSION.SDK_INT >= 11)
 			invalidateOptionsMenu();
-		
+
 		// update preferences
 		updateParticularPreferences();
 	}
-	
+
 	@Override
 	public boolean onAfterAccountMgrRPC() {
 		dismissBAMProgressDialog();
@@ -684,21 +717,24 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 	}
 
 	@Override
-	public boolean onPollError(int errorNum, int operation, String errorMessage, String param) {
+	public boolean onPollError(int errorNum, int operation,
+			String errorMessage, String param) {
 		setProgressBarIndeterminateVisibility(false);
-		if (operation == PollOp.POLL_ATTACH_TO_BAM || operation == PollOp.POLL_SYNC_WITH_BAM) {
+		if (operation == PollOp.POLL_ATTACH_TO_BAM
+				|| operation == PollOp.POLL_SYNC_WITH_BAM) {
 			dismissBAMProgressDialog();
 			mDoGetBAMInfo = false;
 			mSyncingBAMInProgress = false;
 		}
-		StandardDialogs.showPollErrorDialog(this, errorNum, operation, errorMessage, param);
+		StandardDialogs.showPollErrorDialog(this, errorNum, operation,
+				errorMessage, param);
 		// update preferences
 		updateParticularPreferences();
 		return true;
 	}
-	
+
 	@Override
-	public  void onPollCancel(int opFlags) {
+	public void onPollCancel(int opFlags) {
 		// update preferences
 		updateParticularPreferences();
 	}
@@ -719,10 +755,11 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		updateParticularPreferences();
 		return true;
 	}
-	
+
 	@Override
 	public boolean updatedClientMode(ModeInfo modeInfo) {
-		if (Logging.DEBUG) Log.d(TAG, "Client run/network mode info updated, refreshing view");
+		if (Logging.DEBUG)
+			Log.d(TAG, "Client run/network mode info updated, refreshing view");
 		mClientMode = modeInfo;
 		refreshClientMode();
 		dismissClientProgressDialog();
@@ -731,7 +768,8 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 
 	@Override
 	public boolean updatedHostInfo(HostInfo hostInfo) {
-		if (Logging.DEBUG) Log.d(TAG, "Host info received, displaying");
+		if (Logging.DEBUG)
+			Log.d(TAG, "Host info received, displaying");
 		mDoUpdateHostInfo = false;
 		mHostInfo = hostInfo;
 		dismissClientProgressDialog();
@@ -740,41 +778,41 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		}
 		return false;
 	}
-	
-	
-	
+
 	private void refreshClientName() {
 		Preference pref = findPreference("selectedHost");
 		if (mConnectedClient != null) {
-			// We have data about client, so we set the info "nickname (address:port)"
-			pref.setSummary(String.format("%s (%s:%d)", mConnectedClient.getNickname(),
+			// We have data about client, so we set the info
+			// "nickname (address:port)"
+			pref.setSummary(String.format("%s (%s:%d)",
+					mConnectedClient.getNickname(),
 					mConnectedClient.getAddress(), mConnectedClient.getPort()));
-		}
-		else {
+		} else {
 			// Not connected to client
 			pref.setSummary(getString(R.string.noHostConnected));
 		}
 	}
-	
+
 	private void refreshClientMode() {
-		if ( (mConnectedClient != null) && (mClientMode != null) ) {
+		if ((mConnectedClient != null) && (mClientMode != null)) {
 			// 1. The run-mode of currently connected client
-			ListPreference listPref = (ListPreference)findPreference("actRunMode");
+			ListPreference listPref = (ListPreference) findPreference("actRunMode");
 			CharSequence[] runDesc = listPref.getEntries();
-			int idx = listPref.findIndexOfValue(Integer.toString(mClientMode.task_mode));
+			int idx = listPref.findIndexOfValue(Integer
+					.toString(mClientMode.task_mode));
 			listPref.setValueIndex(idx);
 			listPref.setSummary(runDesc[idx]);
 			// All operations depend on actRunMode
 			// When this one is enabled, all others are enabled as well...
 			listPref.setEnabled(true);
 			// 2. The network mode of currently connected client
-			listPref = (ListPreference)findPreference("actNetworkMode");
+			listPref = (ListPreference) findPreference("actNetworkMode");
 			runDesc = listPref.getEntries();
-			idx = listPref.findIndexOfValue(Integer.toString(mClientMode.network_mode));
+			idx = listPref.findIndexOfValue(Integer
+					.toString(mClientMode.network_mode));
 			listPref.setValueIndex(idx);
 			listPref.setSummary(runDesc[idx]);
-		}
-		else {
+		} else {
 			// Has not not retrieved mode yet
 			// actRunMode preference
 			Preference pref = findPreference("actRunMode");
@@ -790,94 +828,88 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 
 	private void refreshClientModePending() {
 		// All operations depend on actRunMode
-		// We disable it, so all operations are grayed out and not accessible until
+		// We disable it, so all operations are grayed out and not accessible
+		// until
 		// pending run/network mode retrieval is finished
-		// This is used e.g. in onResume() when we are not sure whether last known modes
+		// This is used e.g. in onResume() when we are not sure whether last
+		// known modes
 		// belong to the same client
 		Preference pref = findPreference("actRunMode");
 		pref.setEnabled(false);
 		if (mClientMode != null) {
 			// We have "some" info about modes, but it could be very obsolete
 			// actRunMode preference
-			ListPreference listPref = (ListPreference)pref;
+			ListPreference listPref = (ListPreference) pref;
 			CharSequence[] runDesc = listPref.getEntries();
-			int idx = listPref.findIndexOfValue(Integer.toString(mClientMode.task_mode));
+			int idx = listPref.findIndexOfValue(Integer
+					.toString(mClientMode.task_mode));
 			listPref.setValueIndex(idx);
 			listPref.setSummary(runDesc[idx]);
 			// actNetworkMode preference
-			listPref = (ListPreference)findPreference("actNetworkMode");
+			listPref = (ListPreference) findPreference("actNetworkMode");
 			runDesc = listPref.getEntries();
-			idx = listPref.findIndexOfValue(Integer.toString(mClientMode.network_mode));
+			idx = listPref.findIndexOfValue(Integer
+					.toString(mClientMode.network_mode));
 			listPref.setValueIndex(idx);
 			listPref.setSummary(runDesc[idx]);
-		}
-		else {
+		} else {
 			// No info available (i.e. client never connected or disconnected)
 			// actRunMode preference
 			pref.setSummary(getString(R.string.retrievingData));
 			// actNetworkMode preference
 			pref = findPreference("actNetworkMode");
 			pref.setSummary(getString(R.string.retrievingData));
-		
+
 		}
 	}
-	
+
 	/*
 	 * enabling/disabling particular preferences
 	 */
 	private void disableRunBenchmarkPreference() {
-		Preference pref = findPreference("runBenchmark");
-		pref.setEnabled(false);
+
 	}
-	
+
 	private void disableGlobalPreferencesPreference() {
-		Preference pref = findPreference("globalPreferences");
-		pref.setEnabled(false);
+
 	}
-	
+
 	private void disableDoNetworkCommPreference() {
 		Preference pref = findPreference("doNetworkCommunication");
 		pref.setEnabled(false);
 	}
-	
-	
-	
+
 	private void updateParticularPreferences() {
-		if (Logging.DEBUG) Log.d(TAG, "update particular prefs");
+		if (Logging.DEBUG)
+			Log.d(TAG, "update particular prefs");
 		if (mConnectionManager != null && mConnectedClient != null) {
-			Preference pref = findPreference("runBenchmark");
-			pref.setEnabled(!mConnectionManager.isOpBeingExecuted(BoincOp.RunBenchmarks));
-			
-			pref = findPreference("globalPreferences");
-			pref.setEnabled(!mConnectionManager.isOpBeingExecuted(BoincOp.GlobalPrefsOverride));
-			
+			Preference pref ;
+
 			pref = findPreference("doNetworkCommunication");
-			pref.setEnabled(!mConnectionManager.isOpBeingExecuted(BoincOp.DoNetworkComm));
-			
-			
-		
+			pref.setEnabled(!mConnectionManager
+					.isOpBeingExecuted(BoincOp.DoNetworkComm));
+
 		} else {
 			disableGlobalPreferencesPreference();
 			disableRunBenchmarkPreference();
 			disableDoNetworkCommPreference();
 		}
 	}
-	
-	
+
 	private void updatePreferencesEnabled() {
 		// get main dependency preference
 		Preference pref = findPreference("localPreferences");
 		// and select enabled or disabled
 		pref.setEnabled(mConnectedClient != null);
 	}
-	
+
 	private void showProgressDialog(final int progress) {
 		if (mProgressDialogAllowed) {
 			mConnectProgressIndicator = progress;
 			showDialog(DIALOG_RETRIEVAL_PROGRESS);
-		}
-		else if (mConnectProgressIndicator != -1) {
-			// Not allowed to show progress dialog (i.e. activity restarting/terminating),
+		} else if (mConnectProgressIndicator != -1) {
+			// Not allowed to show progress dialog (i.e. activity
+			// restarting/terminating),
 			// but we are showing previous progress dialog - dismiss it
 			StandardDialogs.dismissDialog(this, DIALOG_RETRIEVAL_PROGRESS);
 			mConnectProgressIndicator = -1;
@@ -890,18 +922,17 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 			mConnectProgressIndicator = -1;
 		}
 	}
-	
+
 	private void dismissBAMProgressDialog() {
 		if (mSyncingBAMInProgress)
 			StandardDialogs.dismissDialog(this, DIALOG_ATTACH_BAM_PROGRESS);
 	}
-	
+
 	private void dismissProgressDialogs() {
 		dismissClientProgressDialog();
 		dismissBAMProgressDialog();
 	}
-	
-	
+
 	private void boincConnect() {
 		if (mConnectionManager == null)
 			return;
@@ -910,9 +941,9 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 			refreshClientModePending();
 			mConnectionManager.connect(mSelectedClient, false);
 			mSelectedClient = null;
-		}
-		catch (NoConnectivityException e) {
-			if (Logging.DEBUG) Log.d(TAG, "No connectivity - cannot connect");
+		} catch (NoConnectivityException e) {
+			if (Logging.DEBUG)
+				Log.d(TAG, "No connectivity - cannot connect");
 			// TODO: Show notification about connectivity
 		}
 	}
@@ -926,32 +957,33 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 		if (mConnectedClient == null) {
 			// No client connected now, we can safely connect to new one
 			boincConnect();
-		}
-		else {
-			// We are currently connected and some client was selected to connect
+		} else {
+			// We are currently connected and some client was selected to
+			// connect
 			// We must check whether it is not the same
 			if (mSelectedClient.equals(mConnectedClient)) {
 				// The same client was selected, as the one already connected
 				// We will not change connection - reset mSelectedClient
-				if (Logging.DEBUG) Log.d(TAG, "Selected the same client as already connected: " +
-						mSelectedClient.getNickname() + ", keeping existing connection");
+				if (Logging.DEBUG)
+					Log.d(TAG,
+							"Selected the same client as already connected: "
+									+ mSelectedClient.getNickname()
+									+ ", keeping existing connection");
 				mSelectedClient = null;
-			}
-			else {
-			
+			} else {
+
 				boincDisconnect();
-				// The boincConnect() will be triggered after the clientDisconnected() notification
+				// The boincConnect() will be triggered after the
+				// clientDisconnected() notification
 			}
 		}
 	}
-	
-	
-	
+
 	private void boincClearLocalPrefs() {
 		mConnectionManager.setGlobalPrefsOverride("");
 		disableGlobalPreferencesPreference();
 	}
-	
+
 	private void boincChangeRunMode(int mode) {
 		mConnectionManager.setRunMode(mode);
 	}
@@ -959,22 +991,25 @@ public class ManageClientActivity extends PreferenceActivity implements ClientMa
 	private void boincChangeNetworkMode(int mode) {
 		mConnectionManager.setNetworkMode(mode);
 	}
-	
+
 	private void boincRunCpuBenchmarks() {
 		mConnectionManager.runBenchmarks();
-		Toast.makeText(this, getString(R.string.clientRunBenchNotify), Toast.LENGTH_LONG).show();
+		Toast.makeText(this, getString(R.string.clientRunBenchNotify),
+				Toast.LENGTH_LONG).show();
 		disableRunBenchmarkPreference();
 	}
 
 	private void boincDoNetworkCommunication() {
 		mConnectionManager.doNetworkCommunication();
-		Toast.makeText(this, getString(R.string.clientDoNetCommNotify), Toast.LENGTH_LONG).show();
+		Toast.makeText(this, getString(R.string.clientDoNetCommNotify),
+				Toast.LENGTH_LONG).show();
 		disableDoNetworkCommPreference();
 	}
 
 	private void boincShutdownClient() {
 		mConnectionManager.shutdownCore();
-		Toast.makeText(this, getString(R.string.clientShutdownNotify), Toast.LENGTH_LONG).show();
+		Toast.makeText(this, getString(R.string.clientShutdownNotify),
+				Toast.LENGTH_LONG).show();
 	}
 
 	@Override

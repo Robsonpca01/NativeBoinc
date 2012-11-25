@@ -48,13 +48,7 @@
 			android:persistent="false" />
 	</PreferenceCategory>
 	<PreferenceCategory android:title="@string/manageCategoryAdvanced">
-		<Preference
-			android:key="runBenchmark"
-			android:title="@string/clientRunBenchTitle"
-			android:summary="@string/clientRunBenchSummary"
-			android:shouldDisableView="true"
-			android:dependency="localPreferences"
-			android:persistent="false" />
+		
 		<Preference
 			android:key="doNetworkCommunication"
 			android:title="@string/clientDoNetCommTitle"
