@@ -1,22 +1,3 @@
-/* 
- * NativeBOINC - Native BOINC Client with Manager
- * Copyright (C) 2011, Mateusz Szpakowski
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
-
 package sk.boinc.nativeboinc;
 
 import java.util.Locale;
@@ -47,10 +28,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TabHost;
 
-/**
- * @author mat
- *
- */
+
 public class LocalPreferencesActivity extends ServiceBoincActivity implements ClientPreferencesReceiver {
 	private static final String TAG = "LocalPrefsActivity";
 	
@@ -69,21 +47,16 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 	private CheckBox mComputeOnBatteries;
 	private CheckBox mRunAlwaysWhenPlugged;
 	private CheckBox mComputeInUse;
-	private CheckBox mUseGPUInUse;
 	private EditText mComputeIdleFor;
 	private EditText mComputeUsageLessThan;
 	private EditText mBatteryLevelNL;
 	private EditText mBatteryTempLT;
 	private EditText mSwitchBetween;
-	private EditText mUseAtMostCPUs;
-	private EditText mUseAtMostCPUTime;
 	private EditText mMaxDownloadRate;
 	private EditText mMaxUploadRate;
 	private EditText mTransferAtMost;
 	private EditText mTransferPeriodDays;
 	private EditText mConnectAboutEvery;
-	private EditText mAdditionalWorkBuffer;
-	private CheckBox mSkipVerifyImages;
 	private EditText mUseAtMostDiskSpace;
 	private EditText mLeaveAtLeastDiskFree;
 	private EditText mUseAtMostTotalDisk;
@@ -172,21 +145,16 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 		mComputeOnBatteries = (CheckBox)findViewById(R.id.localPrefComputeOnBatteries);
 		mRunAlwaysWhenPlugged = (CheckBox)findViewById(R.id.localPrefRunAlwaysWhenPlugged);
 		mComputeInUse = (CheckBox)findViewById(R.id.localPrefComputeInUse);
-		mUseGPUInUse = (CheckBox)findViewById(R.id.localPrefUseGPUInUse);
 		mComputeIdleFor = (EditText)findViewById(R.id.localPrefComputeIdleFor);
 		mComputeUsageLessThan = (EditText)findViewById(R.id.localPrefComputeUsageLessThan);
 		mBatteryLevelNL = (EditText)findViewById(R.id.localPrefBatteryNL);
 		mBatteryTempLT = (EditText)findViewById(R.id.localPrefTempLT);
 		mSwitchBetween = (EditText)findViewById(R.id.localPrefSwitchBetween);
-		mUseAtMostCPUs = (EditText)findViewById(R.id.localPrefUseAtMostCPUs);
-		mUseAtMostCPUTime = (EditText)findViewById(R.id.localPrefUseAtMostCPUTime);
 		mMaxDownloadRate = (EditText)findViewById(R.id.localPrefMaxDownloadRate);
 		mMaxUploadRate = (EditText)findViewById(R.id.localPrefMaxUploadRate);
 		mTransferAtMost = (EditText)findViewById(R.id.localPrefTransferAtMost);
 		mTransferPeriodDays = (EditText)findViewById(R.id.localPrefTransferPeriodDays);
 		mConnectAboutEvery = (EditText)findViewById(R.id.localPrefConnectAboutEvery);
-		mAdditionalWorkBuffer = (EditText)findViewById(R.id.localPrefAdditWorkBuffer);
-		mSkipVerifyImages = (CheckBox)findViewById(R.id.localPrefSkipImageVerify);
 		mUseAtMostDiskSpace = (EditText)findViewById(R.id.localPrefUseAtMostDiskSpace);
 		mLeaveAtLeastDiskFree = (EditText)findViewById(R.id.localPrefLeaveAtLeastDiskFree);
 		mUseAtMostTotalDisk = (EditText)findViewById(R.id.localPrefUseAtMostTotalDisk);
@@ -252,15 +220,12 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 		mBatteryTempLT.addTextChangedListener(textWatcher);
 		
 		mSwitchBetween.addTextChangedListener(textWatcher);
-		mUseAtMostCPUs.addTextChangedListener(textWatcher);
-		mUseAtMostCPUTime.addTextChangedListener(textWatcher);
 		
 		mMaxDownloadRate.addTextChangedListener(textWatcher);
 		mMaxUploadRate.addTextChangedListener(textWatcher);
 		mTransferAtMost.addTextChangedListener(textWatcher);
 		mTransferPeriodDays.addTextChangedListener(textWatcher);
 		mConnectAboutEvery.addTextChangedListener(textWatcher);
-		mAdditionalWorkBuffer.addTextChangedListener(textWatcher);
 		
 		mUseAtMostDiskSpace.addTextChangedListener(textWatcher);
 		mUseAtMostTotalDisk.addTextChangedListener(textWatcher);
@@ -407,8 +372,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 			
 			double cpu_scheduling_period_minutes = Double.parseDouble(
 					mSwitchBetween.getText().toString());
-			double max_ncpus_pct = Double.parseDouble(mUseAtMostCPUs.getText().toString());
-			double cpu_usage_limit = Double.parseDouble(mUseAtMostCPUTime.getText().toString());
 			double battery_level_nl = Double.parseDouble(mBatteryLevelNL.getText().toString());
 			double batt_temp_lt = Double.parseDouble(mBatteryTempLT.getText().toString());
 			
@@ -417,7 +380,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 			double daily_xfer_limit_mb = Double.parseDouble(mTransferAtMost.getText().toString());
 			double daily_xfer_period_days = Integer.parseInt(mTransferPeriodDays.getText().toString());
 			double work_buf_min_days = Double.parseDouble(mConnectAboutEvery.getText().toString());
-			double work_buf_addit_days = Double.parseDouble(mAdditionalWorkBuffer.getText().toString());
 			
 			double disk_max_used_gb = Double.parseDouble(mUseAtMostDiskSpace.getText().toString());
 			double disk_max_used_pct = Double.parseDouble(mUseAtMostTotalDisk.getText().toString());
@@ -461,18 +423,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 			} else
 				mSwitchBetween.setError(null);
 			
-			if (max_ncpus_pct > 100.0 || max_ncpus_pct < 0.0) {
-				mUseAtMostCPUs.setError(mWrongText);
-				good = false;
-			} else
-				mUseAtMostCPUs.setError(null);
-			
-			if (cpu_usage_limit > 100.0 || cpu_usage_limit < 0.0) {
-				mUseAtMostCPUTime.setError(mWrongText);
-				good =false;
-			} else
-				mUseAtMostCPUTime.setError(null);
-			
 			if (max_bytes_sec_down < 0.0) {
 				mMaxDownloadRate.setError(mWrongText);
 				good = false;
@@ -503,12 +453,7 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 			} else
 				mConnectAboutEvery.setError(null);
 			
-			if (work_buf_addit_days < 0.0) {
-				mAdditionalWorkBuffer.setError(mWrongText);
-				good = false;
-			} else
-				mAdditionalWorkBuffer.setError(null);
-			
+					
 			if (disk_max_used_gb < 0.0) {
 				mUseAtMostDiskSpace.setError(mWrongText);
 				good = false;
@@ -579,7 +524,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 		mComputeInUse.setChecked(globalPrefs.run_if_user_active);
 		mRunAlwaysWhenPlugged.setChecked(globalPrefs.run_always_when_plugged);
 		mComputeOnBatteries.setChecked(globalPrefs.run_on_batteries);
-		mUseGPUInUse.setChecked(globalPrefs.run_gpu_if_user_active);
 		
 		mComputeIdleFor.setText(formatDouble(globalPrefs.idle_time_to_run));
 		mComputeUsageLessThan.setText(formatDouble(globalPrefs.suspend_cpu_usage));
@@ -587,16 +531,12 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 		mBatteryTempLT.setText(formatDouble(globalPrefs.run_if_temp_lt_than));
 		
 		mSwitchBetween.setText(formatDouble(globalPrefs.cpu_scheduling_period_minutes));
-		mUseAtMostCPUs.setText(formatDouble(globalPrefs.max_ncpus_pct));
-		mUseAtMostCPUTime.setText(formatDouble(globalPrefs.cpu_usage_limit));
 		
 		mMaxDownloadRate.setText(formatDouble(globalPrefs.max_bytes_sec_down));
 		mMaxUploadRate.setText(formatDouble(globalPrefs.max_bytes_sec_up));
 		mTransferAtMost.setText(formatDouble(globalPrefs.daily_xfer_limit_mb));
 		mTransferPeriodDays.setText(Integer.toString(globalPrefs.daily_xfer_period_days));
 		mConnectAboutEvery.setText(formatDouble(globalPrefs.work_buf_min_days));
-		mAdditionalWorkBuffer.setText(formatDouble(globalPrefs.work_buf_additional_days));
-		mSkipVerifyImages.setChecked(globalPrefs.dont_verify_images);
 		
 		mUseAtMostDiskSpace.setText(formatDouble(globalPrefs.disk_max_used_gb));
 		mUseAtMostTotalDisk.setText(formatDouble(globalPrefs.disk_max_used_pct));
@@ -623,7 +563,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 			globalPrefs.run_if_user_active = mComputeInUse.isChecked();
 			globalPrefs.run_on_batteries = mComputeOnBatteries.isChecked();
 			globalPrefs.run_always_when_plugged = mRunAlwaysWhenPlugged.isChecked();
-			globalPrefs.run_gpu_if_user_active = mUseGPUInUse.isChecked();
 			
 			globalPrefs.idle_time_to_run = Double.parseDouble(mComputeIdleFor.getText().toString());
 			globalPrefs.suspend_cpu_usage = Double.parseDouble(
@@ -635,8 +574,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 			
 			globalPrefs.cpu_scheduling_period_minutes = Double.parseDouble(
 					mSwitchBetween.getText().toString());
-			globalPrefs.max_ncpus_pct = Double.parseDouble(mUseAtMostCPUs.getText().toString());
-			globalPrefs.cpu_usage_limit = Double.parseDouble(mUseAtMostCPUTime.getText().toString());
 			
 			globalPrefs.max_bytes_sec_down = Double.parseDouble(mMaxDownloadRate.getText().toString());
 			globalPrefs.max_bytes_sec_up = Double.parseDouble(mMaxUploadRate.getText().toString());
@@ -644,9 +581,7 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 			globalPrefs.daily_xfer_period_days = Integer.parseInt(
 					mTransferPeriodDays.getText().toString());
 			globalPrefs.work_buf_min_days = Double.parseDouble(mConnectAboutEvery.getText().toString());
-			globalPrefs.work_buf_additional_days = Double.parseDouble(
-					mAdditionalWorkBuffer.getText().toString());
-			globalPrefs.dont_verify_images = mSkipVerifyImages.isChecked();
+			
 			
 			globalPrefs.disk_max_used_gb = Double.parseDouble(mUseAtMostDiskSpace.getText().toString());
 			globalPrefs.disk_max_used_pct = Double.parseDouble(mUseAtMostTotalDisk.getText().toString());

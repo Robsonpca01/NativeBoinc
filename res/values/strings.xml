@@ -92,7 +92,7 @@
     <string name="menuNativeClient">Cliente nativo</string>
     <!-- About -->
     <string name="aboutTitle">Informação Básica</string>
-    <string name="aboutHomepageUrl"></string>
+    <string name="aboutHomepageUrl"/>
     <string name="aboutText">
 		%1$s Obrigado por utilizar meu programa.\n
 		Original AndroBOINC por Pavel Michalec (Paulo M.)\n

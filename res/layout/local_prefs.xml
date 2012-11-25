@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-/* 
- * NativeBOINC - Native BOINC Client with Manager
- * Copyright (C) 2011, Mateusz Szpakowski
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- */
- -->
+
  <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@android:id/tabhost"
 	android:layout_width="fill_parent"
@@ -60,11 +41,6 @@
 			  			android:layout_width="fill_parent"
 			  			android:layout_height="wrap_content"
 			  			android:text="@string/localPrefComputeInUse" />
-			  		<CheckBox
-			  			android:id="@+id/localPrefUseGPUInUse"
-			  			android:layout_width="fill_parent"
-			  			android:layout_height="wrap_content"
-			  			android:text="@string/localPrefUseGPUInUse" />
 			  		<LinearLayout
 			  			android:orientation="horizontal"
 						android:layout_width="fill_parent"
@@ -183,44 +159,12 @@
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:paddingTop="3dip">
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:textSize="@dimen/labelTextSize"
-							android:text="@string/localPrefUseAtMost" />
-						<EditText 
-							android:id="@+id/localPrefUseAtMostCPUs"
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:inputType="numberDecimal"
-							android:maxWidth="@dimen/localPrefEditSize" />
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:textSize="@dimen/labelTextSize"
-							android:text="@string/localPrefPercentCPUs" />
 					</LinearLayout>
 					<LinearLayout
 			  			android:orientation="horizontal"
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:paddingTop="3dip">
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:textSize="@dimen/labelTextSize"
-							android:text="@string/localPrefUseAtMost" />
-						<EditText 
-							android:id="@+id/localPrefUseAtMostCPUTime"
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:inputType="numberDecimal"
-							android:maxWidth="@dimen/localPrefEditSize" />
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:textSize="@dimen/labelTextSize"
-							android:text="@string/localPrefPercentCPUTime" />
 					</LinearLayout>
 					
 					<Button android:id="@+id/localPrefCPUTimePrefs"
@@ -336,33 +280,6 @@
 							android:textSize="@dimen/labelTextSize"
 							android:text="@string/days" />
 					</LinearLayout>
-					<LinearLayout
-			  			android:orientation="horizontal"
-						android:layout_width="fill_parent"
-						android:layout_height="wrap_content"
-						android:paddingTop="3dip">
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:textSize="@dimen/labelTextSize"
-							android:text="@string/localPrefAdditWorkBuffer" />
-						<EditText 
-							android:id="@+id/localPrefAdditWorkBuffer"
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:inputType="numberDecimal"
-							android:maxWidth="@dimen/localPrefEditSize" />
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:textSize="@dimen/labelTextSize"
-							android:text="@string/days" />
-					</LinearLayout>
-					<CheckBox
-			  			android:id="@+id/localPrefSkipImageVerify"
-			  			android:layout_width="fill_parent"
-			  			android:layout_height="wrap_content"
-			  			android:text="@string/localPrefSkipImageVerify" />
 					
 					<Button android:id="@+id/localPrefNetTimePrefs"
 					    android:layout_width="wrap_content"
