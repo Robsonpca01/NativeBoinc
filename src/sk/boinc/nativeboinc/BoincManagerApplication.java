@@ -1,4 +1,4 @@
-
+ 
 package sk.boinc.nativeboinc;
 
 import java.io.IOException;

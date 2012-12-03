@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Informações Básica -->
-    <string name="app_name">MobileBOINC</string>
-    <string name="app_desc">Mobile BOINC para Android com AndroBOINC</string>
+    <string name="app_name">AndroBOINC</string>
+    <string name="app_desc">Andro BOINC para Android com AndroBOINC</string>
     <string name="service_desc">Permitir participação em projetos BOINC para dispositivos Android</string>
-    <string name="install_service_desc">Serviço de instalação do cliente nativo e aplicação BOINC </string>
+    <string name="install_service_desc">Serviço de instalação do cliente   e aplicação BOINC </string>
     <string name="nboinc_service_desc">Serviço do cliente BOINC</string>
     <string name="newsHandlerDesc">Processador de notícias</string>
     <!--nomes dos widgets -->
-    <string name="widget2x1">BOINC nativo pequeno</string>
-    <string name="widgetTablet">BOINC nativo grande</string>
+    <string name="widget2x1">BOINC   pequeno</string>
+    <string name="widgetTablet">BOINC   grande</string>
     <string name="autostartReceiver">Inicio automático do receiver</string>
     <!-- Strings genéricas -->
     <string name="back">Voltar</string>
@@ -48,14 +48,14 @@
     <string name="copy">Copiar</string>
     <string name="saveToSDCard">Salvar no SDCard</string>
     <string name="restart">Reiniciar</string>
-    <string name="clientRestarting">Reiniciar cliente nativo…</string>
+    <string name="clientRestarting">Reiniciar cliente  …</string>
     <string name="selectAll">Selecionar tudo</string>
     <string name="unselectAll">Desmarcar tudo</string>
     <string name="yesText">Sim</string>
     <string name="noText">Não</string>
     <string name="orText">ou</string>
     <string name="installedBinaries">Binários instalados</string>
-    <string name="boincClient">Mobile BOINC</string>
+    <string name="boincClient">Andro BOINC</string>
     <!-- Units -->
     <string name="unitKiB">KiB</string>
     <string name="unitMiB">MiB</string>
@@ -89,7 +89,7 @@
     <string name="menuPreferences">Preferências</string>
     <string name="menuReconnect">Reconectar</string>
     <string name="menuRefresh">Atualizar</string>
-    <string name="menuNativeClient">Cliente nativo</string>
+    <string name="menuNativeClient">Cliente</string>
     <!-- About -->
     <string name="aboutTitle">Informação Básica</string>
     <string name="aboutHomepageUrl"/>
@@ -112,7 +112,7 @@
     <string name="prefAutoConnectTitle">Conectar automaticamente</string>
     <string name="prefAutoConnectDisabled">Não conectar automaticamente ao iniciar</string>
     <string name="prefAutoConnectEnabled">Conectar ao cliente recentemente conectado ao iniciar</string>
-    <string name="prefCategoryNativeBoinc">Mobile BOINC Nativo</string>
+    <string name="prefCategoryNativeBoinc">Andro BOINC</string>
     <string name="prefPowerSaving">Economia de energia</string>
     <string name="prefPowerSavingOnDisabled">Evitar bloqueio de tela e underclocking da CPU</string>
     <string name="prefPowerSavingOnEnabled">Permitir bloqueio de tela e underclocking da CPU</string>
@@ -150,7 +150,7 @@
     <string name="localPrefRunAlwaysWhenPlugged">Executar sempre quando conectado</string>
     <string name="localPrefComputeInUse">Enquanto o dispositivo estiver em uso</string>
     <string name="localPrefUseGPUInUse">Utilizar GPU enquanto o dispositivo estiver em uso</string>
-    <string name="localPrefComputeIdleFor">Somente depois que o dispositivo estiver inativo por</string>
+    <string name="localPrefComputeIdleFor">Somente depois que o dispositivo estiver i  por</string>
     <string name="minutes">min</string>
     <string name="localPrefComputeUsageLessThan">Enquanto o uso do processador estiver menor que</string>
     <string name="percent">%</string>
@@ -177,7 +177,7 @@
     <string name="localPrefGBDiskFree">GB espaço de disco livre</string>
     <string name="localPrefPercentTotalDisk">% total de disco livre</string>
     <string name="localPrefMemoryWhenInUse">% enquanto o dispositivo está em uso</string>
-    <string name="localPrefMemoryWhenInIdle">% enquanto o dispositivo está inativo</string>
+    <string name="localPrefMemoryWhenInIdle">% enquanto o dispositivo está i </string>
     <string name="localPrefCheckpointToDisk">Ponto de verificação para o disco, no máximo, a cada</string>
     <string name="seconds">seg</string>
     <string name="localPrefWrong">Valor errado!</string>
@@ -202,7 +202,7 @@
     <string name="noHostConnected">Sem host conectado</string>
     <string name="clientConnecting">Conectando cliente…</string>
     <string name="selectHostTitle">Host atual</string>
-    <string name="selectHostNoneAvailable">Sem Mobile BOINC configurado.</string>
+    <string name="selectHostNoneAvailable">Sem AndroBOINC configurado.</string>
     <string name="selectHostDialogTitle">Selecionar host</string>
     <string name="clientNameNone">Nenhum</string>
     <string name="clientIdNone">0</string>
@@ -210,7 +210,7 @@
     <string name="clientAddProjectTitle">Adicionar projeto BOINC</string>
     <string name="clientAddProjectSummary">Adicionar projeto BOINC</string>
     <string name="clientUpdateTitle">Atualizar binários</string>
-    <string name="clientUpdateSummary">Atualizar Mobile BOINC ou aplicações de projetos</string>
+    <string name="clientUpdateSummary">Atualizar AndroBOINC ou aplicações de projetos</string>
     <string name="clientSyncBAMTitle">Sincronizar com BAM</string>
     <string name="clientSyncBAMSummary">Tentar sincronizar com gerenciador BAM</string>
     <string name="clientSyncBAMNotify">Sincronizar com gerenciador BAM </string>
@@ -237,7 +237,7 @@
     <string name="clientShutdownSummary">Desligar o core client conectado no momento</string>
     <string name="clientShutdownNotify">Desligando o core client conectado no momento </string>
     <string name="warnShutdownText">O core client conectado será desligado. Este gerenciador não poderá iniciar o cliente posteriormente.</string>
-    <!--  Native Client activity -->
+    <!--   Client activity -->
     <string name="nativeAutostart">Inicializando cliente</string>
     <string name="nativeAutostartTitle">Inicio automático do cliente</string>
     <string name="newsAndUpdates">Notícias e atualizações</string>
@@ -246,7 +246,7 @@
     <string name="notifyNewsUpdatesTitle">Notificar sobre notícias e novos binários</string>
     <string name="notifyNewsUpdatesSummaryOn">Habilitado notificações sobre notícias e novos binários a cada 6 horas</string>
     <string name="notifyNewsUpdatesSummaryOff">Desabilitado notificações sobre notícias e novos binários a cada 6 horas</string>
-    <string name="nativeBoincClient">Cliente nativo do BOINC</string>
+    <string name="nativeBoincClient">Cliente BOINC</string>
     <string name="nativeBoincNetwork">Opções de rede</string>
     <string name="nativeHostnameTitle">Definir nome do host</string>
     <string name="nativeHostnameSummaryNone">Recuperado a partir do sistema de rede</string>
@@ -257,7 +257,7 @@
     <string name="nativeAccessPasswordTitle">Senha de acesso</string>
     <string name="nativeAccessPasswordSummary">Trocar senha de acesso para cliente</string>
     <string name="nativeAccessListTitle">Acesso a lista de host</string>
-    <string name="nativeAccessListSummary">Lista de hosts que possuem acesso ao Mobile BOINC</string>
+    <string name="nativeAccessListSummary">Lista de hosts que possuem acesso ao Andro BOINC</string>
     <string name="nativeBoincInstallation">Opções de instalação</string>
     <string name="nativeMoveToSDCardTitle">Mover para a memória do SDCard</string>
     <string name="nativeMoveToSDCardSummary">Mover BOINC para a memória do SDCard</string>
@@ -277,7 +277,7 @@
     <string name="nativeDumpBoincDirTitle">Descarregar arquivos BOINC</string>
     <string name="nativeDumpBoincDirSummary">Descarregar todo o diretório do BOINC no SDCard</string>
     <string name="nativeShowLogsTitle">Exibir logs</string>
-    <string name="nativeShowLogsSummary">Exibir últimos logs do Mobile BOINC</string>
+    <string name="nativeShowLogsSummary">Exibir últimos logs do AndroBOINC</string>
     <string name="nativeBoincLogs">Últimos logs do BOINC</string>
     <string name="nativeBoincLogsHelp">Para ter opções, por favor pressione o botão Menu.</string>
     <string name="updateFromSDCard">Atualizar binários a partir do SDCard</string>
@@ -309,7 +309,7 @@
     <string name="synchronizeBAM">Sincronizar BAM</string>
     <!--  progress dialog messages -->
     <string name="synchronizingBAM">Sincronizando BAM…</string>
-    <string name="shutdownAskText">Deseja desligar o cliente nativo?</string>
+    <string name="shutdownAskText">Deseja desligar o cliente  ?</string>
     <!-- logs -->
     <string name="enterOutputFilePath">Insira o caminho do arquivo de saída</string>
     <string name="boincLogsSaveError">Não é possível salvar os logs do BOINC no SDCard</string>
@@ -329,7 +329,7 @@
     <string name="otherProject">Outro projeto</string>
     <string name="otherProjectDetails">Escolher outro projeto</string>
     <string name="projectsFromClient">Exibir projetos a partir do cliente</string>
-    <string name="projectsFromClientDetails">Exibir lista de projetos a partir do Mobile BOINC</string>
+    <string name="projectsFromClientDetails">Exibir lista de projetos a partir do AndroBOINC</string>
     <string name="projectListHelp"> Esta é a lista de projetos suportados. Para obter informações sobre o projeto, por favor pressione entradas mais antigas.</string>
     <string name="projectUrl">Entre com a URL do projeto</string>
     <!-- Host edit dialog -->
@@ -356,22 +356,22 @@
     <string name="addingProject">Adicionando projeto…</string>
     <!-- Install Wizard Activity -->
     <string name="installWizard">Assistente de instalação</string>
-    <string name="installWelcome">Bem vindo ao MobileBOINC!</string>
-    <string name="installClientInstall">Por favor, pressione o botão \'Próximo\' para instalar o Mobile BOINC.</string>
+    <string name="installWelcome">Bem vindo ao AndroBOINC!</string>
+    <string name="installClientInstall">Por favor, pressione o botão \'Próximo\' para instalar o AndroBOINC.</string>
     <string name="versionToInstall">Versão a instalar</string>
     <string name="placeToInstall">Lugar de instalação</string>
-    <string name="installSuccessfully">O Mobile BOINC foi instalado com sucesso!</string>
+    <string name="installSuccessfully">O Andro BOINC foi instalado com sucesso!</string>
     <string name="installAddProject">Por favor pressione o botão \'Adicionar projeto\' para adicionar o primeiro projeto BOINC.</string>
     <string name="installFinished">A instalação foi finalizada. Por favor pressione o botão \'Finalizar\'.</string>
-    <string name="installWidgetFinished">Dica: Nós recomendamos o uso da ferramenta NativeBOINC para controlar o cliente nativo.</string>
+    <string name="installWidgetFinished">Dica: Nós recomendamos o uso da ferramenta para controlar o cliente.</string>
     <string name="installInfoFinished"/>
     <string name="installFinishedBenchmark">Durante a instalação do primeiro projeto, o BOINC pode executar benchmarks, que podem levar alguns segundos.</string>
     <string name="installReadBefore">LEIA ANTES DE INSTALAR:</string>
     <string name="installAttention2">Se a aplicação fechar inesperadamente, por favor utilize \'Forçar encerramento\' e execute novamente. </string>
-    <string name="installAttention3">O Mobile BOINC estará trabalhando em Segundo plano. Por favor utilize a opção \'Desligar\' para desligar o cliente.</string>
-    <string name="installNetworkAccess1">O Mobile BOINC permite que você conecte com a rede utilizando gerenciador BOINC.</string>
-    <string name="installClientNotifyBegin">Instalando Mobile BOINC</string>
-    <string name="installClientNotifyFinish">Mobile BOINC foi instalado</string>
+    <string name="installAttention3">O Andro BOINC estará trabalhando em Segundo plano. Por favor utilize a opção \'Desligar\' para desligar o cliente.</string>
+    <string name="installNetworkAccess1">O Andro BOINC permite que você conecte com a rede utilizando gerenciador BOINC.</string>
+    <string name="installClientNotifyBegin">Instalando Andro BOINC</string>
+    <string name="installClientNotifyFinish">Andro BOINC foi instalado</string>
     <string name="installProjectNotifyBegin">Instalando aplicações para </string>
     <string name="installProjectBegin">Instalando aplicações</string>
     <string name="installProjectNotifyFinish">Aplicações instaladas</string>
@@ -386,7 +386,7 @@
     <string name="description">Descrição</string>
     <string name="changes">Mudanças</string>
     <string name="noInstallOpsText">Sem operações em segundo plano.</string>
-    <string name="installProgressText">Mobile BOINC está executando algumas operações em segundo plano..</string>
+    <string name="installProgressText">Andro BOINC está executando algumas operações em segundo plano..</string>
     <string name="operationsProgress">Progresso das operações</string>
     <!-- ProjectsActivity -->
     <string name="projectCtxMenuTitle">Comandos</string>
@@ -441,7 +441,7 @@
     <string name="updateBinaries">Atualizar binários</string>
     <string name="updateNewAvailable">Novos binários disponíveis</string>
     <string name="updateNoNew">Sem novos binários</string>
-    <string name="updateBoincClient">Mobile BOINC</string>
+    <string name="updateBoincClient">Andro BOINC</string>
     <string name="updateUpdating">Atualizando</string>
     <!-- Delete project binaries -->
     <string name="deleteProjectBins">Deletar binários do projeto</string>
@@ -519,29 +519,29 @@
     <!-- operation strings -->
     <string name="downloadPGPKey">Fazendo download da chave PGP</string>
     <string name="verifySignature">Verificando assinatura</string>
-    <string name="downloadNativeClient">Fazendo download do cliente nativo</string>
-    <string name="unpackNativeClient">Descompactando cliente nativo</string>
+    <string name="downloadNativeClient">Fazendo download do cliente</string>
+    <string name="unpackNativeClient">Descompactando cliente</string>
     <string name="unpackApplication">Descompactando aplicações de projetos</string>
     <string name="downloadApplication">Fazendo download das aplicações de projetos</string>
     <string name="operationCancelled">Operação cancelada</string>
     <string name="operationFinished">Operação finalizada</string>
-    <string name="nativeClientFirstStart">Primeiro início do cliente nativo</string>
-    <string name="nativeClientFirstStartError">Falha no primeiro início do cliente nativo</string>
-    <string name="nativeClientFirstKill">Primeira eliminação do cliente nativo</string>
+    <string name="nativeClientFirstStart">Primeiro início do cliente</string>
+    <string name="nativeClientFirstStartError">Falha no primeiro início do cliente</string>
+    <string name="nativeClientFirstKill">Primeira eliminação do cliente</string>
     <string name="nativeClientAwaitForShutdown">Aguardando pelo desligamento</string>
-    <string name="nativeClientConfigured">Cliente nativo foi configurado</string>
-    <string name="nativeClientStarting">Inicializando cliente nativo</string>
-    <string name="nativeClientStart">Cliente nativo iniciou</string>
-    <string name="nativeClientStopping">Parando cliente nativo</string>
-    <string name="nativeClientShutdown">Cliente nativo foi parado</string>
-    <string name="nativeClientWorking">Cliente nativo esta funcionando</string>
+    <string name="nativeClientConfigured">Cliente foi configurado</string>
+    <string name="nativeClientStarting">Inicializando cliente</string>
+    <string name="nativeClientStart">Cliente  </string>
+    <string name="nativeClientStopping">Parando cliente</string>
+    <string name="nativeClientShutdown">Cliente foi parado</string>
+    <string name="nativeClientWorking">Cliente esta funcionando</string>
     <!-- boinc Exit code text -->
-    <string name="nativeClientWaitFailed">Cliente nativo foi desligado (mas continua funcionando)!</string>
-    <string name="nativeClientNormalExitWithCode">Cliente nativo foi encerrado com código</string>
-    <string name="nativeClientSignaled">Cliente nativo foi encerrado por sinal</string>
-    <string name="nativeClientStoppedByForeign">Cliente nativo foi parado por aplicação externa!</string>
-    <string name="nativeClientStopUnknownReason">Cliente nativo parou sozinho por motivo desconhecido</string>
-    <!-- native client events -->
+    <string name="nativeClientWaitFailed">Cliente foi desligado (mas continua funcionando)!</string>
+    <string name="nativeClientNormalExitWithCode">Cliente foi encerrado com código</string>
+    <string name="nativeClientSignaled">Cliente foi encerrado por sinal</string>
+    <string name="nativeClientStoppedByForeign">Cliente foi parado por aplicação externa!</string>
+    <string name="nativeClientStopUnknownReason">Cliente parou sozinho por motivo desconhecido</string>
+    <!-- cliente eventos -->
     <string name="eventAttachedProject">Novo projeto foi anexado</string>
     <string name="eventAttachedProjectMessage">Projeto a partir de %s foi anexado</string>
     <string name="eventDetachedProject">Projeto foi separado</string>
@@ -560,24 +560,24 @@
     <string name="installError">Erro de Instalação</string>
     <string name="downloadPGPKeyError">Não foi possível fazer download da chave PGP</string>
     <string name="loadPGPKeyError">Não foi possível carregar a chave PGP</string>
-    <string name="downloadNativeClientError">Não foi possível fazer download do cliente nativo</string>
+    <string name="downloadNativeClientError">Não foi possível fazer download do cliente</string>
     <string name="downloadApplicationError">Não foi possível fazer download das aplicações do projeto</string>
     <string name="downloadSignatureError">Não foi possível fazer download de assinatura</string>
     <string name="verifySignatureError">Não foi possível verificar a assinatura</string>
     <string name="verifySignatureFailed">Falha na verificação de assinatura</string>
-    <string name="unpackNativeClientError">Não foi possível descompactar o cliente nativo</string>
+    <string name="unpackNativeClientError">Não foi possível descompactar o cliente</string>
     <string name="unpackApplicationError">Não foi possível descompactar as aplicações do projeto</string>
     <string name="copyApplicationError">Não foi possível copiar as aplicações do projeto</string>
     <string name="changePermissionsError">Não foi possível mudar as permissões</string>
-    <string name="copyNativeClientError">Não foi possível copiar o cliente nativo</string>
-    <string name="runNativeClientError">Não foi possível executar o cliente nativo</string>
-    <string name="connectNativeClientError">Não foi possível conectar com o cliente nativo</string>
+    <string name="copyNativeClientError">Não foi possível copiar o cliente</string>
+    <string name="runNativeClientError">Não foi possível executar o cliente</string>
+    <string name="connectNativeClientError">Não foi possível conectar com o cliente</string>
     <string name="getAccessPasswordError">Não foi possível obter a senha de acesso</string>
     <string name="setAccessPasswordError">Não foi possível definir a senha de acesso</string>
     <string name="nativeAuthorizeError">Não foi possível autorizar o acesso</string>
-    <string name="nativeClientConfigError">Não foi possível configurar o cliente nativo</string>
-    <string name="nativeClientResultsError">Não foi possível obter os resultados a partir do cliente nativo</string>
-    <string name="nativeClientProjectsError">Não foi possível obter projetos a partir do cliente nativo</string>
+    <string name="nativeClientConfigError">Não foi possível configurar o cliente</string>
+    <string name="nativeClientResultsError">Não foi possível obter os resultados a partir do cliente  </string>
+    <string name="nativeClientProjectsError">Não foi possível obter projetos a partir do cliente  </string>
     <string name="appListDownloadError">Não foi possível fazer o download da lista de aplicações do projeto</string>
     <string name="appListParseError">Não foi possível analisar a lista de aplicações do projeto</string>
     <string name="clientListDownloadError">Não foi possível fazer o download da lista de cliente</string>
@@ -594,7 +594,7 @@
     <string name="unexpectedError">Erro Inesperado</string>
     <string name="errorNumFormat">(erro: %d)</string>
     <string name="cantAuthorizeClientMonitor">Não pode autorizar monitoramento de cliente!</string>
-    <string name="cantAuthorizeClientMonitorMessage">Não pode autorizar monitoramento de cliente! Você não pode instalar binários de projetos automaticamente (você pode utilizar a opção Atualizar binários depois de adicionar projeto) ou receber eventos de clientes. Você pode reiniciar o Mobile BOINC (recomendado).</string>
+    <string name="cantAuthorizeClientMonitorMessage">Não pode autorizar monitoramento de cliente! Você não pode instalar binários de projetos automaticamente (você pode utilizar a opção Atualizar binários depois de adicionar projeto) ou receber eventos de clientes. Você pode reiniciar o Andro BOINC (recomendado).</string>
     <string name="cantDeleteProjectBins">Não pode\ deletar binários do projeto</string>
     <!-- HostInfo display -->
     <string name="hostInfoPart1">

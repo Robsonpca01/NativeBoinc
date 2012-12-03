@@ -15,10 +15,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 
-/**
- * @author mat
- *
- */
+
 public class NotificationController {
 
 	//private static final String TAG = "NotificationsController";

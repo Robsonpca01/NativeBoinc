@@ -60,7 +60,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 	private EditText mUseAtMostDiskSpace;
 	private EditText mLeaveAtLeastDiskFree;
 	private EditText mUseAtMostTotalDisk;
-	private EditText mCheckpointToDisk;
 	private EditText mUseAtMostMemoryInUse;
 	private EditText mUseAtMostMemoryInIdle;
 	private CheckBox mLeaveApplications;
@@ -158,7 +157,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 		mUseAtMostDiskSpace = (EditText)findViewById(R.id.localPrefUseAtMostDiskSpace);
 		mLeaveAtLeastDiskFree = (EditText)findViewById(R.id.localPrefLeaveAtLeastDiskFree);
 		mUseAtMostTotalDisk = (EditText)findViewById(R.id.localPrefUseAtMostTotalDisk);
-		mCheckpointToDisk = (EditText)findViewById(R.id.localPrefCheckpointToDisk);
 		mUseAtMostMemoryInUse = (EditText)findViewById(R.id.localPrefUseAtMostMemoryInUse);
 		mUseAtMostMemoryInIdle = (EditText)findViewById(R.id.localPrefUseAtMostMemoryInIdle);
 		mLeaveApplications = (CheckBox)findViewById(R.id.localPrefLeaveApplications);
@@ -230,7 +228,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 		mUseAtMostDiskSpace.addTextChangedListener(textWatcher);
 		mUseAtMostTotalDisk.addTextChangedListener(textWatcher);
 		mLeaveAtLeastDiskFree.addTextChangedListener(textWatcher);
-		mCheckpointToDisk.addTextChangedListener(textWatcher);
 		
 		mUseAtMostMemoryInIdle.addTextChangedListener(textWatcher);
 		mUseAtMostMemoryInUse.addTextChangedListener(textWatcher);
@@ -384,7 +381,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 			double disk_max_used_gb = Double.parseDouble(mUseAtMostDiskSpace.getText().toString());
 			double disk_max_used_pct = Double.parseDouble(mUseAtMostTotalDisk.getText().toString());
 			double disk_min_free_gb = Double.parseDouble(mLeaveAtLeastDiskFree.getText().toString());
-			double disk_interval = Double.parseDouble(mCheckpointToDisk.getText().toString());
 			
 			double ram_max_used_busy_frac = Double.parseDouble(
 					mUseAtMostMemoryInUse.getText().toString());
@@ -471,12 +467,7 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 				good = false;
 			} else
 				mLeaveAtLeastDiskFree.setError(null);
-			
-			if (disk_interval < 0.0) {
-				mCheckpointToDisk.setError(mWrongText);
-				good = false;
-			} else
-				mCheckpointToDisk.setError(null);
+						
 			
 			if (ram_max_used_busy_frac > 100.0 || ram_max_used_busy_frac < 0.0) {
 				mUseAtMostMemoryInUse.setError(mWrongText);
@@ -541,7 +532,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 		mUseAtMostDiskSpace.setText(formatDouble(globalPrefs.disk_max_used_gb));
 		mUseAtMostTotalDisk.setText(formatDouble(globalPrefs.disk_max_used_pct));
 		mLeaveAtLeastDiskFree.setText(formatDouble(globalPrefs.disk_min_free_gb));
-		mCheckpointToDisk.setText(formatDouble(globalPrefs.disk_interval));
 		
 		mUseAtMostMemoryInIdle.setText(formatDouble(globalPrefs.ram_max_used_idle_frac));
 		mUseAtMostMemoryInUse.setText(formatDouble(globalPrefs.ram_max_used_busy_frac));
@@ -586,7 +576,6 @@ public class LocalPreferencesActivity extends ServiceBoincActivity implements Cl
 			globalPrefs.disk_max_used_gb = Double.parseDouble(mUseAtMostDiskSpace.getText().toString());
 			globalPrefs.disk_max_used_pct = Double.parseDouble(mUseAtMostTotalDisk.getText().toString());
 			globalPrefs.disk_min_free_gb = Double.parseDouble(mLeaveAtLeastDiskFree.getText().toString());
-			globalPrefs.disk_interval = Double.parseDouble(mCheckpointToDisk.getText().toString());
 			
 			globalPrefs.ram_max_used_busy_frac = Double.parseDouble(
 					mUseAtMostMemoryInUse.getText().toString());

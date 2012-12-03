@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package sk.boinc.nativeboinc;
 
 import java.io.FileOutputStream;
@@ -26,10 +24,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
-/**
- * @author mat
- *
- */
+
 public class BoincLogsActivity extends AbstractBoincActivity {
 
 	private static final int LOGS_FILENAME_DIALOG = 1;

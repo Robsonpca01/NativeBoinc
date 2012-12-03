@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package sk.boinc.nativeboinc.nativeclient;
 
 import java.io.BufferedReader;
@@ -16,10 +14,7 @@ import sk.boinc.nativeboinc.BoincManagerApplication;
 
 import android.content.Context;
 
-/**
- * @author mat
- *
- */
+
 public class NativeBoincUtils {
 
 	public static final String INITIAL_BOINC_CONFIG = "<global_preferences>\n" +

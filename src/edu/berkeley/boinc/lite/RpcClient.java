@@ -1078,7 +1078,7 @@ public class RpcClient {
 			}
 			
 			mRequest.append("</global_preferences>\n</set_global_prefs_override>\n");
-			sendRequest(mRequest.toString());
+		sendRequest(mRequest.toString());
 			receiveReply();
 			return true;
 		} catch (IOException e) {
